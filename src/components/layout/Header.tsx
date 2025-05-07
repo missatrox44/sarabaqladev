@@ -9,6 +9,7 @@ import { ModeToggle } from '@/components/theme/ModeToggle';
 import { 
   Menu, X, GithubIcon, LinkedinIcon, TwitterIcon
 } from 'lucide-react';
+import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -72,7 +73,7 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-4 pl-8">
             <div className="flex items-center space-x-3">
               <a 
-                href="https://github.com" 
+                href={GITHUB_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -81,7 +82,7 @@ export function Header() {
                 <span className="sr-only">GitHub</span>
               </a>
               <a 
-                href="https://linkedin.com" 
+                href={LINKEDIN_URL}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -147,7 +148,7 @@ export function Header() {
           </Button>
           <div className="flex justify-center space-x-6 pt-6">
             <a 
-              href="https://github.com" 
+              href={GITHUB_URL} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -156,7 +157,7 @@ export function Header() {
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={LINKEDIN_URL}
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
