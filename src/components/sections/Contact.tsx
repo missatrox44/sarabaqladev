@@ -5,68 +5,18 @@ import {
   Mail, Phone, MapPin, Send,
   Github, Linkedin, Twitter
 } from 'lucide-react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
+
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { toast } from '@/hooks/use-toast';
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
-// import { useForm, ValidationError } from '@formspree/react';
-
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: 'Name must be at least 2 characters',
-  }),
-  email: z.string().email({
-    message: 'Please enter a valid email address',
-  }),
-  subject: z.string().min(5, {
-    message: 'Subject must be at least 5 characters',
-  }),
-  message: z.string().min(10, {
-    message: 'Message must be at least 10 characters',
-  }),
-});
+import { useForm, ValidationError } from '@formspree/react';
 
 export function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
-      form.reset();
-      toast({
-        title: 'Message sent successfully!',
-        description: "I'll get back to you as soon as possible.",
-      });
-    }, 1500);
-  }
+  const [state, handleSubmit] = useForm("mzzrdayr");
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-muted/30">
@@ -103,10 +53,10 @@ export function Contact() {
                 <div>
                   <p className="font-medium">Email</p>
                   <a 
-                    href="mailto:sara@artemisbytes.com" 
+                    href="mailto:missatrox44@gmail.com" 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    sara@artemisbytes.com
+                    missatrox44@gmail.com
                   </a>
                 </div>
               </div>
@@ -172,72 +122,42 @@ export function Contact() {
           </div>
 
           <div className="bg-card border rounded-xl p-6 md:p-8 shadow-sm">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            {state.succeeded ? (
+              <p className="text-green-600 text-center">Thanks for your message!</p>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your email" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div>
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" type="text" name="name" required placeholder="Your name" />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" type="email" name="email" required placeholder="Your email" />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                  </div>
                 </div>
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Subject</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Subject of your message" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Write your message here..." 
-                          className="min-h-[120px]" 
-                          {...field} 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+
+                <div>
+                  <Label htmlFor="subject">Subject</Label>
+                  <Input id="subject" type="text" name="subject" required placeholder="Subject of your message" />
+                  <ValidationError prefix="Subject" field="subject" errors={state.errors} />
+                </div>
+
+                <div>
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea id="message" name="message" rows={4} required placeholder="Your message..." />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
+                </div>
+
                 <Button 
-                  type="submit" 
-                  className={cn("w-full", isSubmitting && "opacity-70")}
-                  disabled={isSubmitting}
+                  type="submit"
+                  disabled={state.submitting}
+                  className={cn("w-full", state.submitting && "opacity-70")}
                 >
-                  {isSubmitting ? (
+                  {state.submitting ? (
                     <span className="flex items-center">
                       <svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -252,7 +172,7 @@ export function Contact() {
                   )}
                 </Button>
               </form>
-            </Form>
+            )}
           </div>
         </div>
       </div>
