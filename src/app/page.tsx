@@ -1,4 +1,4 @@
-// import { Hero } from '@/components/sections/Hero';
+import { Hero } from '@/components/sections/Hero';
 // import { About } from '@/components/sections/About';
 // import { FeaturedProjects } from '@/components/sections/FeaturedProjects';
 // import { LatestBlogs } from '@/components/sections/LatestBlogs';
@@ -8,8 +8,8 @@
 export default function Home() {
   return (
     <>
-      {/* <Hero />
-      <About />
+      <Hero />
+      {/* <About />
       <FeaturedProjects />
       <LatestBlogs />
       <Experience />
