@@ -3,7 +3,7 @@ import { Hero } from '@/components/sections/Hero';
 // import { FeaturedProjects } from '@/components/sections/FeaturedProjects';
 // import { LatestBlogs } from '@/components/sections/LatestBlogs';
 // import { Experience } from '@/components/sections/Experience';
-// import { Contact } from '@/components/sections/Contact';
+import { Contact } from '@/components/sections/Contact';
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       {/* <About />
       <FeaturedProjects />
       <LatestBlogs />
-      <Experience />
-      <Contact /> */}
+      <Experience />*/}
+      <Contact /> 
     </>
   );
 }
