@@ -41,7 +41,7 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
   const posts: BlogItem[] = result.posts.map(post => ({
     title: post.title,
     excerpt: post.description,
-    coverImage: post.image || "/images/placeholder.webp",
+    coverImage: post.image || "/fallback-blog.png",
     date: post.publishedAt || post.updatedAt,
     slug: post.slug,
     // you can pick your taxonomy/tag logic here:
