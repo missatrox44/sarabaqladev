@@ -61,15 +61,15 @@ const Page = async ({ params: { slug } }: { params: Params }) => {
   };
 
   return (
-    <>
+    <div className="container max-w-7xl mx-auto pt-[80px] pb-16 px-4 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-        <BlogPostContent post={result.post} />
-        <RelatedPosts posts={posts} />
-    </>
-  );
+      <BlogPostContent post={result.post} />
+      <RelatedPosts posts={posts} />
+      </div>
+      );
 };
 
-export default Page;
+      export default Page;
