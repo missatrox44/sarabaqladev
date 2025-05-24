@@ -25,7 +25,7 @@ export const RelatedPosts: FunctionComponent<{
             <Link href={`/blog/${post.slug}`}>
               <AspectRatio ratio={16 / 9} className="w-full">
                 <Image
-                  src={post.image || "/images/placeholder.png"}
+                  src={post.image || "/fallback-blog.png"}
                   alt={post.title}
                   fill
                   className="h -full min-h-full min-w-full object-cover object-center"
