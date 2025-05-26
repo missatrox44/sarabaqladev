@@ -29,7 +29,7 @@ export const RelatedPosts: FunctionComponent<{
                   src={post.image || "/fallback-blog.png"}
                   alt={post.title}
                   fill
-                  className="h -full min-h-full min-w-full object-cover object-center"
+                  className="h-full min-h-full min-w-full object-cover object-center"
                 />
               </AspectRatio>
             </Link>

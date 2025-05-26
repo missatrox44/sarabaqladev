@@ -25,52 +25,54 @@ export const BlogPostsPagination = ({
   };
 }) => {
   return (
-    <Pagination>
-      <PaginationContent>
-        {pagination.prevPage && (
-          <PaginationItem>
-            <PaginationPrevious href={`${basePath}${pagination.prevPage}`} />
-          </PaginationItem>
-        )}
-        {pagination.page > 3 && (
-          <>
+    <div className="py-8">
+      <Pagination>
+        <PaginationContent>
+          {pagination.prevPage && (
             <PaginationItem>
-              <PaginationLink href={`${basePath}1`}>1</PaginationLink>
+              <PaginationPrevious href={`${basePath}${pagination.prevPage}`} />
             </PaginationItem>
-            <PaginationEllipsis />
-          </>
-        )}
-        {Array.from({ length: pagination.totalPages }, (_, index) => index + 1)
-          .filter(
-            (pageNumber) =>
-              Math.abs(pagination.page - pageNumber) <= numSiblingPages
-          )
-          .map((pageNumber) => (
-            <PaginationItem key={pageNumber}>
-              <PaginationLink
-                href={`${basePath}${pageNumber}`}
-                isActive={pageNumber === pagination.page}
-              >
-                {pageNumber}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-        {pagination.page < pagination.totalPages - 2 && (
-          <>
-            <PaginationEllipsis />
+          )}
+          {pagination.page > 3 && (
+            <>
+              <PaginationItem>
+                <PaginationLink href={`${basePath}1`}>1</PaginationLink>
+              </PaginationItem>
+              <PaginationEllipsis />
+            </>
+          )}
+          {Array.from({ length: pagination.totalPages }, (_, index) => index + 1)
+            .filter(
+              (pageNumber) =>
+                Math.abs(pagination.page - pageNumber) <= numSiblingPages
+            )
+            .map((pageNumber) => (
+              <PaginationItem key={pageNumber}>
+                <PaginationLink
+                  href={`${basePath}${pageNumber}`}
+                  isActive={pageNumber === pagination.page}
+                >
+                  {pageNumber}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+          {pagination.page < pagination.totalPages - 2 && (
+            <>
+              <PaginationEllipsis />
+              <PaginationItem>
+                <PaginationLink href={`${basePath}${pagination.totalPages}`}>
+                  {pagination.totalPages}
+                </PaginationLink>
+              </PaginationItem>
+            </>
+          )}
+          {pagination.nextPage && (
             <PaginationItem>
-              <PaginationLink href={`${basePath}${pagination.totalPages}`}>
-                {pagination.totalPages}
-              </PaginationLink>
+              <PaginationNext href={`${basePath}${pagination.nextPage}`} />
             </PaginationItem>
-          </>
-        )}
-        {pagination.nextPage && (
-          <PaginationItem>
-            <PaginationNext href={`${basePath}${pagination.nextPage}`} />
-          </PaginationItem>
-        )}
-      </PaginationContent>
-    </Pagination>
+          )}
+        </PaginationContent>
+      </Pagination>
+    </div>
   );
 };

@@ -30,6 +30,7 @@
 import { BlogsClient, BlogItem } from "@/components/sections/BlogsClient";
 import { wisp } from "@/lib/wisp";
 import { Separator } from "@/components/ui/separator";
+import { BlogPostsPagination } from "@/components/sections/BlogPostsPagination";
 
 export default async function BlogPage({ searchParams }: { searchParams: { page?: string } }) {
   // read ?page= from the URL (optional)
@@ -59,6 +60,7 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
       </div>
       <Separator className="my-8" />
       <BlogsClient posts={posts} />
+      <BlogPostsPagination pagination={result.pagination} />
     </div>);
 }
 
