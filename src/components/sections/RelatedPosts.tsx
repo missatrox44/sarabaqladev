@@ -15,7 +15,8 @@ export const RelatedPosts: FunctionComponent<{
   }
 
   return (
-    <div className="my-8 max-w-prose text-xl mx-auto">
+    // <div className="my-8 max-w-prose text-xl mx-auto">
+      <div>
       <div className="mb-6 text-lg font-semibold tracking-tight">
         Related Posts
       </div>
