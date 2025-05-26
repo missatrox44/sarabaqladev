@@ -9,7 +9,10 @@ import { wisp } from '@/lib/wisp';
 
 
 export async function LatestBlogs() {
-  const result = await wisp.getPosts({ limit: 3, page: 1 });
+  // const result = await wisp.getPosts({ limit: "all" });
+    const result = await wisp.getPosts({ limit: 3 });
+
+  console.log("Latest Blogs Data:", result);
 
   const latestBlogs = result.posts.map(post => ({
     title: post.title,
@@ -19,7 +22,7 @@ export async function LatestBlogs() {
     slug: post.slug,
     category: post.tags[0]?.name ?? "Uncategorized",
   }));
-  
+
   return (
     <section id="blog" className="py-24 relative overflow-hidden bg-muted/30">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

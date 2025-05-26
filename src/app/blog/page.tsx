@@ -36,7 +36,7 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
   const page = searchParams.page ? parseInt(searchParams.page) : 1;
 
   // fetch from Wisp
-  const result = await wisp.getPosts({ limit: 100, page });
+  const result = await wisp.getPosts({ limit: 100, });
   // map Wisp’s post shape into our BlogItem shape
   const posts: BlogItem[] = result.posts.map(post => ({
     title: post.title,
