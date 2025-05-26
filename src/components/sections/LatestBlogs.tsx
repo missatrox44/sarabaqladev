@@ -3,12 +3,23 @@ import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { blogData } from '@/lib/data';
+// import { blogData } from '@/lib/data';
 import { format } from 'date-fns';
+import { wisp } from '@/lib/wisp';
 
-export function LatestBlogs() {
-  const latestBlogs = blogData.slice(0, 3);
 
+export async function LatestBlogs() {
+  const result = await wisp.getPosts({ limit: 3, page: 1 });
+
+  const latestBlogs = result.posts.map(post => ({
+    title: post.title,
+    excerpt: post.description,
+    coverImage: post.image || "/fallback-blog.png",
+    date: post.publishedAt || post.updatedAt,
+    slug: post.slug,
+    category: post.tags[0]?.name ?? "Uncategorized",
+  }));
+  
   return (
     <section id="blog" className="py-24 relative overflow-hidden bg-muted/30">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
