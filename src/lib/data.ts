@@ -1,57 +1,90 @@
 // Project data
 export const projectData = [
+  // {
+  //   title: 'Git Me There',
+  //   description: 'Git Me There is a user-friendly web application, crafted using HTML, CSS, JavaScript, and leveraging the power of third-party APIs. This application serves as a one-stop solution for planning transportation logistics for upcoming journeys within any U.S. city. By entering their destination, users are provided with walking and biking scores, as well as a list of nearby restaurants. For destinations with a walking score below 50, the application conveniently presents an option to book an Uber ride, ensuring an effortless travel experience.',
+  //   image: 'projects/git_me_there.png',
+  //   technologies: ['HTML5', 'CSS3', 'API', 'Bootstrap'],
+  //   demoUrl: 'https://missatrox44.github.io/git-me-there',
+  //   githubUrl: 'https://github.com/missatrox44/git-me-there',
+  //   featured: false,
+  //   date: "July 2022"
+  // },
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured online store with product catalog, shopping cart, and secure checkout',
-    image: 'https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    demoUrl: 'https://example.com/ecommerce',
-    githubUrl: 'https://github.com/example/ecommerce',
-    featured: true
+    title: 'Fact or Fiction',
+    description: 'Fact or Fiction is a dynamic full-stack application offering users an engaging gaming experience. The game involves discerning whether given laws or headlines are authentic or fabricated. Developed using Handlebars.js, Express.js, and Sequelize, the project employs Bootstrap for styling, ensuring a sleek and intuitive user interface.',
+    image: 'projects/fact_or_fiction.png',
+    technologies: ['MySQL', 'Heroku', 'Express', 'Handlebars', 'Sequelize'],
+    demoUrl: 'https://github.com/missatrox44/Fact-Fiction',
+    githubUrl: 'https://factorfiction.herokuapp.com',
+    featured: false,
+    date: "August 2022"
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task tracking application with real-time updates and team management',
-    image: 'https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    technologies: ['React', 'Firebase', 'Tailwind CSS', 'Redux'],
-    demoUrl: 'https://example.com/taskapp',
-    githubUrl: 'https://github.com/example/taskapp',
-    featured: true
+    title: 'Baes',
+    description: 'Baes is a comprehensive application built on the MERN stack, designed with the aim of enhancing personal relationships. It enables users to maintain and manage crucial information about their significant contacts. With Baes, users can set up an account, modify their profiles, forge connections, and record customized notes about their interactions and relationships.',
+    image: 'projects/baes.png',
+    technologies: ['MongoDB', 'GraphQL', 'React', 'Express', 'Node'],
+    demoUrl: 'https://loversnotfighters.vercel.app/',
+    githubUrl: 'https://github.com/missatrox44/baesii',
+    featured: true,
+    date: "September 2022"
   },
   {
-    title: 'Portfolio Website',
-    description: 'Personal portfolio website showcasing projects, skills, and professional experience',
-    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    demoUrl: 'https://example.com/portfolio',
-    githubUrl: 'https://github.com/example/portfolio',
-    featured: true
-  },
-  {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather information with historical data and forecasting',
-    image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Portfolio (legacy)',
+    description: 'A meticulously designed digital showcase of my diverse projects and technical prowess. Crafted using Bootstrap, this portfolio captures the essence of responsiveness and modern design aesthetics. It presents my works in an organized, elegant manner, ensuring smooth navigation and optimal viewing across all device sizes. From the intricate animations to the intuitive layouts, every aspect of this portfolio is a testament to my commitment to quality and attention to detail.',
+    image: 'projects/bootstrap_portfolio.png',
     technologies: ['Vue.js', 'OpenWeather API', 'Chart.js', 'SCSS'],
-    demoUrl: 'https://example.com/weather',
-    githubUrl: 'https://github.com/example/weather',
+    demoUrl: 'https://missatrox44.github.io/portfolio/',
+    githubUrl: 'https://github.com/missatrox44/portfolio"',
+    featured: false,
+    date: "September 2022"
+  },
+  {
+    title: 'OHS Broncho Band',
+    description: 'This project involved a comprehensive refactoring of the Odessa High School Broncho Band\'s website. It was redesigned to be mobile responsive, while also updating images and links for a more appealing and user-friendly experience. New pages were added, working in close collaboration with the band director to ensure that the final design echoed her vision and faithfully represented the values of the OHS Broncho Band. The website was expertly crafted using tools from WiX and continues to be a work in progress, reflecting the ever-evolving spirit of the band program.',
+    image: 'projects/odessa_band_screenshot.png',
+    technologies: ['Wix', 'HTML5', 'CSS3'],
+    demoUrl: 'https://www.odessaband.org/',
+    githubUrl: '',
+    featured: false,
+    date: "October 2022"
+  },
+  {
+    title: 'Travel 2 It',
+    description: 'Introducing Travel 2 It – your next must-have travel companion, masterfully crafted during the 6-week Chingu Voyage 41 journey. Dive into a seamless trip-planning experience, where organizing is as simple as creating editable stacks and cards. From jotting down must-visit spots to curating detailed plans, each card is your canvas. Not set on the order? Fluidly drag and drop cards or entire stacks until it feels just right. Enjoy our elegant Dark & Light Modes. Sharing your journeys with loved ones via Email, Facebook, or Whatsapp is available now! Make every trip a masterpiece with Travel 2 It.',
+    image: 'projects/travel_2_it.png',
+    technologies: ['React', 'Vite', 'Chakra UI'],
+    demoUrl: 'https://cosmic-gnome-4fc624.netlify.app/',
+    githubUrl: 'https://github.com/missatrox44/travel2it',
     featured: false
   },
   {
-    title: 'Fitness Tracker',
-    description: 'Mobile-first fitness application for tracking workouts, nutrition, and progress',
-    image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    technologies: ['React Native', 'GraphQL', 'Node.js', 'MongoDB'],
-    demoUrl: 'https://example.com/fitness',
-    githubUrl: 'https://github.com/example/fitness',
+  title: 'Pomodoro Timer',
+  description: 'The fruit of a dynamic week-long paired programming challenge, curated by Chingu. Crafted by two efficiency enthusiasts, our app breathes fresh life into the revered Pomodoro technique that we passionately incorporate into our daily routines. Taking inspiration, yet adding our flair, we\'ve not only cloned a popular app but have enhanced it with a unique \"Developer Mode\". This speedy mode whizzes through time, allowing users to swiftly experience functionalities. Enhance your productivity cycles with the Pomodoro Timer, and witness time-management in a whole new light!',
+  image: 'projects/pomodoro_timer.png',
+  technologies: ['React', 'Vite', 'Chakra UI'],
+  demoUrl: 'https://missatrox44.github.io/pomodoro-clock/',
+  githubUrl: 'https://github.com/missatrox44/pomodoro-clock',
+  featured: true,
+  date: "March 2023"
+  },
+   {
+    title: 'Travel 2 It',
+    description: 'Introducing Travel 2 It – your next must-have travel companion, masterfully crafted during the 6-week Chingu Voyage 41 journey. Dive into a seamless trip-planning experience, where organizing is as simple as creating editable stacks and cards. From jotting down must-visit spots to curating detailed plans, each card is your canvas. Not set on the order? Fluidly drag and drop cards or entire stacks until it feels just right. Enjoy our elegant Dark & Light Modes. Sharing your journeys with loved ones via Email, Facebook, or Whatsapp is available now! Make every trip a masterpiece with Travel 2 It.',
+    image: 'projects/travel_2_it.png',
+    technologies: ['React', 'Vite', 'Chakra UI'],
+    demoUrl: 'https://cosmic-gnome-4fc624.netlify.app/',
+    githubUrl: 'https://github.com/missatrox44/travel2it',
     featured: false
   },
-  {
-    title: 'Recipe Sharing Platform',
-    description: 'Social platform for sharing and discovering recipes with user ratings and comments',
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    technologies: ['Angular', 'Firebase', 'Material UI', 'RxJS'],
-    demoUrl: 'https://example.com/recipes',
-    githubUrl: 'https://github.com/example/recipes',
+   {
+    title: 'Travel 2 It',
+    description: 'Introducing Travel 2 It – your next must-have travel companion, masterfully crafted during the 6-week Chingu Voyage 41 journey. Dive into a seamless trip-planning experience, where organizing is as simple as creating editable stacks and cards. From jotting down must-visit spots to curating detailed plans, each card is your canvas. Not set on the order? Fluidly drag and drop cards or entire stacks until it feels just right. Enjoy our elegant Dark & Light Modes. Sharing your journeys with loved ones via Email, Facebook, or Whatsapp is available now! Make every trip a masterpiece with Travel 2 It.',
+    image: 'projects/travel_2_it.png',
+    technologies: ['React', 'Vite', 'Chakra UI'],
+    demoUrl: 'https://cosmic-gnome-4fc624.netlify.app/',
+    githubUrl: 'https://github.com/missatrox44/travel2it',
     featured: false
   }
 ];
