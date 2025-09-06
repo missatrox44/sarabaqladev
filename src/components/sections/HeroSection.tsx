@@ -5,8 +5,6 @@ import { Button } from '@/components/ui/enhanced-button';
 import { Download, ArrowDown } from 'lucide-react';
 // import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
-import heroImage from 'hero-abstract.jpg';
-
 export default function HeroSection() {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
@@ -24,7 +22,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url('/hero-abstract.jpg')` }}
       />
       
       {/* Animated Background Elements */}
@@ -138,8 +136,8 @@ export default function HeroSection() {
               transition={{ duration: 2, repeat: Infinity }}
               className="flex flex-col items-center text-muted-foreground"
             >
-              <span className="text-sm mb-2">Scroll to explore</span>
-              <ArrowDown className="h-4 w-4" />
+              {/* <span className="text-sm mb-2">Scroll to explore</span>
+              <ArrowDown className="h-4 w-4" /> */}
             </motion.div>
           </motion.div>
         </div>
