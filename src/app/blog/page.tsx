@@ -40,8 +40,8 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
   const result = await wisp.getPosts({ limit: 100, });
   // map Wisp’s post shape into our BlogItem shape
   const posts: BlogItem[] = result.posts.map(post => ({
-    title: post.title,
-    excerpt: post.description,
+    title: post.title ?? "Untitled",
+    excerpt: post.description ?? "",
     coverImage: post.image || "/fallback-blog.png",
     date: post.publishedAt || post.updatedAt,
     slug: post.slug,

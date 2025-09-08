@@ -13,8 +13,8 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 export interface BlogItem {
   title: string;
   excerpt: string;
-  coverImage: string;
-  date: string;          // ISO string
+  coverImage?: string;
+  date: Date |string;          // ISO string
   slug: string;
   category: string;
 }
