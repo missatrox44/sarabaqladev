@@ -13,7 +13,7 @@ import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Projects', href: '/projects' },
+  { name: 'Portfolio', href: '/portfolio' },
   { name: 'Blog', href: '/blog' },
 ];
 

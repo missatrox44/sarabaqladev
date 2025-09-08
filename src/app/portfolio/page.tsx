@@ -6,11 +6,11 @@ export const metadata = {
   description: 'Explore my complete portfolio of projects and case studies'
 };
 
-export default function ProjectsPage() {
+export default function PortfolioPage() {
   return (
     <div className="container max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="space-y-2 text-center mb-12">
-        <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Portfolio</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Explore my complete portfolio of work, from web applications to design projects
         </p>

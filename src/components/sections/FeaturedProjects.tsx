@@ -13,7 +13,7 @@ export function FeaturedProjects() {
         <div className="space-y-4 text-center mb-16">
           <div className="inline-block">
             <Badge variant="outline" className="text-sm font-medium rounded-full px-4 py-1">
-              Featured Projects
+              Featured Portfolio
             </Badge>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
@@ -71,8 +71,8 @@ export function FeaturedProjects() {
 
         <div className="mt-12 text-center">
           <Button size="lg" asChild>
-            <Link href="/projects">
-              View All Projects <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href="/portfolio">
+              View Portfolio <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
