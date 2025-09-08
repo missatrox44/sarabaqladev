@@ -100,7 +100,7 @@ export function Header() {
                 <span className="sr-only">Twitter</span>
               </a> */}
             </div>
-            <ModeToggle />
+           {/* } <ModeToggle /> */}
             <Button asChild>
               <Link href="/#contact">Contact</Link>
             </Button>
@@ -108,7 +108,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
-            <ModeToggle />
+            {/* } <ModeToggle /> */}
             <Button
               variant="ghost"
               size="icon"

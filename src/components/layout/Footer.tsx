@@ -4,7 +4,7 @@ import { Rss } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import { Button } from '@/components/ui/button';
-import { ModeToggle } from '@/components/theme/ModeToggle';
+// import { ModeToggle } from '@/components/theme/ModeToggle';
 import { Github, Linkedin } from "lucide-react";
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
@@ -29,7 +29,7 @@ export const Footer: FunctionComponent = () => {
               <Rss className="w-4 h-4" />
             </Button>
           </Link>
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           <Link href={GITHUB_URL} target="_blank" rel="noreferrer">
             <Button variant="ghost">
               <Github className="w-4 h-4" />
