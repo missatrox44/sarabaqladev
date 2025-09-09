@@ -42,7 +42,7 @@ export default function ProjectsSection() {
               className="cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <Card className="card-forest h-full group">
+              <Card className="card-forest h-full group flex flex-col">
                 <div className="aspect-video overflow-hidden rounded-t-xl">
                   <img
                     src={project.image}
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
                     {project.shortDescription}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex flex-col flex-1">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.slice(0, 3).map((tech) => (
                       <Badge key={tech} variant="secondary" className="text-xs">
@@ -71,7 +71,7 @@ export default function ProjectsSection() {
                       </Badge>
                     )}
                   </div>
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     <Button
                       variant="forest-ghost"
                       size="sm"
