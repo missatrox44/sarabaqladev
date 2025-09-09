@@ -28,7 +28,7 @@ export const projects: Project[] = [
     impact:
       'Enhanced restaurant operations by eliminating manual processes, improving staff efficiency, and ensuring better customer service during busy times.',
     techStack: ['React', 'Firebase Realtime Database', 'Tailwind CSS'],
-    image: 'projects/crab_city_rotation.png',
+    image: 'projects/crab-city.png',
     liveDemo: 'https://crab-city.vercel.app/',
     github: 'https://github.com/missatrox44/server-rotation-crab-city',
     featured: true,
