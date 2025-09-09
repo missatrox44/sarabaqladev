@@ -31,7 +31,7 @@ export const projects: Project[] = [
     image: 'projects/crab_city_rotation.png',
     liveDemo: 'https://crab-city.vercel.app/',
     github: 'https://github.com/missatrox44/server-rotation-crab-city',
-    featured: false,
+    featured: true,
   },
   {
     id: 'love-thy-selfie',
@@ -107,6 +107,6 @@ export const projects: Project[] = [
     image: 'projects/travel_2_it.png',
     liveDemo: 'https://cosmic-gnome-4fc624.netlify.app/',
     github: 'https://github.com/missatrox44/travel2it',
-    featured: false,
+    featured: true,
   }
 ];
