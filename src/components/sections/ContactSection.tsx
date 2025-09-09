@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/enhanced-button';
@@ -9,66 +9,21 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Github, Linkedin, Send, ExternalLink } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactSection() {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [state, handleSubmit] = useForm("mzzrdayr");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Client-side validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Fields",
-        description: "Please fill in all required fields.",
-        variant: "destructive"
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        variant: "destructive"
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      // Simulate form submission - replace with actual Formspree integration
-      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'demo-form';
-      
-      // For demo purposes, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+  // Show success message when form is submitted
+  useEffect(() => {
+    if (state.succeeded) {
       toast({
         title: "Message Sent!",
         description: "Thanks for reaching out! I'll get back to you soon.",
       });
-      
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  }, [state.succeeded, toast]);
 
   const contactLinks = [
     { 
@@ -170,65 +125,76 @@ export default function ContactSection() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="bg-background/50"
-                    />
+                {state.succeeded ? (
+                  <div className="text-center py-8">
+                    <div className="text-green-600 text-lg font-medium mb-2">
+                      Thanks for your message!
+                    </div>
+                    <p className="text-muted-foreground">
+                      I'll get back to you as soon as possible.
+                    </p>
                   </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                      className="bg-background/50"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell me about your project or just say hello!"
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
-                      className="bg-background/50 resize-none"
-                    />
-                  </div>
-                  
-                  <Button
-                    type="submit"
-                    variant="hero"
-                    size="lg"
-                    disabled={isSubmitting}
-                    className="w-full"
-                  >
-                    {isSubmitting ? (
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                        className="mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full"
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name *</Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                        className="bg-background/50"
                       />
-                    ) : (
-                      <Send className="mr-2 h-4 w-4" />
-                    )}
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </Button>
-                </form>
+                      <ValidationError prefix="Name" field="name" errors={state.errors} />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="your.email@example.com"
+                        required
+                        className="bg-background/50"
+                      />
+                      <ValidationError prefix="Email" field="email" errors={state.errors} />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message *</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell me about your project or just say hello!"
+                        rows={5}
+                        required
+                        className="bg-background/50 resize-none"
+                      />
+                      <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    </div>
+                    
+                    <Button
+                      type="submit"
+                      variant="hero"
+                      size="lg"
+                      disabled={state.submitting}
+                      className="w-full"
+                    >
+                      {state.submitting ? (
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                          className="mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full"
+                        />
+                      ) : (
+                        <Send className="mr-2 h-4 w-4" />
+                      )}
+                      {state.submitting ? 'Sending...' : 'Send Message'}
+                    </Button>
+                  </form>
+                )}
               </CardContent>
             </Card>
           </motion.div>
