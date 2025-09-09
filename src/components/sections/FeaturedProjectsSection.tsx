@@ -26,9 +26,9 @@ export default function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          {/* <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A showcase of applications I&apos;ve built, from concept to deployment. Each project tells a story of problem-solving and innovation.
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

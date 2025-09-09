@@ -19,7 +19,7 @@ export function Contact() {
   const [state, handleSubmit] = useForm("mzzrdayr");
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-muted/30 scroll-mt-[80px]">
+    <section id="contact" className="py-24 relative overflow-hidden scroll-mt-[80px]">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 text-center mb-16">
           <div className="inline-block">

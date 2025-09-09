@@ -28,7 +28,7 @@ const skills = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-muted/30">
+    <section id="about" className="py-24 relative overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <motion.div
@@ -43,24 +43,24 @@ export function About() {
                 About Me
               </Badge>
             </div> */}
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Turning ideas into <span className="text-gradient">impactful web & mobile apps</span>
+            {/* <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+             Always Learning, <span className="text-gradient">Always Building</span>
+            </h2> */}
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Meet <span className="text-gradient">Sara</span>
             </h2>
 
+
+            <p className="text-lg text-muted-foreground">
+              I&apos;m a full stack developer with 3+ years of experience building dynamic, modern, scalable applications.
+            </p>
             <p className="text-lg text-muted-foreground">
               My background in ecology research and teaching sharpens my communication and analytical skills, making me as comfortable bridging teams as I am writing code.
             </p>
 
             <p className="text-lg text-muted-foreground">
-              I&apos;m a full stack developer with 3+ years of experience building dynamice, modern, scalable applications.
-            </p>
-
-            <p className="text-lg text-muted-foreground">
-              I&apos;m a full stack developer who ships clean, user‑centered experiences. Blending a
-              science mindset with design sense, I turn complex problems into intuitive products.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              When I&apos;m not coding, you&apos;ll find me outdoors, playing trumpet, or reading. Always learning,
+              When I&apos;m not coding, you&apos;ll find me outdoors, reading, or playing trumpet. Always learning,
               always building.
             </p>
             <div className="pt-2">
@@ -112,7 +112,7 @@ export function About() {
 
                 {/* Wide top */}
                 <div className="col-span-3 md:col-span-8">
-                  <img src="/cats.jpeg" alt="Bagheera & Sylvester" className="h-full w-full object-cover rounded-xl aspect-[16/9]" />
+                  <img src="/cactus-cats.jpeg" alt="Bagheera & Sylvester" className="h-full w-full object-cover rounded-xl aspect-[16/9]" />
                 </div>
 
                 {/* Two squares */}
