@@ -74,20 +74,20 @@ export default function ContactSection() {
     { 
       icon: Mail, 
       label: 'Email', 
-      value: 'sara.baqla@email.com',
-      href: 'mailto:sara.baqla@email.com'
+      value: 'missatrox44@gmail.com',
+      href: 'mailto:missatrox44@gmail.com'
     },
     { 
       icon: Github, 
       label: 'GitHub', 
-      value: 'github.com/sarabaqla',
-      href: 'https://github.com/sarabaqla'
+      value: 'github.com/missatrox44',
+      href: 'https://github.com/missatrox44'
     },
     { 
       icon: Linkedin, 
       label: 'LinkedIn', 
-      value: 'linkedin.com/in/sarabaqla',
-      href: 'https://linkedin.com/in/sarabaqla'
+      value: 'linkedin.com/in/sara-baqla',
+      href: 'https://www.linkedin.com/in/sara-baqla/'
     }
   ];
 
