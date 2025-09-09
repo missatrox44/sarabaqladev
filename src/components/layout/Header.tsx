@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/enhanced-button';
 import { ModeToggle } from '@/components/theme/ModeToggle';
 import { 
   Menu, X, GithubIcon, LinkedinIcon, TwitterIcon
@@ -47,7 +47,7 @@ export function Header() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex-1 flex items-center">
-            <Link href="/" className="text-2xl font-bold">
+            <Link href="/" className="text-2xl font-bold text-gradient">
               sarabaqla.dev
             </Link>
           </div>
@@ -101,7 +101,7 @@ export function Header() {
               </a> */}
             </div>
            {/* } <ModeToggle /> */}
-            <Button asChild>
+            <Button asChild variant="hero">
               <Link href="/#contact">Contact</Link>
             </Button>
           </div>
@@ -143,7 +143,7 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button asChild className="mt-4">
+          <Button asChild className="mt-4" variant="hero">
             <Link href="/#contact">Contact</Link>
           </Button>
           <div className="flex justify-center space-x-6 pt-6">
