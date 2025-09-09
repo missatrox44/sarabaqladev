@@ -103,7 +103,7 @@ export default function ProjectsSection() {
                 <DialogHeader>
                   <div className="flex items-start justify-between">
                     <div>
-                      <DialogTitle className="text-2xl mb-2">
+                      <DialogTitle className="text-2xl mb-2 text-gradient">
                         {selectedProject.title}
                       </DialogTitle>
                       <DialogDescription className="text-base">
@@ -119,7 +119,7 @@ export default function ProjectsSection() {
                     <img
                       src={selectedProject.image}
                       alt={selectedProject.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
 

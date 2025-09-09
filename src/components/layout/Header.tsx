@@ -14,7 +14,7 @@ import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Blog', href: '/blog' },
+  // { name: 'Blog', href: '/blog' },
 ];
 
 export function Header() {
