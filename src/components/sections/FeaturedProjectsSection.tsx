@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/enhanced-button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { ExternalLink, Github, X } from 'lucide-react';
 import { projects, Project } from '@/data/projects';
+import Link from 'next/link';
 
 export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -88,6 +89,12 @@ export default function ProjectsSection() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link href="/portfolio">
+            <Button variant="hero">View All Projects</Button>
+          </Link>
         </div>
 
         {/* Project Modal */}
