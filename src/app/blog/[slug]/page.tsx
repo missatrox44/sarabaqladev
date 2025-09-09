@@ -1,5 +1,4 @@
-// src/app/blog/[slug]/page.tsx
-
+// WISP TEMPLATE
 import { BlogPostContent } from "@/components/sections/BlogPostContent";
 import { RelatedPosts } from "@/components/sections/RelatedPosts";
 import { config } from "@/config";
@@ -7,20 +6,17 @@ import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
 import type { BlogPosting, WithContext } from "schema-dts";
-import type { ResolvingMetadata } from "next";
 
-type RouteParams = { slug: string };
+export async function generateMetadata(props: { params: Promise<Params> }) {
+  const params = await props.params;
 
-// ---- Metadata ----
-export async function generateMetadata(
-  { params }: { params: RouteParams },
-  _parent: ResolvingMetadata
-) {
   const { slug } = params;
 
   const result = await wisp.getPost(slug);
   if (!result || !result.post) {
-    return { title: "Blog post not found" };
+    return {
+      title: "Blog post not found",
+    };
   }
 
   const { title, description, image } = result.post;
@@ -36,31 +32,34 @@ export async function generateMetadata(
     },
   };
 }
+interface Params {
+  slug: string;
+}
 
-// ---- Page ----
-export default async function Page({ params }: { params: RouteParams }) {
+const Page = async (props: { params: Promise<Params> }) => {
+  const params = await props.params;
+
   const { slug } = params;
-
   const result = await wisp.getPost(slug);
+  const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
+
   if (!result || !result.post) {
-    notFound();
+    return notFound();
   }
 
-  const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
   const { title, publishedAt, updatedAt, image, author } = result.post;
 
-  // Ensure these are strings; guard if your SDK returns Date | string | undefined
   const jsonLd: WithContext<BlogPosting> = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: title,
-    image: image || undefined,
-    datePublished: publishedAt ? String(publishedAt) : undefined,
-    dateModified: updatedAt ? String(updatedAt) : undefined,
+    image: image ? image : undefined,
+    datePublished: publishedAt ? publishedAt.toString() : undefined,
+    dateModified: updatedAt.toString(),
     author: {
       "@type": "Person",
-      name: author?.name || undefined,
-      image: author?.image || undefined,
+      name: author.name ?? undefined,
+      image: author.image ?? undefined,
     },
   };
 
@@ -72,6 +71,8 @@ export default async function Page({ params }: { params: RouteParams }) {
       />
       <BlogPostContent post={result.post} />
       <RelatedPosts posts={posts} />
-    </div>
-  );
-}
+      </div>
+      );
+};
+
+      export default Page;
