@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Download, ArrowDown } from 'lucide-react';
+import { Download, ArrowRight } from 'lucide-react';
 // import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function HeroSection() {
@@ -101,7 +101,7 @@ export default function HeroSection() {
               className="min-w-[200px] group"
             >
               Featured Projects
-              <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
             {/* <TooltipProvider>
