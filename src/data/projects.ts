@@ -15,6 +15,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'quality-water-4-usa',
+    title: 'Quality Water 4 USA',
+    shortDescription:
+      'A modern, customer-friendly landing page for a local water purification company with clear calls to action and a free water analysis form.',
+    longDescription:
+      'Quality Water 4 USA is a landing page built for a local business specializing in water purification systems. The site features a clean, modern design with intuitive navigation, allowing customers to easily learn about the company’s services. Visitors can explore key offerings, read customer testimonials, and get answers to common concerns through a dedicated FAQ section. A prominently placed form encourages scheduling a free water analysis, turning interest into action. Designed for clarity and trust, the layout uses intuitive navigation and strong calls to action throughout to boost customer engagement and conversions.',
+    problem:
+      'The business needed a professional online presence that clearly communicated its services and encouraged customers to schedule water analyses.',
+    solution:
+      'Designed and developed a modern landing page highlighting services, testimonials, FAQs, and a clear call-to-action form for free water analysis scheduling.',
+    impact:
+      'Improved the company’s digital visibility and customer engagement, helping convert site visitors into leads with a streamlined scheduling flow.',
+    techStack: ['Next.js', 'Tailwind CSS', 'Formspree'],
+    image: 'projects/quality-water-4-usa.png',
+    liveDemo: 'https://qualitywater4usa.com',
+    github: '',
+    featured: true,
+  },
+  {
     id: 'crab-city-server-rotation',
     title: 'Crab City Server Rotation',
     shortDescription:
