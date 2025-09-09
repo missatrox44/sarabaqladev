@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/enhanced-button';
@@ -14,7 +14,7 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function ContactSection() {
   const { toast } = useToast();
   const [state, handleSubmit] = useForm("mzzrdayr");
-
+  const formRef = useRef<HTMLFormElement>(null);
   // Show success message when form is submitted
   useEffect(() => {
     if (state.succeeded) {
@@ -22,9 +22,22 @@ export default function ContactSection() {
         title: "Message Sent!",
         description: "Thanks for reaching out! I'll get back to you soon.",
       });
+
+      formRef.current?.reset();
     }
   }, [state.succeeded, toast]);
 
+  useEffect(() => {
+    if (state.errors && Array.isArray(state.errors) && state.errors.length > 0) {
+      toast({
+        title: "Submission Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    }
+  },
+ [state.errors, toast]);
+  
   const contactLinks = [
     { 
       icon: Mail, 
@@ -45,6 +58,8 @@ export default function ContactSection() {
       href: 'https://www.linkedin.com/in/sara-baqla/'
     }
   ];
+
+  
 
   return (
     <section id="contact" className="py-20">
@@ -125,7 +140,7 @@ export default function ContactSection() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                {state.succeeded ? (
+                {/* {state.succeeded ? (
                   <div className="text-center py-8">
                     <div className="text-green-600 text-lg font-medium mb-2">
                       Thanks for your message!
@@ -134,8 +149,8 @@ export default function ContactSection() {
                       I'll get back to you as soon as possible.
                     </p>
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                ) : ( */}
+                  <form  ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name *</Label>
                       <Input
@@ -194,7 +209,7 @@ export default function ContactSection() {
                       {state.submitting ? 'Sending...' : 'Send Message'}
                     </Button>
                   </form>
-                )}
+                {/* )} */}
               </CardContent>
             </Card>
           </motion.div>
