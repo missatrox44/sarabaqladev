@@ -1,25 +1,30 @@
 "use client";
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ExternalLink, Github, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { projectData } from '@/lib/data';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/enhanced-button';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { projects, Project } from '@/data/projects';
 
 // List of all unique technologies across projects
 const allTechnologies = Array.from(
-  new Set(projectData.flatMap(project => project.technologies))
+  new Set(projects.flatMap(project => project.techStack))
 ).sort();
 
 export function Projects() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // Filter projects based on search query and selected technology
-  const filteredProjects = projectData.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesTech = selectedTech ? project.technologies.includes(selectedTech) : true;
+  const filteredProjects: Project[] = projects.filter(project => {
+    const matchesSearch =
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesTech = selectedTech ? project.techStack.includes(selectedTech) : true;
     return matchesSearch && matchesTech;
   });
 
@@ -67,52 +72,162 @@ export function Projects() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project, index) => (
-          <div 
-            key={index} 
-            className="group relative bg-card border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl"
+          <motion.div
+            key={project.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -8 }}
+            className="cursor-pointer"
+            onClick={() => setSelectedProject(project)}
           >
-            <div className="relative aspect-video overflow-hidden">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <div className="flex gap-2">
-                  <Button size="sm" variant="secondary" asChild>
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                      Live Demo <ExternalLink className="ml-1 h-3 w-3" />
-                    </a>
-                  </Button>
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-3 w-3" />
-                    </a>
+            <Card className="card-forest h-full group">
+              <div className="aspect-video overflow-hidden rounded-t-xl">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  {project.shortDescription}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.techStack.slice(0, 3).map((tech) => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                  {project.techStack.length > 3 && (
+                    <Badge variant="outline" className="text-xs">
+                      +{project.techStack.length - 3} more
+                    </Badge>
+                  )}
+                </div>
+                <div className="flex gap-3">
+                  <Button
+                    variant="forest-ghost"
+                    size="sm"
+                    className="flex-1 text-xs"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project);
+                    }}
+                  >
+                    View Details
                   </Button>
                 </div>
-              </div>
-            </div>
-            <div className="p-6 space-y-4">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-muted-foreground">{project.description}</p>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, i) => (
-                  <Badge 
-                    key={i} 
-                    variant="secondary" 
-                    className={`rounded-full ${selectedTech === tech ? "bg-primary text-primary-foreground" : ""}`}
-                  >
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
       </div>
+
+      {/* Project Modal */}
+      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          {selectedProject && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+            >
+              <DialogHeader>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <DialogTitle className="text-2xl mb-2 text-gradient">
+                      {selectedProject.title}
+                    </DialogTitle>
+                    <DialogDescription className="text-base">
+                      {selectedProject.longDescription}
+                    </DialogDescription>
+                  </div>
+                </div>
+              </DialogHeader>
+
+              <div className="mt-6 space-y-6">
+                {/* Project Image */}
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                {/* Problem, Solution, Impact */}
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-destructive">Problem</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {selectedProject.problem}
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-primary">Solution</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {selectedProject.solution}
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-accent">Impact</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {selectedProject.impact}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tech Stack */}
+                <div>
+                  <h4 className="font-semibold mb-3">Technology Stack</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.techStack.map((tech) => (
+                      <Badge key={tech} variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-4 pt-4">
+                  {selectedProject.liveDemo && (
+                    <Button
+                      variant="hero"
+                      onClick={() => window.open(selectedProject.liveDemo, '_blank')}
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Live Demo
+                    </Button>
+                  )}
+                  {selectedProject.github ? (
+                    <Button
+                      variant="forest-outline"
+                      onClick={() => window.open(selectedProject.github, '_blank')}
+                    >
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" disabled>
+                      <Github className="mr-2 h-4 w-4" />
+                      Private Repo
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {filteredProjects.length === 0 && (
         <div className="text-center py-12">
