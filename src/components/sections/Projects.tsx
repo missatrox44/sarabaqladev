@@ -21,9 +21,15 @@ export function Projects() {
 
   // Filter projects based on search query and selected technology
   const filteredProjects: Project[] = projects.filter(project => {
+    const q = searchQuery.trim().toLowerCase();
     const matchesSearch =
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase());
+      project.title.toLowerCase().includes(q) ||
+      project.shortDescription.toLowerCase().includes(q) ||
+      project.longDescription.toLowerCase().includes(q) ||
+      project.problem.toLowerCase().includes(q) ||
+      project.solution.toLowerCase().includes(q) ||
+      project.impact.toLowerCase().includes(q) ||
+      project.techStack.some(tech => tech.toLowerCase().includes(q));
     const matchesTech = selectedTech ? project.techStack.includes(selectedTech) : true;
     return matchesSearch && matchesTech;
   });
