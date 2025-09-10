@@ -15,7 +15,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="py-20 scroll-mt-[80px]">
-      <div className="container mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,9 +62,21 @@ export default function ProjectsSection() {
                     {project.attributions?.length ? (
                       <div className="flex gap-2 justify-end">
                         {project.attributions.map((a, i) => (
-                          <Badge key={i} variant="highlight" className="text-xs">
-                            {a.org}
-                          </Badge>
+                          <a
+                            key={i}
+                            href={a.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative inline-flex"
+                            aria-label={`Open ${a.org} in a new tab`}
+                            onClick={e => e.stopPropagation()}
+                          >
+                            <Badge
+                              className="h-fit hover:bg-pink-600 focus:ring-pink-500" variant="highlight"
+                            >
+                              {a.org}
+                            </Badge>
+                          </a>
                         ))}
                       </div>
                     ) : null}

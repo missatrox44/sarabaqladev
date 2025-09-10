@@ -36,34 +36,34 @@ export default function ContactSection() {
       });
     }
   },
- [state.errors, toast]);
-  
+    [state.errors, toast]);
+
   const contactLinks = [
-    { 
-      icon: Mail, 
-      label: 'Email', 
+    {
+      icon: Mail,
+      label: 'Email',
       value: 'missatrox44@gmail.com',
       href: 'mailto:missatrox44@gmail.com'
     },
-    { 
-      icon: Github, 
-      label: 'GitHub', 
+    {
+      icon: Github,
+      label: 'GitHub',
       value: 'github.com/missatrox44',
       href: 'https://github.com/missatrox44'
     },
-    { 
-      icon: Linkedin, 
-      label: 'LinkedIn', 
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
       value: 'linkedin.com/in/sara-baqla',
       href: 'https://www.linkedin.com/in/sara-baqla/'
     }
   ];
 
-  
+
 
   return (
     <section id="contact" className="py-20 scroll-mt-[80px]">
-      <div className="container mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+        <div className="mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -91,7 +91,7 @@ export default function ContactSection() {
             <div>
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                I&apos;m always interested in new opportunities, interesting projects, and great conversations. 
+                I&apos;m always interested in new opportunities, interesting projects, and great conversations.
                 Whether you&apos;re looking to collaborate or just want to say hello, feel free to reach out!
               </p>
             </div>
@@ -107,7 +107,7 @@ export default function ContactSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ x: 10 }}
+                  // whileHover={{ x: 10 }}
                   className="flex items-center p-4 card-forest group cursor-pointer"
                 >
                   <link.icon className="h-6 w-6 text-primary mr-4 group-hover:scale-110 transition-transform" />
@@ -150,65 +150,65 @@ export default function ContactSection() {
                     </p>
                   </div>
                 ) : ( */}
-                  <form  ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name *</Label>
-                      <Input
-                        id="name"
-                        type="text"
-                        name="name"
-                        placeholder="Your name"
-                        required
-                        className="bg-background/50"
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name *</Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                      className="bg-background/50"
+                    />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="your.email@example.com"
+                      required
+                      className="bg-background/50"
+                    />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message *</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell me about your project or just say hello!"
+                      rows={5}
+                      required
+                      className="bg-background/50 resize-none"
+                    />
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    variant="hero"
+                    size="lg"
+                    disabled={state.submitting}
+                    className="w-full"
+                  >
+                    {state.submitting ? (
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        className="mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full"
                       />
-                      <ValidationError prefix="Name" field="name" errors={state.errors} />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="your.email@example.com"
-                        required
-                        className="bg-background/50"
-                      />
-                      <ValidationError prefix="Email" field="email" errors={state.errors} />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell me about your project or just say hello!"
-                        rows={5}
-                        required
-                        className="bg-background/50 resize-none"
-                      />
-                      <ValidationError prefix="Message" field="message" errors={state.errors} />
-                    </div>
-                    
-                    <Button
-                      type="submit"
-                      variant="hero"
-                      size="lg"
-                      disabled={state.submitting}
-                      className="w-full"
-                    >
-                      {state.submitting ? (
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                          className="mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full"
-                        />
-                      ) : (
-                        <Send className="mr-2 h-4 w-4" />
-                      )}
-                      {state.submitting ? 'Sending...' : 'Send Message'}
-                    </Button>
-                  </form>
+                    ) : (
+                      <Send className="mr-2 h-4 w-4" />
+                    )}
+                    {state.submitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
                 {/* )} */}
               </CardContent>
             </Card>

@@ -52,8 +52,8 @@ export function Projects() {
         </div>
         <div className="flex flex-wrap gap-2">
           {selectedTech && (
-            <Badge 
-              variant="secondary" 
+            <Badge
+              variant="secondary"
               className="cursor-pointer"
               onClick={() => setSelectedTech(null)}
             >
@@ -97,9 +97,34 @@ export function Projects() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
+                <div className="flex items-start justify-between">
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
+
+                  {/* Right-aligned pills */}
+                  {project.attributions?.length ? (
+                    <div className="flex gap-2 justify-end">
+                      {project.attributions.map((a, i) => (
+                        <a
+                          key={i}
+                          href={a.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative inline-flex"
+                          aria-label={`Open ${a.org} in a new tab`}
+                          onClick={e => e.stopPropagation()}
+                        >
+                          <Badge
+                            className="h-fit hover:bg-pink-600 focus:ring-pink-500" variant="highlight"
+                          >
+                            {a.org}
+                          </Badge>
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
                 <CardDescription className="text-muted-foreground">
                   {project.shortDescription}
                 </CardDescription>
@@ -149,9 +174,31 @@ export function Projects() {
               <DialogHeader>
                 <div className="flex items-start justify-between">
                   <div>
-                    <DialogTitle className="text-2xl mb-2 text-gradient">
-                      {selectedProject.title}
-                    </DialogTitle>
+                    <div className="flex justify-between items-center">
+                      <DialogTitle className="text-2xl mb-2 text-gradient">
+                        {selectedProject.title}
+                      </DialogTitle>
+                      {selectedProject.attributions?.length ? (
+                        <div className="flex gap-2 mr-3">
+                          {selectedProject.attributions.map((a, i) => (
+                            <a
+                              key={i}
+                              href={a.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group relative inline-flex"
+                              aria-label={`Open ${a.org} in a new tab`}
+                            >
+                              <Badge
+                                className="h-fit hover:bg-pink-600 focus:ring-pink-500" variant="highlight"
+                              >
+                                {a.org}
+                              </Badge>
+                            </a>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
                     <DialogDescription className="text-base">
                       {selectedProject.longDescription}
                     </DialogDescription>
@@ -235,14 +282,16 @@ export function Projects() {
         </DialogContent>
       </Dialog>
 
-      {filteredProjects.length === 0 && (
-        <div className="text-center py-12">
-          <h3 className="text-xl font-bold">No projects found</h3>
-          <p className="text-muted-foreground mt-2">
-            Try adjusting your search or filter criteria
-          </p>
-        </div>
-      )}
-    </div>
+      {
+        filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <h3 className="text-xl font-bold">No projects found</h3>
+            <p className="text-muted-foreground mt-2">
+              Try adjusting your search or filter criteria
+            </p>
+          </div>
+        )
+      }
+    </div >
   );
 }
