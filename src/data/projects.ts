@@ -39,11 +39,37 @@ export const projects: Project[] = [
     liveDemo: "https://www.manresawilds.org/",
     featured: true,
     attributions: [
-      {
-        org: "Reach",
-        // role: "Full Stack Developer",
-        url: "https://www.manresawilds.org/"
-      }
+      { org: 'Reach', url: 'https://reachcreative.com' },
+    ]
+  },
+  {
+    id: "identity-digital-premium",
+    title: "Identity Digital – Premium Catalog",
+    shortDescription:
+      "Standalone Next.js app embedded in Webflow for browsing and filtering premium domain names with CSV export and Hubspot/Salesforce integration.",
+    longDescription:
+      "The Premium Catalog is a Next.js application built for Identity Digital to let clients explore and evaluate premium domain names. I owned this project end-to-end, from architecture to delivery. Users can toggle between grid and list views, filter domains by TLD, name length, and price range, and sort results by price or alphabetically. Filtered results can be exported as a CSV for stakeholder review. Selected domains flow into a Hubspot form, which feeds leads directly into Salesforce for the sales team. Data is maintained in a Google Sheet with a custom Apps Script that transforms the sheet into a JSON API endpoint consumed by the app. The application is fully mobile responsive and embedded seamlessly into Identity Digital’s Webflow site via iFrame.",
+    problem:
+      "Identity Digital needed a way for potential customers to explore premium domain names and quickly identify options that fit their needs. The solution had to support complex filtering, easy sharing of curated lists, and seamless lead capture integrated with existing Hubspot and Salesforce workflows, all while living inside a Webflow site.",
+    solution:
+      "Designed and developed a standalone Next.js application, embedded via iFrame in Webflow, to handle advanced filtering and search at scale. Implemented CSV export for stakeholder review, integrated a Hubspot form for user interest submissions, and ensured those leads were captured in Salesforce. Built a Google Apps Script pipeline to convert and expose domain data from Google Sheets as a JSON endpoint consumed by the app. Delivered a performant experience that can scale with Identity Digital’s catalog.",
+    impact:
+      "Enabled Identity Digital to showcase its premium domain portfolio in a user friendly way that improved client engagement and reduced sales friction. The CSV export empowered clients to share tailored lists with decision makers, while Hubspot and Salesforce integration streamlined lead capture for the sales team. The modular setup allows the catalog to grow as inventory expands, all while staying embedded in the marketing site.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Webflow",
+      "Hubspot",
+      "Salesforce",
+      "Google Sheets + Apps Script"
+    ],
+    image: "/premium-catalog.png",
+    liveDemo: "https://www.identity.digital/premium-catalog",
+    featured: true,
+    attributions: [
+      { org: 'Reach', url: 'https://reachcreative.com' },
+      { org: 'Heco', url: 'https://www.helloheco.com' },
     ]
   },
   {
@@ -65,7 +91,7 @@ export const projects: Project[] = [
     github: '',
     featured: true,
     attributions: [
-      { org: 'Reach', role: 'Full-Stack Developer', url: 'https://reachcreative.com' },
+      { org: 'Reach', url: 'https://reachcreative.com' },
       // { org: 'Heco', role: 'Partner Agency', url: 'https://www.helloheco.com/' },
     ],
   },
