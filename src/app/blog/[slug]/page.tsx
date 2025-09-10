@@ -7,6 +7,11 @@ import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
 import type { BlogPosting, WithContext } from "schema-dts";
 
+interface Params {
+  slug: string;
+}
+
+
 export async function generateMetadata(props: { params: Promise<Params> }) {
   const params = await props.params;
 
