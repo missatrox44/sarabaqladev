@@ -29,7 +29,12 @@ export function Projects() {
       project.problem.toLowerCase().includes(q) ||
       project.solution.toLowerCase().includes(q) ||
       project.impact.toLowerCase().includes(q) ||
-      project.techStack.some(tech => tech.toLowerCase().includes(q));
+      project.techStack.some(tech => tech.toLowerCase().includes(q) ||
+        (project.attributions &&
+          project.attributions.some(attr =>
+            attr.org.toLowerCase().includes(q)
+          )
+        ));
     const matchesTech = selectedTech ? project.techStack.includes(selectedTech) : true;
     return matchesSearch && matchesTech;
   });
