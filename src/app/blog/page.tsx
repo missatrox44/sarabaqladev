@@ -32,9 +32,12 @@ import { wisp } from "@/lib/wisp";
 import { Separator } from "@/components/ui/separator";
 import { BlogPostsPagination } from "@/components/sections/BlogPostsPagination";
 
-export default async function BlogPage({ searchParams }: { searchParams: { page?: string } }) {
-  // read ?page= from the URL (optional)
-  const page = searchParams.page ? parseInt(searchParams.page) : 1;
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined }
+}) {
+  const page = searchParams?.page ? parseInt(Array.isArray(searchParams.page) ? searchParams.page[0] : searchParams.page) : 1;
 
   // fetch from Wisp
   const result = await wisp.getPosts({ limit: 100, });
