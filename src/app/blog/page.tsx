@@ -32,15 +32,19 @@ import { wisp } from "@/lib/wisp";
 import { Separator } from "@/components/ui/separator";
 import { BlogPostsPagination } from "@/components/sections/BlogPostsPagination";
 
+type SearchParams = Record<string, string | string[] | undefined>;
+
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams?: { [key: string]: string | string[] | undefined }
+  searchParams?: Promise<SearchParams>;
 }) {
-  const page = searchParams?.page ? parseInt(Array.isArray(searchParams.page) ? searchParams.page[0] : searchParams.page) : 1;
+  const sp = (await searchParams) ?? {};
+  const raw = sp.page;
+  const page = raw ? parseInt(Array.isArray(raw) ? raw[0] : raw, 10) || 1 : 1;
 
   // fetch from Wisp
-  const result = await wisp.getPosts({ limit: 100, });
+  const result = await wisp.getPosts({ limit: 100 });
   // map Wisp’s post shape into our BlogItem shape
   const posts: BlogItem[] = result.posts.map(post => ({
     title: post.title ?? "Untitled",
