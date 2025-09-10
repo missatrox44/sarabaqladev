@@ -76,7 +76,7 @@ export function Header() {
                 href={GITHUB_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <GithubIcon className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -85,7 +85,7 @@ export function Header() {
                 href={LINKEDIN_URL}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <LinkedinIcon className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>

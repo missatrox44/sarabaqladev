@@ -11,37 +11,37 @@ export interface Project {
   liveDemo?: string;
   github?: string;
   featured: boolean;
-    attributions?: {
+  attributions?: {
     org: 'Reach' | 'Heco' | 'Freelance' | 'Personal';
-    role?: string;      
-    url?: string;       
+    role?: string;
+    url?: string;
   }[];
 }
 
 export const projects: Project[] = [
   {
-  id: 'frommers',
-  title: "Frommer's Website Redesign",
-  shortDescription:
-    "A complete redesign and rebuild of Frommer’s travel site, migrating legacy data into Craft CMS and implementing modern SEO and ad solutions.",
-  longDescription:
-    "Frommer’s, a leader in travel guides and content, needed a modernized digital platform. Their original site was outdated, not mobile-friendly, and poorly optimized for SEO. Our team delivered a full redesign and migration to Craft CMS, importing and restructuring their legacy database to support diverse travel content formats. We applied SEO best practices throughout the build, significantly improving visibility, and implemented a flexible ad injection system to open new revenue streams. The result is a faster, scalable, and user-friendly platform that better serves both readers and the business.",
-  problem:
-    "The legacy Frommer’s site was outdated, difficult to maintain, and underperforming in SEO. Content was stored in inconsistent formats, making migration and scalability a challenge. Revenue opportunities through advertising were also limited.",
-  solution:
-    "Rebuilt the site on Craft CMS with a clean, responsive design. Migrated and normalized legacy database content into structured entries, enabling efficient content management. Implemented SEO best practices across templates, metadata, and site architecture. Added an ad injection system to maximize monetization without disrupting the user experience.",
-  impact:
-    "Improved organic search visibility and site performance, helping Frommer’s reach more readers. Streamlined editorial workflows with Craft CMS, reducing content management overhead. Introduced flexible ad placements that increased revenue opportunities while maintaining usability.",
-  techStack: ['Craft CMS 5', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript'],
-  image: '/frommers.png',
-  liveDemo: 'https://www.frommers.com/',
-  github: '', 
-  featured: true,
+    id: 'frommers',
+    title: "Frommer's",
+    shortDescription:
+      "A complete redesign and rebuild of Frommer’s travel site, migrating legacy data into Craft CMS and implementing modern SEO and ad solutions.",
+    longDescription:
+      "Frommer’s, a leader in travel guides and content, needed a modernized digital platform. Their original site was outdated, not mobile-friendly, and poorly optimized for SEO. Our team delivered a full redesign and migration to Craft CMS, importing and restructuring their legacy database to support diverse travel content formats. We applied SEO best practices throughout the build, significantly improving visibility, and implemented a flexible ad injection system to open new revenue streams. The result is a faster, scalable, and user-friendly platform that better serves both readers and the business.",
+    problem:
+      "The legacy Frommer’s site was outdated, difficult to maintain, and underperforming in SEO. Content was stored in inconsistent formats, making migration and scalability a challenge. Revenue opportunities through advertising were also limited.",
+    solution:
+      "Rebuilt the site on Craft CMS with a clean, responsive design. Migrated and normalized legacy database content into structured entries, enabling efficient content management. Implemented SEO best practices across templates, metadata, and site architecture. Added an ad injection system to maximize monetization without disrupting the user experience.",
+    impact:
+      "Improved organic search visibility and site performance, helping Frommer’s reach more readers. Streamlined editorial workflows with Craft CMS, reducing content management overhead. Introduced flexible ad placements that increased revenue opportunities while maintaining usability.",
+    techStack: ['Craft CMS 5', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript'],
+    image: '/frommers.png',
+    liveDemo: 'https://www.frommers.com/',
+    github: '',
+    featured: true,
     attributions: [
-    { org: 'Reach', role: 'Full-Stack Developer', url: 'https://reachcreative.com' },
-    { org: 'Heco', role: 'Partner Agency', url: 'https://www.helloheco.com/' },
-  ],
-},
+      { org: 'Reach', role: 'Full-Stack Developer', url: 'https://reachcreative.com' },
+      // { org: 'Heco', role: 'Partner Agency', url: 'https://www.helloheco.com/' },
+    ],
+  },
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
@@ -59,7 +59,9 @@ export const projects: Project[] = [
     image: 'projects/quality-water-4-usa.png',
     liveDemo: 'https://qualitywater4usa.com',
     github: '',
-    featured: false,
+    featured: true,
+        attributions: [
+      { org: 'Freelance' }],
   },
   {
     id: 'crab-city-server-rotation',
@@ -78,7 +80,7 @@ export const projects: Project[] = [
     image: 'projects/crab-city.png',
     liveDemo: 'https://crab-city.vercel.app/',
     github: 'https://github.com/missatrox44/server-rotation-crab-city',
-    featured: false,
+    featured: true,
   },
   {
     id: 'love-thy-selfie',

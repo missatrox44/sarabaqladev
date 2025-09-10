@@ -19,7 +19,7 @@ const buttonVariants = cva(
         forest: "btn-forest",
         "forest-ghost": "btn-ghost-forest px-6 py-3 rounded-xl font-medium",
         "forest-outline": "border border-primary/30 bg-transparent text-primary hover:bg-primary/10 hover:border-primary px-6 py-3 rounded-xl font-medium transition-all duration-300",
-        hero: "bg-gradient-forest text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ring-0 hover:ring-2 hover:ring-primary/30"
+        hero: "bg-gradient-forest text-[#181E2B] font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ring-0 hover:ring-2 hover:ring-primary/30"
       },
       size: {
         default: "h-9 px-4 py-2",
