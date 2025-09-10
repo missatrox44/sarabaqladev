@@ -100,7 +100,7 @@ export default function HeroSection() {
               onClick={scrollToProjects}
               className="min-w-[200px] group"
             >
-              Featured Projects
+              Featured Work
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 

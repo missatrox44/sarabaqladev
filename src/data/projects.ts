@@ -20,6 +20,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "manresa-wilds",
+    title: "Manresa Wilds",
+    shortDescription:
+      "Next.js + Prismic site for a first-of-its-kind waterfront park in Norwalk, CT, built with a modular, mobile first approach.",
+    longDescription:
+      "Manresa Wilds is a public facing Next.js application connected to Prismic that tells the story of a new, publicly accessible waterfront park. I worked on a cross functional team where I conducted PR reviews, gave implementation feedback, and collaborated on highly effective sprint planning. The site is fully responsive and designed for accessible, fast loading content updates via Prismic’s slice-based components.",
+    problem:
+      "Manresa Island Corporation needed a modern, flexible platform to share its vision of transforming a decommissioned power plant into 1.75 miles of new public waterfront access. The site had to host event listings, recaps, press releases, and rich storytelling about the site’s history, mission, and future ecological programs, while empowering non-technical staff to publish updates without developer support.",
+
+    solution:
+      "Built a responsive Next.js application integrated with Prismic CMS, using slice based components for modular, editorially flexible content. Collaborated in effective sprint planning, PR reviews, and provided implementation feedback to maintain quality. Implemented accessible, performant layouts that adapt seamlessly across devices, ensuring the site could scale as new programming and ecological initiatives roll out.",
+
+    impact:
+      "Launched a scalable storytelling hub that communicates the park’s mission, showcases events and press coverage, and supports community engagement. The site strengthens outreach and fundraising efforts, provides transparency around remediation and ecological restoration, and lays a digital foundation for Manresa Wilds to inspire public connection to the waterfront for the first time in nearly 75 years.",
+    techStack: ["Next.js", "TypeScript", "Prismic", "Tailwind CSS", "SCSS Modules"],
+    image: "/manresa.png",
+    liveDemo: "https://www.manresawilds.org/",
+    featured: true,
+    attributions: [
+      {
+        org: "Reach",
+        // role: "Full Stack Developer",
+        url: "https://www.manresawilds.org/"
+      }
+    ]
+  },
+  {
     id: 'frommers',
     title: "Frommer's",
     shortDescription:
@@ -59,7 +86,7 @@ export const projects: Project[] = [
     image: 'projects/quality-water-4-usa.png',
     liveDemo: 'https://qualitywater4usa.com',
     github: '',
-    featured: true,
+    featured: false,
     attributions: [
       { org: 'Freelance' }
     ],
@@ -81,7 +108,7 @@ export const projects: Project[] = [
     image: 'projects/crab-city.png',
     liveDemo: 'https://crab-city.vercel.app/',
     github: 'https://github.com/missatrox44/server-rotation-crab-city',
-    featured: true,
+    featured: false,
     attributions: [
       { org: 'Prototype' }
     ],
