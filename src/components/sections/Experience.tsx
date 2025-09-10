@@ -1,6 +1,6 @@
 import { Book, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { experienceData } from '@/lib/data';
+import { experienceData } from '@/data/experience';
 import { Badge } from '@/components/ui/badge';
 
 export function Experience() {
