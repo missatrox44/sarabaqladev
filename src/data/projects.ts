@@ -96,6 +96,37 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "nantbio-renewables",
+    title: "NantBio Renewables",
+    shortDescription:
+      "WordPress site for a sustainability focused company selling compostable straws, tableware, and cutlery made from ocean calcium sand.",
+    longDescription:
+      "NantBio Renewables needed a modern website to showcase its Wave Ware™ line of compostable straws, plates, bowls, cutlery, and trays. Built in WordPress with Blade templating, the site highlights the company’s sustainable, ocean sourced materials and product innovations. I contributed to the development of several pages and custom components, implemented interactive sliders, built modals connected to HubSpot forms, and create templates for custom post types. The result is a responsive, engaging site that communicates both the science and story of truly compostable materials.",
+    problem:
+      "NantBio Renewables required a flexible, marketing driven platform to promote its Wave Ware™ products and educate customers on the benefits of compostable, ocean calcium based alternatives to plastics. The site needed to combine storytelling with lead capture while supporting ongoing news and press release content.",
+    solution:
+      "Developed key site components in WordPress using Blade templating. Built custom pages and content types, implemented interactive features such as Slider.js carousels, and integrated modals with HubSpot forms for seamless lead capture. Ensured mobile responsiveness and a cohesive brand experience across the product catalog and blog content.",
+    impact:
+      "Delivered a sustainable focused web presence that helps NantBio Renewables tell the story of its carbon negative materials and eco friendly products. The site improved customer engagement, streamlined lead generation through HubSpot, and positioned the brand as a trusted provider of compostable, USA made tableware and packaging solutions.",
+    techStack: [
+      "WordPress",
+      "Blade",
+      "PHP",
+      "JavaScript",
+      "Slider.js",
+      "HubSpot"
+    ],
+    image: "/nant-bio.png",
+    liveDemo: "https://nantbr.com/",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://reachcreative.com"
+      }
+    ]
+  },
+  {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
     shortDescription:
