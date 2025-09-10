@@ -11,6 +11,11 @@ export interface Project {
   liveDemo?: string;
   github?: string;
   featured: boolean;
+    attributions?: {
+    org: 'Reach' | 'Heco' | 'Freelance' | 'Personal';
+    role?: string;      
+    url?: string;       
+  }[];
 }
 
 export const projects: Project[] = [
@@ -32,6 +37,10 @@ export const projects: Project[] = [
   liveDemo: 'https://www.frommers.com/',
   github: '', 
   featured: true,
+    attributions: [
+    { org: 'Reach', role: 'Full-Stack Developer', url: 'https://reachcreative.com' },
+    { org: 'Heco', role: 'Partner Agency', url: 'https://www.helloheco.com/' },
+  ],
 },
   {
     id: 'quality-water-4-usa',

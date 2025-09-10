@@ -52,9 +52,24 @@ export default function ProjectsSection() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                    {project.title}
-                  </CardTitle>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      {project.title}
+
+                    </CardTitle>
+
+                    {/* Right-aligned pills */}
+                    {project.attributions?.length ? (
+                      <div className="flex gap-2 justify-end">
+                        {project.attributions.map((a, i) => (
+                          <Badge key={i} variant="highlight" className="text-xs">
+                            {a.org}
+                          </Badge>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+
                   <CardDescription className="text-muted-foreground">
                     {project.shortDescription}
                   </CardDescription>
@@ -110,9 +125,20 @@ export default function ProjectsSection() {
                 <DialogHeader>
                   <div className="flex items-start justify-between">
                     <div>
+                      <div className="flex justify-between">
                       <DialogTitle className="text-2xl mb-2 text-gradient">
                         {selectedProject.title}
                       </DialogTitle>
+                      {selectedProject.attributions?.length ? (
+                        <div className="flex gap-2 mr-3">
+                          {selectedProject.attributions.map((a, i) => (
+                            <Badge key={i} variant="highlight" className="text-xs h-fit">
+                              {a.org}
+                            </Badge>
+                          ))}
+                        </div>
+                      ) : null}
+                      </div>
                       <DialogDescription className="text-base">
                         {selectedProject.longDescription}
                       </DialogDescription>
@@ -203,6 +229,6 @@ export default function ProjectsSection() {
           </DialogContent>
         </Dialog>
       </div>
-    </section>
+    </section >
   );
 }
