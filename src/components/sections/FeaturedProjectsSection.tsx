@@ -125,19 +125,30 @@ export default function ProjectsSection() {
                 <DialogHeader>
                   <div className="flex items-start justify-between">
                     <div>
-                      <div className="flex justify-between">
-                      <DialogTitle className="text-2xl mb-2 text-gradient">
-                        {selectedProject.title}
-                      </DialogTitle>
-                      {selectedProject.attributions?.length ? (
-                        <div className="flex gap-2 mr-3">
-                          {selectedProject.attributions.map((a, i) => (
-                            <Badge key={i} variant="highlight" className="text-xs h-fit">
-                              {a.org}
-                            </Badge>
-                          ))}
-                        </div>
-                      ) : null}
+                      <div className="flex justify-between items-center">
+                        <DialogTitle className="text-2xl mb-2 text-gradient">
+                          {selectedProject.title}
+                        </DialogTitle>
+                        {selectedProject.attributions?.length ? (
+                          <div className="flex gap-2 mr-3">
+                            {selectedProject.attributions.map((a, i) => (
+                              <a
+                                key={i}
+                                href={a.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative inline-flex"
+                                aria-label={`Open ${a.org} in a new tab`}
+                              >
+                                <Badge
+                                  className="h-fit hover:bg-pink-600 focus:ring-pink-500" variant="highlight"
+                                >
+                                  {a.org}
+                                </Badge>
+                              </a>
+                            ))}
+                          </div>
+                        ) : null}
                       </div>
                       <DialogDescription className="text-base">
                         {selectedProject.longDescription}

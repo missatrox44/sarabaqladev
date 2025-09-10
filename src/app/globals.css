@@ -34,6 +34,11 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
+    --pink: 330 81% 60%; /* #EC4899 */
+    --pink-accent: 333 71% 67%; /* #F472B6 */
+    --pink-deep: 335 77% 45%; /* #DB2777 */
+    --pink-foreground: 0 0% 98%; 
+
     --border: 220 26% 18%;
     --input: 220 26% 18%;
     --ring: 158 64% 52%;
@@ -41,9 +46,22 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Forest Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%), hsl(84 81% 69%), hsl(120 61% 50%));
-    --gradient-accent: linear-gradient(90deg, hsl(145 76% 69%), hsl(158 64% 52%));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 26% 14%), hsl(220 39% 11%));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(158 64% 52%),
+      hsl(84 81% 69%),
+      hsl(120 61% 50%)
+    );
+    --gradient-accent: linear-gradient(
+      90deg,
+      hsl(145 76% 69%),
+      hsl(158 64% 52%)
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(220 26% 14%),
+      hsl(220 39% 11%)
+    );
 
     /* Shadows */
     --shadow-forest: 0 10px 40px -10px hsl(158 64% 52% / 0.2);
@@ -154,5 +172,16 @@ All colors MUST be HSL.
   /* Navigation */
   .nav-sticky {
     @apply backdrop-blur-xl bg-background/80 border-b border-border/50;
+  }
+}
+
+@layer utilities {
+  @keyframes glow-pink {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+    }
   }
 }
