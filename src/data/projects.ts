@@ -12,7 +12,7 @@ export interface Project {
   github?: string;
   featured: boolean;
   attributions?: {
-    org: 'Reach' | 'Heco' | 'Freelance' | 'Personal';
+    org: 'Reach' | 'Heco' | 'Freelance' | 'Personal' | 'Experimental' | 'Prototype';
     role?: string;
     url?: string;
   }[];
@@ -60,8 +60,9 @@ export const projects: Project[] = [
     liveDemo: 'https://qualitywater4usa.com',
     github: '',
     featured: true,
-        attributions: [
-      { org: 'Freelance' }],
+    attributions: [
+      { org: 'Freelance' }
+    ],
   },
   {
     id: 'crab-city-server-rotation',
@@ -81,6 +82,10 @@ export const projects: Project[] = [
     liveDemo: 'https://crab-city.vercel.app/',
     github: 'https://github.com/missatrox44/server-rotation-crab-city',
     featured: true,
+    attributions: [
+      { org: 'Prototype' }
+    ],
+
   },
   {
     id: 'love-thy-selfie',
@@ -100,6 +105,9 @@ export const projects: Project[] = [
     liveDemo: 'https://www.lovethyselfiephotobooth.com/',
     github: 'https://github.com/missatrox44/love-thy-selfie',
     featured: false,
+    attributions: [
+      { org: 'Freelance' }
+    ],
   },
   {
     id: 'ohs-broncho-band',
@@ -119,6 +127,9 @@ export const projects: Project[] = [
     liveDemo: 'https://www.odessaband.org/',
     github: '',
     featured: false,
+    attributions: [
+      { org: 'Freelance' }
+    ],
   },
   {
     id: 'pomodoro-timer',
@@ -138,6 +149,9 @@ export const projects: Project[] = [
     liveDemo: 'https://missatrox44.github.io/pomodoro-clock/',
     github: 'https://github.com/missatrox44/pomodoro-clock',
     featured: false,
+    attributions: [
+      { org: 'Prototype' }
+    ],
   },
   {
     id: 'travel-2-it',
@@ -157,5 +171,8 @@ export const projects: Project[] = [
     liveDemo: 'https://cosmic-gnome-4fc624.netlify.app/',
     github: 'https://github.com/missatrox44/travel2it',
     featured: false,
+    attributions: [
+      { org: 'Prototype' }
+    ],
   }
 ];
