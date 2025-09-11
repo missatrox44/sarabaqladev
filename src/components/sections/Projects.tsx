@@ -18,10 +18,16 @@ export function Projects() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
 
-  // Filter projects based on search query and selected technology
+  const handleTechFilter = (tech: string) => {
+    setSelectedTechs(prev =>
+      prev.includes(tech) ? prev.filter(t => t !== tech) : [...prev, tech]
+    );
+  };
   const filteredProjects: Project[] = projects.filter(project => {
     const q = searchQuery.trim().toLowerCase();
+
     const matchesSearch =
       project.title.toLowerCase().includes(q) ||
       project.shortDescription.toLowerCase().includes(q) ||
@@ -29,19 +35,44 @@ export function Projects() {
       project.problem.toLowerCase().includes(q) ||
       project.solution.toLowerCase().includes(q) ||
       project.impact.toLowerCase().includes(q) ||
-      project.techStack.some(tech => tech.toLowerCase().includes(q) ||
-        (project.attributions &&
-          project.attributions.some(attr =>
-            attr.org.toLowerCase().includes(q)
-          )
-        ));
-    const matchesTech = selectedTech ? project.techStack.includes(selectedTech) : true;
+      project.techStack.some(
+        tech =>
+          tech.toLowerCase().includes(q) ||
+          (project.attributions &&
+            project.attributions.some(attr => attr.org.toLowerCase().includes(q)))
+      );
+
+    const matchesTech =
+      selectedTechs.length === 0
+        ? true
+        : selectedTechs.every(t => project.techStack.includes(t));
+
     return matchesSearch && matchesTech;
   });
 
-  const handleTechFilter = (tech: string) => {
-    setSelectedTech(selectedTech === tech ? null : tech);
-  };
+  // Filter projects based on search query and selected technology
+  // const filteredProjects: Project[] = projects.filter(project => {
+  //   const q = searchQuery.trim().toLowerCase();
+  //   const matchesSearch =
+  //     project.title.toLowerCase().includes(q) ||
+  //     project.shortDescription.toLowerCase().includes(q) ||
+  //     project.longDescription.toLowerCase().includes(q) ||
+  //     project.problem.toLowerCase().includes(q) ||
+  //     project.solution.toLowerCase().includes(q) ||
+  //     project.impact.toLowerCase().includes(q) ||
+  //     project.techStack.some(tech => tech.toLowerCase().includes(q) ||
+  //       (project.attributions &&
+  //         project.attributions.some(attr =>
+  //           attr.org.toLowerCase().includes(q)
+  //         )
+  //       ));
+  //   const matchesTech = selectedTech ? project.techStack.includes(selectedTech) : true;
+  //   return matchesSearch && matchesTech;
+  // });
+
+  // const handleTechFilter = (tech: string) => {
+  //   setSelectedTech(selectedTech === tech ? null : tech);
+  // };
 
   return (
     <div className="space-y-8">
@@ -56,6 +87,30 @@ export function Projects() {
           />
         </div>
         <div className="flex flex-wrap gap-2">
+          {selectedTechs.length > 0 && (
+            <>
+              {selectedTechs.map(t => (
+                <Badge
+                  key={t}
+                  variant="secondary"
+                  className="cursor-pointer"
+                  onClick={() => handleTechFilter(t)}
+                  title="Remove filter"
+                >
+                  {t} ✕
+                </Badge>
+              ))}
+              <Badge
+                variant="secondary"
+                className="cursor-pointer"
+                onClick={() => setSelectedTechs([])}
+              >
+                Clear all
+              </Badge>
+            </>
+          )}
+        </div>
+        {/* <div className="flex flex-wrap gap-2">
           {selectedTech && (
             <Badge
               variant="secondary"
@@ -65,7 +120,7 @@ export function Projects() {
               Clear filter
             </Badge>
           )}
-        </div>
+        </div> */}
       </div>
 
       <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar">
