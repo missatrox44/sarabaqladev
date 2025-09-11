@@ -8,13 +8,13 @@ export function Experience() {
     <section id="experience" className="py-24 relative overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 text-center mb-16">
-          <div className="inline-block">
+          {/* <div className="inline-block">
             <Badge variant="outline" className="text-sm font-medium rounded-full px-4 py-1">
               My Journey
             </Badge>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Experience &amp; Education
+          </div> */}
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Education &amp; <span className="text-gradient">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             A timeline of my professional career and educational background.

@@ -1,14 +1,26 @@
 export const experienceData = [
-  {
-    title: 'Full Stack Developer',
-    company: 'Reach Creative',
-    location: 'Remote',
-    period: 'Jan 2024 – Present',
-    description:
-      'Develop Next.js components and CMS-driven pages using Prismic and Sanity. Work closely with designers to deliver polished, performant web experiences.',
-    type: 'work',
-    skills: ['Next.js', 'Sanity', 'Prismic', 'Supabase', 'Typescript', 'Vue.js']
-  },
+{
+  title: 'Full Stack Developer',
+  company: 'Reach Creative',
+  location: 'Remote',
+  period: 'Jan 2024 – Sept 2025',
+  description:
+    'Delivered modern web experiences for high profile clients including National Geographic, Core Spaces, and Resolute Ventures. Built new Next.js components and pages integrated with Prismic and Sanity, implemented Supabase logic for secure form workflows, and maintained highly animated legacy apps with GSAP, React Three Fiber, and Spline. Partnered with designers and agencies (Heco) to translate complex designs into responsive, performant, and CMS-driven sites.',
+  type: 'work',
+  skills: [
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Prismic',
+    'Sanity',
+    'Supabase',
+    'Tailwind CSS',
+    'Sass',
+    'React Three Fiber',
+    'Spline',
+    'Vue.js'
+  ]
+},
   {
     title: 'Junior Software Developer',
     company: 'IBG Software',
