@@ -13,7 +13,6 @@ export interface Project {
   featured: boolean;
   attributions?: {
     org: 'Reach' | 'Heco' | 'Freelance' | 'Personal' | 'Experimental' | 'Prototype';
-    role?: string;
     url?: string;
   }[];
 }
@@ -123,6 +122,37 @@ export const projects: Project[] = [
       {
         org: "Reach",
         url: "https://reachcreative.com"
+      }
+    ]
+  },
+  {
+    id: "resolute-ventures",
+    title: "Resolute Ventures",
+    shortDescription:
+      "Modernized venture fund site with rich motion, connected to Prismic with editable portfolio and team pages.",
+    longDescription:
+      "Resolute Ventures is a lead pre-seed/seed investor known for a founder first approach and a strong community ethos. We rebuilt their marketing site as a Next.js app with thoughtful animations and a flexible Prismic CMS. The site highlights their story, people, and community while giving the team full control over content including portfolio companies, founder blurbs, retreat highlights, and more, without developer handoffs.",
+    problem:
+      "The previous site looked dated and was difficult to update. Resolute needed a faster, modern experience that clearly communicated their founder first philosophy and allowed non technical team members to manage portfolio companies, bios, and community content.",
+    solution:
+      "Rebuilt the site in Next.js with an animation system (GSAP) for subtle, performance minded motion. Modeled content in Prismic. Implemented pages for Companies, About (history + leadership), and Community (retreats, coaching, peer programs). Deployed on Vercel with image optimization and caching.",
+    impact:
+      "A contemporary look and feel that better reflects the brand. Faster load times and smoother interactions. Fully editable CMS where the Resolute team can update companies, bios, and community sections in minutes, keeping the site aligned with their active founder community.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Prismic",
+      "Tailwind CSS",
+      "Vercel", "GSAP"
+    ],
+    image: "resolute.png",
+    liveDemo: "https://www.resolute.vc/",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://www.resolute.vc/"
       }
     ]
   },
