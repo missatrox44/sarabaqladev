@@ -187,6 +187,39 @@ export const projects: Project[] = [
   ]
 },
 {
+  id: "nat-geo-travel-texas",
+  title: "National Geographic – Travel Texas",
+  shortDescription:
+    "Enhanced National Geographic’s Travel Texas microsite with new articles, carousel media, films, and interactive map updates using Spline.",
+  longDescription:
+    "National Geographic’s Travel Texas site is a rich, animated microsite highlighting the culture, landscapes, and destinations across Texas. At Reach, I supported major content updates, including refreshing carousel images, adding new editorial articles to the masonry grid, and updating the interactive map built with Spline by adding new points of interest. I also integrated two new short films into the experience, updating the playback logic to accommodate their external hosting. The site makes heavy use of advanced animation and 3D libraries including Three.js, React Three Fiber, GSAP, and Spline, requiring careful integration to maintain smooth performance and responsive behavior.",
+  problem:
+    "The client needed to refresh the campaign with new articles, films, and map content, but the site’s reliance on complex 3D/animation libraries and custom logic meant updates risked breaking layouts, animations, or film playback.",
+  solution:
+    "Updated carousel images and masonry grid articles while maintaining visual balance and responsive layout. Added new points of interest to the Spline-powered interactive map, ensuring they rendered correctly across breakpoints. Integrated two externally hosted films, adjusting playback logic so users could view them seamlessly without breaking the flow of the microsite.",
+  impact:
+    "Kept a highly interactive National Geographic microsite current and engaging with new stories, films, and map experiences. Maintained the integrity of complex animations and 3D interactions, allowing visitors to continue exploring Texas’s highlights through a performant, visually dynamic interface.",
+  techStack: [
+    "Next.js",
+    "React",
+    "Sass",
+    "Three.js",
+    "React Three Fiber",
+    "Spline",
+    "GSAP",
+    "Keen Slider"
+  ],
+  image: "/travel-texas.png",
+  liveDemo: "https://www.nationalgeographic.com/travel-texas/",
+  featured: false,
+  attributions: [
+    {
+      org: "Reach",
+      url: "https://reachcreative.com"
+    }
+  ]
+},
+{
   id: "nat-geo-earth-month-sweepstakes",
   title: "National Geographic Earth Month Sweepstakes",
   shortDescription:
