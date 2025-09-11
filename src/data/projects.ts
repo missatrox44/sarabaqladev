@@ -152,10 +152,40 @@ export const projects: Project[] = [
     attributions: [
       {
         org: "Reach",
-        url: "https://www.resolute.vc/"
+        url: "https://www.reachcreative.com/"
       }
     ]
   },
+  {
+  id: "nhrl",
+  title: "NHRL",
+  shortDescription:
+    "Contributed to NHRL’s legacy Next.js app by implementing new Prismic components promoting Havoc Academy.",
+  longDescription:
+    "NHRL (National Havoc Robot League) is a competitive combat robotics league with events, live streaming, and community offerings. At Reach, I supported updates to their legacy Next.js app by building new marketing components to promote Havoc Academy. I created a reusable Prismic slice and ensured it was fully responsive across devices, aligning closely with designer specifications. While the app used custom CSS rather than Tailwind, I optimized layouts for mobile and maintained consistency with the existing codebase.",
+  problem:
+    "The client needed to promote a new educational product, Havoc Academy, within their existing site. Their marketing team required flexibility to update and reuse content through Prismic without heavy developer involvement.",
+  solution:
+    "Built a new Prismic slice for Havoc Academy with customizable fields and responsive layouts. Integrated the slice into the Next.js app with custom CSS, ensuring the component matched designs across breakpoints while preserving site performance and code standards.",
+  impact:
+    "Delivered a scalable component that allowed the client’s content team to promote Havoc Academy independently. Improved mobile responsiveness and helped extend the lifespan of the legacy codebase by integrating modern, flexible content updates.",
+  techStack: [
+    "Next.js",
+    "React",
+    "Prismic",
+    "JavaScript",
+    "CSS Modules"
+  ],
+  image: "/nhrl.png",
+  liveDemo: "https://www.nhrl.io/",
+  featured: false,
+  attributions: [
+    {
+      org: "Reach",
+      url: "https://www.reachcreative.com/"
+    }
+  ]
+},
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
