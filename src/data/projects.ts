@@ -186,6 +186,36 @@ export const projects: Project[] = [
     }
   ]
 },
+{
+  id: "nat-geo-earth-month-sweepstakes",
+  title: "National Geographic Earth Month Sweepstakes",
+  shortDescription:
+    "Supported National Geographic’s annual sweepstakes campaign with content updates and Supabase driven entry restrictions.",
+  longDescription:
+    "National Geographic’s annual Earth Month Sweepstakes celebrated our planet with a once-in-a-lifetime grand prize: a National Geographic–Lindblad Expeditions cruise to Antarctica. At Reach, I contributed to the legacy Next.js + Tailwind app by updating content for the 2025 campaign and implementing new logic with Supabase. I ensured users could enter only once per day during the April 15–30 sweepstakes window and added date based logic to automatically disable the form after the promotion ended, showing a clear 'promotion ended' message instead of an inactive form. This improved compliance with sweepstakes rules, reduced manual intervention, and created a smoother experience for participants.",
+  problem:
+    "The sweepstakes microsite needed fresh content for the 2025 promotion and lacked guardrails to enforce daily entry limits.",
+  solution:
+    "Updated copy and assets for the current year’s sweepstakes. Integrated Supabase logic to validate one entry per user per day.",
+    impact:
+  "Delivered an improved sweepstakes experience: users could confidently enter daily without loopholes, admins no longer had to sort and clean a large database of duplicate entries at the end, and visitors saw clear messaging once the promotion concluded.",
+  techStack: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Supabase",
+    "JavaScript"
+  ],
+  image: "/nat-geo-earth-month.png",
+  liveDemo: "https://www.nationalgeographic.com/ourhomesweepstakes/",
+  featured: false,
+  attributions: [
+    {
+      org: "Reach",
+      url: "https://reachcreative.com"
+    }
+  ]
+},
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
