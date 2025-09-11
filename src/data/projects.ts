@@ -278,6 +278,44 @@ export const projects: Project[] = [
     }
   ]
 },
+{
+  id: "core-spaces-strategy",
+  title: "Core Spaces – Strategy Page",
+  shortDescription:
+    "Built the new Strategy page for Core Spaces, integrating dynamic content from Prismic and showcasing their student housing and build-to-rent strategies.",
+  longDescription:
+    "Core Spaces is a vertically integrated real estate developer and operator specializing in student housing and build-to-rent communities. At Reach (in collaboration with Heco), I built the Strategy page of their corporate site. Connected to Prismic, the page highlights Core’s vision, mission, industry leadership, and strategies across student housing and build-to-rent markets. I implemented sections for metrics, strategy pillars, and case studies (oLiv Madison, Oxenfree WEHO), ensuring content editors could update copy, stats, and media without developer support. The page integrates advanced animation and UI libraries to deliver a smooth, polished experience aligned with Core’s innovative brand.",
+  problem:
+    "Core Spaces needed a new page to clearly communicate its strategy and leadership in student housing and build-to-rent sectors. The challenge was to deliver a content-rich, design-driven experience that could be easily updated by non-technical staff.",
+  solution:
+    "Implemented a fully CMS-driven Strategy page using Prismic, structured with reusable slices for sections like stats, strategy pillars, case studies, and video. Leveraged animation and UI libraries to bring the design vision to life, while ensuring the page was responsive and easy for admins to update year-to-year.",
+  impact:
+    "Delivered a visually engaging and content-rich Strategy page that communicated Core’s market leadership and growth strategy. Empowered admins with a flexible, CMS-driven system for future updates and ensured smooth, responsive animations that elevated the brand’s digital presence.",
+  techStack: [
+    "Next.js",
+    "React",
+    "Prismic",
+    "Sass",
+    "GSAP",
+    "React Three Fiber",
+    "Spline",
+    "Keen Slider",
+    "Mapbox GL"
+  ],
+  image: "/core-spaces.png",
+  liveDemo: "https://corespaces.com/strategy",
+  featured: false,
+  attributions: [
+    {
+      org: "Reach",
+      url: "https://reachcreative.com"
+    },
+    {
+      org: "Heco",
+      url: "https://helloheco.com"
+    }
+  ]
+},
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',

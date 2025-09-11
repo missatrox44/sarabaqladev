@@ -109,7 +109,7 @@ export function Projects() {
 
                   {/* Right-aligned pills */}
                   {project.attributions?.length ? (
-                    <div className="flex gap-2 justify-end">
+                    <div className="ml-2 flex gap-2 justify-end">
                       {project.attributions.map((a, i) => (
                         <a
                           key={i}
