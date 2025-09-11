@@ -216,6 +216,35 @@ export const projects: Project[] = [
     }
   ]
 },
+ {
+  id: "nat-geo-travel-nevada",
+  title: "National Geographic – Travel Nevada",
+  shortDescription:
+    "Maintained National Geographic’s Travel Nevada microsite with new media, stories, and shorts integrated into its highly animated layouts.",
+  longDescription:
+    "National Geographic’s Travel Nevada site showcases the best of Nevada — from scenic drives and cultural landmarks to adventure tourism. Built as a highly animated Next.js experience, the site included a dynamic masonry grid, interactive carousels, and stacking card effects to highlight stories and shorts. At Reach, I supported annual content updates, adding new videos and images to the masonry grid while preserving proper heights and responsive behavior. I also integrated new editorial stories and shorts into their respective components, ensuring animations and transitions continued to function smoothly. This work extended the life of the site and kept the campaign fresh and engaging for visitors exploring Nevada’s attractions.",
+  problem:
+    "The site required fresh yearly content to keep audiences engaged, but its complex animated layouts (masonry grid, carousels, stacking cards) meant updates risked breaking layouts or animations if not implemented carefully.",
+  solution:
+    "Updated the masonry grid with new videos and images, adjusting sizing logic to preserve consistent heights. Added new stories into the carousel and new shorts into the stacking card effect, ensuring animations and responsive behavior continued to work seamlessly across devices.",
+  impact:
+    "Kept a National Geographic microsite current with new editorial content and media, maintained the integrity of complex interactive layouts, and ensured a smooth, visually engaging experience for audiences exploring Nevada’s tourism highlights.",
+  techStack: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "CSS",
+  ],
+  image: "/travel-nevada.png",
+  liveDemo: "https://www.nationalgeographic.com/travel-nevada/",
+  featured: false,
+  attributions: [
+    {
+      org: "Reach",
+      url: "https://reachcreative.com"
+    }
+  ]
+},
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
