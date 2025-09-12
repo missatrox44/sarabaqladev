@@ -27,7 +27,7 @@ export default function ProjectsSection() {
             Featured <span className="text-gradient">Work</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of applications I&apos;ve built, from concept to deployment. The portfolio reflects both freelance ventures and select professional projects from my career journey.
+            A showcase of applications I&apos;ve built. The portfolio reflects both freelance ventures and select professional projects from my career journey.
           </p>
         </motion.div>
 

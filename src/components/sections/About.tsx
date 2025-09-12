@@ -16,13 +16,13 @@ import { motion } from 'framer-motion';
 // ];
 
 const skills = [
-  { name: 'Full-Stack Development', icon: <Layout className="h-5 w-5" /> },
+  { name: 'Full Stack Development', icon: <Layout className="h-5 w-5" /> },
   { name: 'React & Next.js', icon: <Monitor className="h-5 w-5" /> },
   { name: 'React Native', icon: <Smartphone className="h-5 w-5" /> },
   { name: 'Node.js & APIs', icon: <Database className="h-5 w-5" /> },
   { name: 'Headless CMS Integration', icon: <Globe className="h-5 w-5" /> },
   // { name: 'UX/UI Collaboration', icon: <Figma className="h-5 w-5" /> },
-  { name: 'Tailwind CSS & SCSS', icon: <Palette className="h-5 w-5" /> },
+  { name: 'Tailwind & SCSS', icon: <Palette className="h-5 w-5" /> },
   // { name: 'Testing (Cypress)', icon: <CheckSquare className="h-5 w-5" /> },
 ];
 
@@ -53,7 +53,7 @@ export function About() {
 
 
             <p className="text-lg text-muted-foreground">
-              I&apos;m a full stack developer with 3+ years of experience building dynamic, modern, scalable applications.
+              I&apos;m a full stack developer with 3+ years of professional experience building dynamic, modern, scalable applications.
             </p>
             <p className="text-lg text-muted-foreground">
               My background in ecology research and teaching sharpens my communication and analytical skills, making me as comfortable bridging teams as I am writing code.

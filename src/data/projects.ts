@@ -33,7 +33,7 @@ export const projects: Project[] = [
 
     impact:
       "Launched a scalable storytelling hub that communicates the park’s mission, showcases events and press coverage, and supports community engagement. The site strengthens outreach and fundraising efforts, provides transparency around remediation and ecological restoration, and lays a digital foundation for Manresa Wilds to inspire public connection to the waterfront for the first time in nearly 75 years.",
-    techStack: ["Next.js", "TypeScript", "Prismic", "Tailwind CSS", "SCSS Modules"],
+    techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
     image: "/manresa.png",
     liveDemo: "https://www.manresawilds.org/",
     featured: true,
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     techStack: [
       "Next.js",
       "TypeScript",
-      "Tailwind CSS",
+      "Tailwind",
       "Webflow",
       "Hubspot",
       "Salesforce",
@@ -84,14 +84,13 @@ export const projects: Project[] = [
       "Rebuilt the site on Craft CMS with a clean, responsive design. Migrated and normalized legacy database content into structured entries, enabling efficient content management. Implemented SEO best practices across templates, metadata, and site architecture. Added an ad injection system to maximize monetization without disrupting the user experience.",
     impact:
       "Improved organic search visibility and site performance, helping Frommer’s reach more readers. Streamlined editorial workflows with Craft CMS, reducing content management overhead. Introduced flexible ad placements that increased revenue opportunities while maintaining usability.",
-    techStack: ['Craft CMS 5', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript'],
+    techStack: ['Craft CMS', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript', 'Laravel', 'Vite', 'Tailwind', 'Craft Cloud'],
     image: '/frommers.png',
     liveDemo: 'https://www.frommers.com/',
     github: '',
     featured: true,
     attributions: [
       { org: 'Reach', url: 'https://reachcreative.com' },
-      // { org: 'Heco', role: 'Partner Agency', url: 'https://www.helloheco.com/' },
     ],
   },
   {
@@ -104,7 +103,7 @@ export const projects: Project[] = [
     problem:
       "NantBio Renewables required a flexible, marketing driven platform to promote its Wave Ware™ products and educate customers on the benefits of compostable, ocean calcium based alternatives to plastics. The site needed to combine storytelling with lead capture while supporting ongoing news and press release content.",
     solution:
-      "Developed key site components in WordPress using Blade templating. Built custom pages and content types, implemented interactive features such as Slider.js carousels, and integrated modals with HubSpot forms for seamless lead capture. Ensured mobile responsiveness and a cohesive brand experience across the product catalog and blog content.",
+      "Developed key site components in WordPress using Blade templating. Built custom pages and content types, implemented interactive features such as Swiper.js carousels, and integrated modals with HubSpot forms for seamless lead capture. Ensured mobile responsiveness and a cohesive brand experience across the product catalog and blog content.",
     impact:
       "Delivered a sustainable focused web presence that helps NantBio Renewables tell the story of its carbon negative materials and eco friendly products. The site improved customer engagement, streamlined lead generation through HubSpot, and positioned the brand as a trusted provider of compostable, USA made tableware and packaging solutions.",
     techStack: [
@@ -112,8 +111,13 @@ export const projects: Project[] = [
       "Blade",
       "PHP",
       "JavaScript",
-      "Slider.js",
-      "HubSpot"
+      "Swiper.js",
+      "HubSpot",
+      "Laravel",
+      "GSAP",
+      "Vite",
+      "Tailwind",
+      "SCSS"
     ],
     image: "/nant-bio.png",
     liveDemo: "https://nantbr.com/",
@@ -140,11 +144,10 @@ export const projects: Project[] = [
       "A contemporary look and feel that better reflects the brand. Faster load times and smoother interactions. Fully editable CMS where the Resolute team can update companies, bios, and community sections in minutes, keeping the site aligned with their active founder community.",
     techStack: [
       "Next.js",
-      "React",
-      "TypeScript",
+      "JavaScript",
       "Prismic",
-      "Tailwind CSS",
-      "Vercel", "GSAP"
+      "Tailwind",
+      "Swiper.js", "GSAP", "SCSS", "Vercel"
     ],
     image: "resolute.png",
     liveDemo: "https://www.resolute.vc/",
@@ -171,10 +174,12 @@ export const projects: Project[] = [
     "Delivered a scalable component that allowed the client’s content team to promote Havoc Academy independently. Improved mobile responsiveness and helped extend the lifespan of the legacy codebase by integrating modern, flexible content updates.",
   techStack: [
     "Next.js",
-    "React",
     "Prismic",
     "JavaScript",
-    "CSS Modules"
+    "Nodemailer",
+    "Swiper.js",
+    "SCSS",
+    "Vercel",
   ],
   image: "/nhrl.png",
   liveDemo: "https://www.nhrl.io/",
@@ -201,13 +206,13 @@ export const projects: Project[] = [
     "Kept a highly interactive National Geographic microsite current and engaging with new stories, films, and map experiences. Maintained the integrity of complex animations and 3D interactions, allowing visitors to continue exploring Texas’s highlights through a performant, visually dynamic interface.",
   techStack: [
     "Next.js",
-    "React",
-    "Sass",
+    "SCSS",
     "Three.js",
     "React Three Fiber",
     "Spline",
     "GSAP",
-    "Keen Slider"
+    "Keen Slider",
+    "Tailwind"
   ],
   image: "/travel-texas.png",
   liveDemo: "https://www.nationalgeographic.com/travel-texas/",
@@ -234,10 +239,11 @@ export const projects: Project[] = [
   "Delivered an improved sweepstakes experience: users could confidently enter daily without loopholes, admins no longer had to sort and clean a large database of duplicate entries at the end, and visitors saw clear messaging once the promotion concluded.",
   techStack: [
     "Next.js",
-    "React",
-    "Tailwind CSS",
+    "Tailwind",
     "Supabase",
-    "JavaScript"
+    "JavaScript", 
+    "SCSS",
+    "Formik"
   ],
   image: "/nat-geo-earth-month.png",
   liveDemo: "https://www.nationalgeographic.com/ourhomesweepstakes/",
@@ -264,9 +270,11 @@ export const projects: Project[] = [
     "Kept a National Geographic microsite current with new editorial content and media, maintained the integrity of complex interactive layouts, and ensured a smooth, visually engaging experience for audiences exploring Nevada’s tourism highlights.",
   techStack: [
     "Next.js",
-    "React",
     "JavaScript",
-    "CSS",
+    "SCSS",
+    "GSAP",
+    "Swiper.js",
+    "Zustand",
   ],
   image: "/travel-nevada.png",
   liveDemo: "https://www.nationalgeographic.com/travel-nevada/",
@@ -293,14 +301,13 @@ export const projects: Project[] = [
     "Delivered a visually engaging and content-rich Strategy page that communicated Core’s market leadership and growth strategy. Empowered admins with a flexible, CMS-driven system for future updates and ensured smooth, responsive animations that elevated the brand’s digital presence.",
   techStack: [
     "Next.js",
-    "React",
     "Prismic",
-    "Sass",
+    "SCSS",
     "GSAP",
-    "React Three Fiber",
-    "Spline",
-    "Keen Slider",
-    "Mapbox GL"
+    "Linus",
+    "JavaScript",
+    "Vercel"
+
   ],
   image: "/core-spaces.png",
   liveDemo: "https://corespaces.com/strategy",
@@ -329,7 +336,7 @@ export const projects: Project[] = [
       'Designed and developed a modern landing page highlighting services, testimonials, FAQs, and a clear call-to-action form for free water analysis scheduling.',
     impact:
       'Improved the company’s digital visibility and customer engagement, helping convert site visitors into leads with a streamlined scheduling flow.',
-    techStack: ['Next.js', 'Tailwind CSS', 'Formspree'],
+    techStack: ['Next.js', 'Tailwind', 'Formspree', 'Vercel', 'TypeScript'],
     image: 'projects/quality-water-4-usa.png',
     liveDemo: 'https://qualitywater4usa.com',
     github: '',
@@ -344,14 +351,14 @@ export const projects: Project[] = [
     shortDescription:
       'A React app with Firebase Realtime Database that digitized table rotation for a local restaurant, replacing a manual whiteboard system.',
     longDescription:
-      'Crab City Server Rotation is a modern and efficient solution designed to streamline table rotations for a local restaurant. Initially, the restaurant managed rotations using a manual whiteboard system which proved challenging during peak hours. To provide a more optimized solution, my colleagues and I developed this React web app. At its core, the application leverages Firebase’s Realtime Database to ensure that table rotation data is managed in real time, giving staff an up-to-date view of table statuses. This improved customer service and streamlined operations. We also incorporated Tailwind CSS to create an intuitive and visually appealing interface. While the provided link showcases the demo, the actual implementation for the restaurant remains private, complete with its own secure login.',
+      'Crab City Server Rotation is a modern and efficient solution designed to streamline table rotations for a local restaurant. Initially, the restaurant managed rotations using a manual whiteboard system which proved challenging during peak hours. To provide a more optimized solution, my colleagues and I developed this React web app. At its core, the application leverages Firebase’s Realtime Database to ensure that table rotation data is managed in real time, giving staff an up-to-date view of table statuses. This improved customer service and streamlined operations. We also incorporated Tailwind to create an intuitive and visually appealing interface. While the provided link showcases the demo, the actual implementation for the restaurant remains private, complete with its own secure login.',
     problem:
       'The restaurant’s manual whiteboard system for tracking table rotations was inefficient and difficult to manage during peak hours.',
     solution:
-      'Developed a React app backed by Firebase Realtime Database, providing real-time updates of table statuses and a user-friendly Tailwind CSS interface.',
+      'Developed a React app backed by Firebase Realtime Database, providing real-time updates of table statuses and a user-friendly Tailwind interface.',
     impact:
       'Enhanced restaurant operations by eliminating manual processes, improving staff efficiency, and ensuring better customer service during busy times.',
-    techStack: ['React', 'Firebase Realtime Database', 'Tailwind CSS'],
+    techStack: ['React', 'Firebase Realtime Database', 'Tailwind'],
     image: 'projects/crab-city.png',
     liveDemo: 'https://crab-city.vercel.app/',
     github: 'https://github.com/missatrox44/server-rotation-crab-city',
@@ -361,50 +368,50 @@ export const projects: Project[] = [
     ],
 
   },
-  {
-    id: 'love-thy-selfie',
-    title: 'Love Thy Selfie',
-    shortDescription:
-      'A mobile-first React app for a local photo booth business, featuring service overviews, customer reviews, and a booking contact form.',
-    longDescription:
-      'Love Thy Selfie is an intuitive, mobile-first React application designed to digitally transform a local photo booth business. Embodying the spirit of "Love Thy Selfie," this platform offers users a comprehensive overview of the diverse services provided, including vivid picture examples and authentic customer reviews. It also showcases the geographic service areas to help customers understand their reach. One of the key features is a seamlessly integrated contact form powered by Email.js, enabling customers to easily inquire about booking opportunities. With its user-friendly interface and responsive design, the Love Thy Selfie website effectively brings the unique essence of the photo booth experience online, and at the fingertips of potential customers.',
-    problem:
-      'The photo booth business lacked an engaging digital presence to showcase services, reviews, and booking options for potential customers.',
-    solution:
-      'Built a responsive, mobile-first React app that highlights services, customer reviews, and service areas while integrating Email.js for seamless booking inquiries.',
-    impact:
-      'Expanded the business’s reach by providing an accessible, visually engaging, and easy-to-use online presence that helps attract and convert new customers.',
-    techStack: ['React', 'Email.js', 'CSS3', 'JavaScript'],
-    image: 'projects/love_thy_selfie.png',
-    liveDemo: 'https://www.lovethyselfiephotobooth.com/',
-    github: 'https://github.com/missatrox44/love-thy-selfie',
-    featured: false,
-    attributions: [
-      { org: 'Freelance' }
-    ],
-  },
-  {
-    id: 'ohs-broncho-band',
-    title: 'OHS Broncho Band',
-    shortDescription:
-      'Refactored and redesigned the Odessa High School Broncho Band website for mobile responsiveness, updated visuals, and better user experience.',
-    longDescription:
-      'This project involved a comprehensive refactoring of the Odessa High School Broncho Band\'s website. It was redesigned to be mobile responsive, while also updating images and links for a more appealing and user-friendly experience. New pages were added, working in close collaboration with the band director to ensure that the final design echoed her vision and faithfully represented the values of the OHS Broncho Band. The website was crafted using WiX and continues to evolve, reflecting the ever-changing spirit of the band program.',
-    problem:
-      'The original site was outdated, lacked mobile responsiveness, and did not effectively represent the band program’s values or vision.',
-    solution:
-      'Redesigned the site for mobile responsiveness, updated visuals and links, and collaborated with the band director to create new pages aligned with her vision.',
-    impact:
-      'Improved accessibility and usability for students, parents, and the community. The redesigned site strengthened the band’s online presence and provided a professional digital representation.',
-    techStack: ['WiX', 'HTML5', 'CSS3'],
-    image: 'projects/odessa_band_screenshot.png',
-    liveDemo: 'https://www.odessaband.org/',
-    github: '',
-    featured: false,
-    attributions: [
-      { org: 'Freelance' }
-    ],
-  },
+  // {
+  //   id: 'love-thy-selfie',
+  //   title: 'Love Thy Selfie',
+  //   shortDescription:
+  //     'A mobile-first React app for a local photo booth business, featuring service overviews, customer reviews, and a booking contact form.',
+  //   longDescription:
+  //     'Love Thy Selfie is an intuitive, mobile-first React application designed to digitally transform a local photo booth business. Embodying the spirit of "Love Thy Selfie," this platform offers users a comprehensive overview of the diverse services provided, including vivid picture examples and authentic customer reviews. It also showcases the geographic service areas to help customers understand their reach. One of the key features is a seamlessly integrated contact form powered by Email.js, enabling customers to easily inquire about booking opportunities. With its user-friendly interface and responsive design, the Love Thy Selfie website effectively brings the unique essence of the photo booth experience online, and at the fingertips of potential customers.',
+  //   problem:
+  //     'The photo booth business lacked an engaging digital presence to showcase services, reviews, and booking options for potential customers.',
+  //   solution:
+  //     'Built a responsive, mobile-first React app that highlights services, customer reviews, and service areas while integrating Email.js for seamless booking inquiries.',
+  //   impact:
+  //     'Expanded the business’s reach by providing an accessible, visually engaging, and easy-to-use online presence that helps attract and convert new customers.',
+  //   techStack: ['React', 'Email.js', 'CSS3', 'JavaScript'],
+  //   image: 'projects/love_thy_selfie.png',
+  //   liveDemo: 'https://www.lovethyselfiephotobooth.com/',
+  //   github: 'https://github.com/missatrox44/love-thy-selfie',
+  //   featured: false,
+  //   attributions: [
+  //     { org: 'Freelance' }
+  //   ],
+  // },
+  // {
+  //   id: 'ohs-broncho-band',
+  //   title: 'OHS Broncho Band',
+  //   shortDescription:
+  //     'Refactored and redesigned the Odessa High School Broncho Band website for mobile responsiveness, updated visuals, and better user experience.',
+  //   longDescription:
+  //     'This project involved a comprehensive refactoring of the Odessa High School Broncho Band\'s website. It was redesigned to be mobile responsive, while also updating images and links for a more appealing and user-friendly experience. New pages were added, working in close collaboration with the band director to ensure that the final design echoed her vision and faithfully represented the values of the OHS Broncho Band. The website was crafted using WiX and continues to evolve, reflecting the ever-changing spirit of the band program.',
+  //   problem:
+  //     'The original site was outdated, lacked mobile responsiveness, and did not effectively represent the band program’s values or vision.',
+  //   solution:
+  //     'Redesigned the site for mobile responsiveness, updated visuals and links, and collaborated with the band director to create new pages aligned with her vision.',
+  //   impact:
+  //     'Improved accessibility and usability for students, parents, and the community. The redesigned site strengthened the band’s online presence and provided a professional digital representation.',
+  //   techStack: ['WiX', 'HTML5', 'CSS3'],
+  //   image: 'projects/odessa_band_screenshot.png',
+  //   liveDemo: 'https://www.odessaband.org/',
+  //   github: '',
+  //   featured: false,
+  //   attributions: [
+  //     { org: 'Freelance' }
+  //   ],
+  // },
   {
     id: 'pomodoro-timer',
     title: 'Pomodoro Timer',

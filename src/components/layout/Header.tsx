@@ -124,7 +124,7 @@ export function Header() {
       {/* Mobile Menu */}
       <div 
         className={cn(
-          "md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md flex flex-col justify-start pt-20 px-6 transform transition-transform duration-300 ease-in-out",
+          "md:hidden fixed inset-0  bg-background backdrop-blur-md flex flex-col justify-start pt-20 px-6 transform transition-transform duration-300 ease-in-out",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
