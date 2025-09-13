@@ -106,12 +106,12 @@ export function About() {
             <div className="relative rounded-2xl overflow-hidden">
               <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-3 p-2 md:p-3">
                 {/* Tall left */}
-                <div className="col-span-3 md:col-span-4 row-span-2">
+                <div className="hidden md:block md:col-span-4 row-span-2">
                   <img src="/sara-seattle.jpeg" alt="Sara hugging a tree at Mount Rainer National Park" className="h-full w-full object-cover rounded-xl aspect-[3/4]" />
                 </div>
 
                 {/* Wide top */}
-                <div className="col-span-3 md:col-span-8">
+                <div className="col-span-6 md:col-span-8">
                   <img src="/cactus-cats.jpeg" alt="Bagheera & Sylvester" className="h-full w-full object-cover rounded-xl aspect-[16/9]" />
                 </div>
 
