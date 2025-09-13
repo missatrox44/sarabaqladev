@@ -24,7 +24,7 @@ export async function LatestBlogs() {
   }));
 
   return (
-    <section id="blog" className="py-24 relative overflow-hidden bg-muted/30">
+    <section id="blog" className="py-12 md:py-24 relative overflow-hidden bg-muted/30">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 text-center mb-16">
           <div className="inline-block">

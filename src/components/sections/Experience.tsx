@@ -18,7 +18,7 @@ const cardHover: Variants = {
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 relative overflow-hidden">
+    <section id="experience" className="py-12 md:py-24 relative overflow-hidden">
       {/* soft background flourish */}
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-30">
         <motion.div

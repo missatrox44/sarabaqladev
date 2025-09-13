@@ -8,7 +8,7 @@ export function FeaturedProjects() {
   const featuredProjects = projectData.slice(0, 3);
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-12 md:py-24 relative overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 text-center mb-16">
           <div className="inline-block">
