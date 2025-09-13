@@ -160,185 +160,202 @@ export const projects: Project[] = [
     ]
   },
   {
-  id: "nhrl",
-  title: "NHRL",
-  shortDescription:
-    "Contributed to NHRL’s legacy Next.js app by implementing new Prismic components promoting Havoc Academy.",
-  longDescription:
-    "NHRL (National Havoc Robot League) is a competitive combat robotics league with events, live streaming, and community offerings. At Reach, I supported updates to their legacy Next.js app by building new marketing components to promote Havoc Academy. I created a reusable Prismic slice and ensured it was fully responsive across devices, aligning closely with designer specifications. While the app used custom CSS rather than Tailwind, I optimized layouts for mobile and maintained consistency with the existing codebase.",
-  problem:
-    "The client needed to promote a new educational product, Havoc Academy, within their existing site. Their marketing team required flexibility to update and reuse content through Prismic without heavy developer involvement.",
-  solution:
-    "Built a new Prismic slice for Havoc Academy with customizable fields and responsive layouts. Integrated the slice into the Next.js app with custom CSS, ensuring the component matched designs across breakpoints while preserving site performance and code standards.",
-  impact:
-    "Delivered a scalable component that allowed the client’s content team to promote Havoc Academy independently. Improved mobile responsiveness and helped extend the lifespan of the legacy codebase by integrating modern, flexible content updates.",
-  techStack: [
-    "Next.js",
-    "Prismic",
-    "JavaScript",
-    "Nodemailer",
-    "Swiper.js",
-    "SCSS",
-    "Vercel",
-  ],
-  image: "/nhrl.png",
-  liveDemo: "https://www.nhrl.io/",
-  featured: false,
-  attributions: [
-    {
-      org: "Reach",
-      url: "https://www.reachcreative.com/"
-    }
-  ]
-},
-{
-  id: "nat-geo-travel-texas",
-  title: "National Geographic – Travel Texas",
-  shortDescription:
-    "Enhanced National Geographic’s Travel Texas microsite with new articles, carousel media, films, and interactive map updates using Spline.",
-  longDescription:
-    "National Geographic’s Travel Texas site is a rich, animated microsite highlighting the culture, landscapes, and destinations across Texas. At Reach, I supported major content updates, including refreshing carousel images, adding new editorial articles to the masonry grid, and updating the interactive map built with Spline by adding new points of interest. I also integrated two new short films into the experience, updating the playback logic to accommodate their external hosting. The site makes heavy use of advanced animation and 3D libraries including Three.js, React Three Fiber, GSAP, and Spline, requiring careful integration to maintain smooth performance and responsive behavior.",
-  problem:
-    "The client needed to refresh the campaign with new articles, films, and map content, but the site’s reliance on complex 3D/animation libraries and custom logic meant updates risked breaking layouts, animations, or film playback.",
-  solution:
-    "Updated carousel images and masonry grid articles while maintaining visual balance and responsive layout. Added new points of interest to the Spline-powered interactive map, ensuring they rendered correctly across breakpoints. Integrated two externally hosted films, adjusting playback logic so users could view them seamlessly without breaking the flow of the microsite.",
-  impact:
-    "Kept a highly interactive National Geographic microsite current and engaging with new stories, films, and map experiences. Maintained the integrity of complex animations and 3D interactions, allowing visitors to continue exploring Texas’s highlights through a performant, visually dynamic interface.",
-  techStack: [
-    "Next.js",
-    "SCSS",
-    "Three.js",
-    "React Three Fiber",
-    "Spline",
-    "GSAP",
-    "Keen Slider",
-    "Tailwind"
-  ],
-  image: "/travel-texas.png",
-  liveDemo: "https://www.nationalgeographic.com/travel-texas/",
-  featured: false,
-  attributions: [
-    {
-      org: "Reach",
-      url: "https://reachcreative.com"
-    }
-  ]
-},
-{
-  id: "nat-geo-earth-month-sweepstakes",
-  title: "National Geographic Earth Month Sweepstakes",
-  shortDescription:
-    "Supported National Geographic’s annual sweepstakes campaign with content updates and Supabase driven entry restrictions.",
-  longDescription:
-    "National Geographic’s annual Earth Month Sweepstakes celebrated our planet with a once-in-a-lifetime grand prize: a National Geographic–Lindblad Expeditions cruise to Antarctica. At Reach, I contributed to the legacy Next.js + Tailwind app by updating content for the 2025 campaign and implementing new logic with Supabase. I ensured users could enter only once per day during the April 15–30 sweepstakes window and added date based logic to automatically disable the form after the promotion ended, showing a clear 'promotion ended' message instead of an inactive form. This improved compliance with sweepstakes rules, reduced manual intervention, and created a smoother experience for participants.",
-  problem:
-    "The sweepstakes microsite needed fresh content for the 2025 promotion and lacked guardrails to enforce daily entry limits.",
-  solution:
-    "Updated copy and assets for the current year’s sweepstakes. Integrated Supabase logic to validate one entry per user per day.",
+    id: "nhrl",
+    title: "NHRL",
+    shortDescription:
+      "Contributed to NHRL’s legacy Next.js app by implementing new Prismic components promoting Havoc Academy.",
+    longDescription:
+      "NHRL (National Havoc Robot League) is a competitive combat robotics league with events, live streaming, and community offerings. At Reach, I supported updates to their legacy Next.js app by building new marketing components to promote Havoc Academy. I created a reusable Prismic slice and ensured it was fully responsive across devices, aligning closely with designer specifications. While the app used custom CSS rather than Tailwind, I optimized layouts for mobile and maintained consistency with the existing codebase.",
+    problem:
+      "The client needed to promote a new educational product, Havoc Academy, within their existing site. Their marketing team required flexibility to update and reuse content through Prismic without heavy developer involvement.",
+    solution:
+      "Built a new Prismic slice for Havoc Academy with customizable fields and responsive layouts. Integrated the slice into the Next.js app with custom CSS, ensuring the component matched designs across breakpoints while preserving site performance and code standards.",
     impact:
-  "Delivered an improved sweepstakes experience: users could confidently enter daily without loopholes, admins no longer had to sort and clean a large database of duplicate entries at the end, and visitors saw clear messaging once the promotion concluded.",
-  techStack: [
-    "Next.js",
-    "Tailwind",
-    "Supabase",
-    "JavaScript", 
-    "SCSS",
-    "Formik"
-  ],
-  image: "/nat-geo-earth-month.png",
-  liveDemo: "https://www.nationalgeographic.com/ourhomesweepstakes/",
-  featured: false,
-  attributions: [
-    {
-      org: "Reach",
-      url: "https://reachcreative.com"
-    }
-  ]
-},
- {
-  id: "nat-geo-travel-nevada",
-  title: "National Geographic – Travel Nevada",
-  shortDescription:
-    "Maintained National Geographic’s Travel Nevada microsite with new media, stories, and shorts integrated into its highly animated layouts.",
-  longDescription:
-    "National Geographic’s Travel Nevada site showcases the best of Nevada — from scenic drives and cultural landmarks to adventure tourism. Built as a highly animated Next.js experience, the site included a dynamic masonry grid, interactive carousels, and stacking card effects to highlight stories and shorts. At Reach, I supported annual content updates, adding new videos and images to the masonry grid while preserving proper heights and responsive behavior. I also integrated new editorial stories and shorts into their respective components, ensuring animations and transitions continued to function smoothly. This work extended the life of the site and kept the campaign fresh and engaging for visitors exploring Nevada’s attractions.",
-  problem:
-    "The site required fresh yearly content to keep audiences engaged, but its complex animated layouts (masonry grid, carousels, stacking cards) meant updates risked breaking layouts or animations if not implemented carefully.",
-  solution:
-    "Updated the masonry grid with new videos and images, adjusting sizing logic to preserve consistent heights. Added new stories into the carousel and new shorts into the stacking card effect, ensuring animations and responsive behavior continued to work seamlessly across devices.",
-  impact:
-    "Kept a National Geographic microsite current with new editorial content and media, maintained the integrity of complex interactive layouts, and ensured a smooth, visually engaging experience for audiences exploring Nevada’s tourism highlights.",
-  techStack: [
-    "Next.js",
-    "JavaScript",
-    "SCSS",
-    "GSAP",
-    "Swiper.js",
-    "Zustand",
-  ],
-  image: "/travel-nevada.png",
-  liveDemo: "https://www.nationalgeographic.com/travel-nevada/",
-  featured: false,
-  attributions: [
-    {
-      org: "Reach",
-      url: "https://reachcreative.com"
-    }
-  ]
-},
-{
-  id: "core-spaces-strategy",
-  title: "Core Spaces – Strategy Page",
-  shortDescription:
-    "Built the new Strategy page for Core Spaces, integrating dynamic content from Prismic and showcasing their student housing and build-to-rent strategies.",
-  longDescription:
-    "Core Spaces is a vertically integrated real estate developer and operator specializing in student housing and build-to-rent communities. At Reach (in collaboration with Heco), I built the Strategy page of their corporate site. Connected to Prismic, the page highlights Core’s vision, mission, industry leadership, and strategies across student housing and build-to-rent markets. I implemented sections for metrics, strategy pillars, and case studies (oLiv Madison, Oxenfree WEHO), ensuring content editors could update copy, stats, and media without developer support. The page integrates advanced animation and UI libraries to deliver a smooth, polished experience aligned with Core’s innovative brand.",
-  problem:
-    "Core Spaces needed a new page to clearly communicate its strategy and leadership in student housing and build-to-rent sectors. The challenge was to deliver a content-rich, design-driven experience that could be easily updated by non-technical staff.",
-  solution:
-    "Implemented a fully CMS-driven Strategy page using Prismic, structured with reusable slices for sections like stats, strategy pillars, case studies, and video. Leveraged animation and UI libraries to bring the design vision to life, while ensuring the page was responsive and easy for admins to update year-to-year.",
-  impact:
-    "Delivered a visually engaging and content-rich Strategy page that communicated Core’s market leadership and growth strategy. Empowered admins with a flexible, CMS-driven system for future updates and ensured smooth, responsive animations that elevated the brand’s digital presence.",
-  techStack: [
-    "Next.js",
-    "Prismic",
-    "SCSS",
-    "GSAP",
-    "Linus",
-    "JavaScript",
-    "Vercel"
+      "Delivered a scalable component that allowed the client’s content team to promote Havoc Academy independently. Improved mobile responsiveness and helped extend the lifespan of the legacy codebase by integrating modern, flexible content updates.",
+    techStack: [
+      "Next.js",
+      "Prismic",
+      "JavaScript",
+      "Nodemailer",
+      "Swiper.js",
+      "SCSS",
+      "Vercel",
+    ],
+    image: "/nhrl.png",
+    liveDemo: "https://www.nhrl.io/",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://www.reachcreative.com/"
+      }
+    ]
+  },
+  {
+    id: "namecom-api",
+    title: "Name.com API Landing Page",
+    shortDescription: "Landing page for Name.com’s AI-ready API with localized content and HubSpot integration.",
+    longDescription: "Contributed to the Name.com API landing page, a Vue-powered site built to highlight the company’s AI-ready API offerings. My work focused on this page specifically, implementing Vue i18n for localization, styling with Tailwind, and collaborating on UI refinements. I also helped with the accompanying contact page, integrating form submissions through HubSpot to streamline lead capture.",
+    problem: "Name.com needed a dedicated, multilingual landing page to showcase its new AI-ready API and provide a clear contact path for interested developers and businesses.",
+    solution: "Built a performant, responsive page with Vue, Tailwind, and Vite, featuring Vue i18n for localization. Added a HubSpot-powered contact form to enable direct communication with potential customers.",
+    impact: "Delivered a polished, multilingual landing page that increased visibility for Name.com’s API product while providing a frictionless way for leads to connect with the sales team.",
+    techStack: ["Vue", "Tailwind", "Vite", "Vue i18n", "TypeScript"],
+    image: "/nameapi.png",
+    liveDemo: "https://www.name.com/nameapi",
+    featured: false,
+    attributions: [
+      { org: "Reach", url: "https://reachcreative.com" },
+      { org: "Heco", url: "https://helloheco.com" }
+    ]
+  },
+  {
+    id: "nat-geo-travel-texas",
+    title: "National Geographic – Travel Texas",
+    shortDescription:
+      "Enhanced National Geographic’s Travel Texas microsite with new articles, carousel media, films, and interactive map updates using Spline.",
+    longDescription:
+      "National Geographic’s Travel Texas site is a rich, animated microsite highlighting the culture, landscapes, and destinations across Texas. At Reach, I supported major content updates, including refreshing carousel images, adding new editorial articles to the masonry grid, and updating the interactive map built with Spline by adding new points of interest. I also integrated two new short films into the experience, updating the playback logic to accommodate their external hosting. The site makes heavy use of advanced animation and 3D libraries including Three.js, React Three Fiber, GSAP, and Spline, requiring careful integration to maintain smooth performance and responsive behavior.",
+    problem:
+      "The client needed to refresh the campaign with new articles, films, and map content, but the site’s reliance on complex 3D/animation libraries and custom logic meant updates risked breaking layouts, animations, or film playback.",
+    solution:
+      "Updated carousel images and masonry grid articles while maintaining visual balance and responsive layout. Added new points of interest to the Spline-powered interactive map, ensuring they rendered correctly across breakpoints. Integrated two externally hosted films, adjusting playback logic so users could view them seamlessly without breaking the flow of the microsite.",
+    impact:
+      "Kept a highly interactive National Geographic microsite current and engaging with new stories, films, and map experiences. Maintained the integrity of complex animations and 3D interactions, allowing visitors to continue exploring Texas’s highlights through a performant, visually dynamic interface.",
+    techStack: [
+      "Next.js",
+      "SCSS",
+      "Three.js",
+      "React Three Fiber",
+      "Spline",
+      "GSAP",
+      "Keen Slider",
+      "Tailwind"
+    ],
+    image: "/travel-texas.png",
+    liveDemo: "https://www.nationalgeographic.com/travel-texas/",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://reachcreative.com"
+      }
+    ]
+  },
+  {
+    id: "nat-geo-earth-month-sweepstakes",
+    title: "National Geographic Earth Month Sweepstakes",
+    shortDescription:
+      "Supported National Geographic’s annual sweepstakes campaign with content updates and Supabase driven entry restrictions.",
+    longDescription:
+      "National Geographic’s annual Earth Month Sweepstakes celebrated our planet with a once-in-a-lifetime grand prize: a National Geographic–Lindblad Expeditions cruise to Antarctica. At Reach, I contributed to the legacy Next.js + Tailwind app by updating content for the 2025 campaign and implementing new logic with Supabase. I ensured users could enter only once per day during the April 15–30 sweepstakes window and added date based logic to automatically disable the form after the promotion ended, showing a clear 'promotion ended' message instead of an inactive form. This improved compliance with sweepstakes rules, reduced manual intervention, and created a smoother experience for participants.",
+    problem:
+      "The sweepstakes microsite needed fresh content for the 2025 promotion and lacked guardrails to enforce daily entry limits.",
+    solution:
+      "Updated copy and assets for the current year’s sweepstakes. Integrated Supabase logic to validate one entry per user per day.",
+    impact:
+      "Delivered an improved sweepstakes experience: users could confidently enter daily without loopholes, admins no longer had to sort and clean a large database of duplicate entries at the end, and visitors saw clear messaging once the promotion concluded.",
+    techStack: [
+      "Next.js",
+      "Tailwind",
+      "Supabase",
+      "JavaScript",
+      "SCSS",
+      "Formik"
+    ],
+    image: "/nat-geo-earth-month.png",
+    liveDemo: "https://www.nationalgeographic.com/ourhomesweepstakes/",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://reachcreative.com"
+      }
+    ]
+  },
+  {
+    id: "nat-geo-travel-nevada",
+    title: "National Geographic – Travel Nevada",
+    shortDescription:
+      "Maintained National Geographic’s Travel Nevada microsite with new media, stories, and shorts integrated into its highly animated layouts.",
+    longDescription:
+      "National Geographic’s Travel Nevada site showcases the best of Nevada — from scenic drives and cultural landmarks to adventure tourism. Built as a highly animated Next.js experience, the site included a dynamic masonry grid, interactive carousels, and stacking card effects to highlight stories and shorts. At Reach, I supported annual content updates, adding new videos and images to the masonry grid while preserving proper heights and responsive behavior. I also integrated new editorial stories and shorts into their respective components, ensuring animations and transitions continued to function smoothly. This work extended the life of the site and kept the campaign fresh and engaging for visitors exploring Nevada’s attractions.",
+    problem:
+      "The site required fresh yearly content to keep audiences engaged, but its complex animated layouts (masonry grid, carousels, stacking cards) meant updates risked breaking layouts or animations if not implemented carefully.",
+    solution:
+      "Updated the masonry grid with new videos and images, adjusting sizing logic to preserve consistent heights. Added new stories into the carousel and new shorts into the stacking card effect, ensuring animations and responsive behavior continued to work seamlessly across devices.",
+    impact:
+      "Kept a National Geographic microsite current with new editorial content and media, maintained the integrity of complex interactive layouts, and ensured a smooth, visually engaging experience for audiences exploring Nevada’s tourism highlights.",
+    techStack: [
+      "Next.js",
+      "JavaScript",
+      "SCSS",
+      "GSAP",
+      "Swiper.js",
+      "Zustand",
+    ],
+    image: "/travel-nevada.png",
+    liveDemo: "https://www.nationalgeographic.com/travel-nevada/",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://reachcreative.com"
+      }
+    ]
+  },
+  {
+    id: "core-spaces-strategy",
+    title: "Core Spaces – Strategy Page",
+    shortDescription:
+      "Built the new Strategy page for Core Spaces, integrating dynamic content from Prismic and showcasing their student housing and build-to-rent strategies.",
+    longDescription:
+      "Core Spaces is a vertically integrated real estate developer and operator specializing in student housing and build-to-rent communities. At Reach (in collaboration with Heco), I built the Strategy page of their corporate site. Connected to Prismic, the page highlights Core’s vision, mission, industry leadership, and strategies across student housing and build-to-rent markets. I implemented sections for metrics, strategy pillars, and case studies (oLiv Madison, Oxenfree WEHO), ensuring content editors could update copy, stats, and media without developer support. The page integrates advanced animation and UI libraries to deliver a smooth, polished experience aligned with Core’s innovative brand.",
+    problem:
+      "Core Spaces needed a new page to clearly communicate its strategy and leadership in student housing and build-to-rent sectors. The challenge was to deliver a content-rich, design-driven experience that could be easily updated by non-technical staff.",
+    solution:
+      "Implemented a fully CMS-driven Strategy page using Prismic, structured with reusable slices for sections like stats, strategy pillars, case studies, and video. Leveraged animation and UI libraries to bring the design vision to life, while ensuring the page was responsive and easy for admins to update year-to-year.",
+    impact:
+      "Delivered a visually engaging and content-rich Strategy page that communicated Core’s market leadership and growth strategy. Empowered admins with a flexible, CMS-driven system for future updates and ensured smooth, responsive animations that elevated the brand’s digital presence.",
+    techStack: [
+      "Next.js",
+      "Prismic",
+      "SCSS",
+      "GSAP",
+      "Linus",
+      "JavaScript",
+      "Vercel"
 
-  ],
-  image: "/core-spaces.png",
-  liveDemo: "https://corespaces.com/strategy",
-  featured: false,
-  attributions: [
-    {
-      org: "Reach",
-      url: "https://reachcreative.com"
-    },
-    {
-      org: "Heco",
-      url: "https://helloheco.com"
-    }
-  ]
-},
-{
-  id: "motorola-brand-guidelines",
-  title: "Motorola Brand Guidelines",
-  shortDescription: "CMS-driven brand guidelines site for Motorola Solutions with custom styling options and animated components.",
-  longDescription: "I contributed on the tail end of this project, making content updates and extending CMS functionality. My work included adding options for custom styles in Prismic, styling labels, and refining UI consistency. The site provides Motorola’s internal and external teams with centralized access to typography, imagery, and brand guidelines, ensuring cohesive use of their brand assets.",
-  problem: "Motorola needed a centralized, easy-to-update platform for maintaining brand consistency across typography, imagery, and other assets.",
-  solution: "Built a CMS-powered guidelines site with Prismic, allowing content editors to easily update styles and assets. Extended CMS schema for custom styles and applied design refinements to improve usability and brand fidelity.",
-  impact: "Streamlined Motorola’s ability to maintain and distribute brand guidelines, reducing manual overhead for their design and marketing teams and ensuring consistent brand execution.",
-  techStack: ["Prismic", "Tailwind", "SCSS", "GSAP", "Next.js"],
-  image: "/motorola.png",
-  liveDemo: "https://brand-guidelines.motorolasolutions.com/",
-  featured: false,
-  attributions: [
-    { org: "Reach", url: "https://reachcreative.com" }
-  ]
-},
+    ],
+    image: "/core-spaces.png",
+    liveDemo: "https://corespaces.com/strategy",
+    featured: false,
+    attributions: [
+      {
+        org: "Reach",
+        url: "https://reachcreative.com"
+      },
+      {
+        org: "Heco",
+        url: "https://helloheco.com"
+      }
+    ]
+  },
+  {
+    id: "motorola-brand-guidelines",
+    title: "Motorola Brand Guidelines",
+    shortDescription: "CMS-driven brand guidelines site for Motorola Solutions with custom styling options and animated components.",
+    longDescription: "I contributed on the tail end of this project, making content updates and extending CMS functionality. My work included adding options for custom styles in Prismic, styling labels, and refining UI consistency. The site provides Motorola’s internal and external teams with centralized access to typography, imagery, and brand guidelines, ensuring cohesive use of their brand assets.",
+    problem: "Motorola needed a centralized, easy-to-update platform for maintaining brand consistency across typography, imagery, and other assets.",
+    solution: "Built a CMS-powered guidelines site with Prismic, allowing content editors to easily update styles and assets. Extended CMS schema for custom styles and applied design refinements to improve usability and brand fidelity.",
+    impact: "Streamlined Motorola’s ability to maintain and distribute brand guidelines, reducing manual overhead for their design and marketing teams and ensuring consistent brand execution.",
+    techStack: ["Prismic", "Tailwind", "SCSS", "GSAP", "Next.js"],
+    image: "/motorola.png",
+    liveDemo: "https://brand-guidelines.motorolasolutions.com/",
+    featured: false,
+    attributions: [
+      { org: "Reach", url: "https://reachcreative.com" }
+    ]
+  },
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
