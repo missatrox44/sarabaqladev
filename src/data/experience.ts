@@ -1,35 +1,48 @@
+export type Experience = {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description?: string;
+  type: 'work' | 'education';
+  skills?: string[];
+  image?: string;
+};
+
 export const experienceData = [
-{
-  title: 'Full Stack Developer',
-  company: 'Reach Creative',
-  location: 'Remote',
-  period: 'Jan 2024 – Sept 2025',
-  description:
-    'Delivered modern web experiences for high profile clients including National Geographic, Core Spaces, and Resolute Ventures. Built new Next.js components and pages integrated with Prismic and Sanity, implemented Supabase logic for secure form workflows, and maintained highly animated legacy apps with GSAP, React Three Fiber, and Spline. Partnered with designers and agencies (Heco) to translate complex designs into responsive, performant, and CMS-driven sites.',
-  type: 'work',
-  skills: [
-    'Next.js',
-    'React',
-    'TypeScript',
-    'Prismic',
-    'Sanity',
-    'Supabase',
-    'Tailwind CSS',
-    'Sass',
-    'React Three Fiber',
-    'Spline',
-    'Vue.js'
-  ]
-},
+  {
+    title: 'Full Stack Developer',
+    company: 'Reach Creative',
+    location: 'Remote',
+    period: 'Jan 2024 – Sept 2025',
+    description:
+      'Partnered with clients like National Geographic and Core Spaces to deliver performant, CMS-driven web experiences. Developed Next.js components and Craft CMS integrations, provided PR/code review feedback, and translated intricate designs into responsive, engaging sites.',
+    type: 'work',
+    skills: [
+      'Next.js',
+      'JavaScript',
+      'TypeScript',
+      'Prismic',
+      'Sanity',
+      'Supabase',
+      'Tailwind',
+      'SCSS',
+      'Vue.js',
+      'Craft CMS',
+      'WordPress'
+    ],
+    image: '/experience/reach.jpg'
+  },
   {
     title: 'Junior Software Developer',
     company: 'IBG Software',
     location: 'Remote',
     period: 'Nov 2022 – Jan 2024',
     description:
-      'Led full stack development of React and React Native apps using TypeScript, Node.js, and Firebase. Implemented secure auth, wrote E2E tests, and built scalable APIs.',
+      'Built and launched web and mobile apps in React and React Native, integrating Firebase and MongoDB for secure, scalable performance. Designed intuitive interfaces with Figma and Material UI, and ensured quality through end-to-end testing and clear team documentation.',
     type: 'work',
-    skills: ['React Native', 'Firebase', 'Node.js', 'TypeScript', 'Cypress', 'MongoDB', 'React', 'Redux',]
+    skills: ['React Native', 'Firebase', 'Node.js', 'TypeScript', 'Cypress', 'MongoDB', 'React', 'Redux', 'JavaScript', 'Expess', 'REST'],
+    image: '/experience/ibg.png'
   },
   {
     title: 'Software Developer',
@@ -37,95 +50,105 @@ export const experienceData = [
     location: 'Remote',
     period: 'Oct 2022 – Nov 2022 & Mar 2023',
     description:
-      'Built an accessible travel planner and a Pomodoro timer app in Agile sprints. Strengthened team collaboration and React skills.',
+      'Collaborated in Chingu’s Voyage 41 to build an accessible travel planning app focused on inclusive design. In a separate sprint, developed a Pomodoro timer app with a partner, sharpening React skills and applying Agile workflows to improve time management and collaboration.',
     type: 'work',
-    skills: ['React', 'Agile', 'JavaScript']
+    skills: ['React', 'Agile', 'JavaScript'],
+    image: '/experience/chingu.png'
   },
   {
     title: 'Web Development Certificate',
     company: 'The University of Texas at Austin',
     location: 'Austin, TX',
     period: 'Jun 2022 – Sep 2022',
-    description:
-      'Completed an intensive coding bootcamp covering full stack JavaScript, React, Node.js, and responsive design.',
-    type: 'education'
+    // description:
+    //   'Completed an intensive coding bootcamp covering full stack JavaScript, React, Node.js, and responsive design.',
+    type: 'education',
+    image: '/experience/longhorns.jpg'
   },
   {
     title: 'Robotics Teacher',
     company: 'ECISD',
     location: 'Odessa, TX',
     period: 'Aug 2021 – Jul 2022',
-    description:
-      'Taught middle school robotics with an emphasis on computer science and engineering principles. Used LEGO Spike Prime, micro:bit, and Ozobots for hands-on learning.',
+    // description:
+    //   'Taught middle school robotics with an emphasis on computer science and engineering principles. Used LEGO Spike Prime, micro:bit, and Ozobots for hands-on learning.',
     type: 'work',
-    skills: ['STEM Education', 'Robotics', 'Curriculum Development']
+    // skills: ['STEM Education', 'Robotics', 'Curriculum Development']
+    image: '/experience/ecisd.png'
   },
   {
     title: 'Elementary Music Specialist',
     company: 'ECISD',
     location: 'Odessa, TX',
     period: 'Aug 2019 – Jul 2021',
-    description:
-      'Taught music classes to Pre-K through 5th grade and founded after-school piano and guitar clubs. Promoted creativity and engagement through music education.',
+    // description:
+    //   'Taught music classes to Pre-K through 5th grade and founded after-school piano and guitar clubs. Promoted creativity and engagement through music education.',
     type: 'work',
-    skills: ['Classroom Management', 'Creative Instruction', 'Youth Engagement']
+    // skills: ['Classroom Management', 'Creative Instruction', 'Youth Engagement']
+    image: '/experience/ecisd.png'
   },
   {
     title: 'AIM Technician',
     company: 'Southwest Conservation Corps',
     location: 'New Mexico, USA',
     period: 'Apr 2018 – Oct 2018',
-    description:
-      'Performed aquatic habitat monitoring for the BLM. Collected water samples, surveyed flora and fauna, and documented site conditions using scientific protocols.',
+    // description:
+    //   'Performed aquatic habitat monitoring for the BLM. Collected water samples, surveyed flora and fauna, and documented site conditions using scientific protocols.',
     type: 'work',
-    skills: ['Environmental Science', 'Field Sampling', 'GIS']
+    // skills: ['Environmental Science', 'Field Sampling', 'GIS']
+    image: '/experience/scc.png'
   },
   {
     title: 'Trail Worker',
     company: 'California Conservation Corps',
     location: 'Trinity Alps, CA',
     period: 'May 2017 – Sep 2017',
-    description:
-      'Maintained wilderness trails and constructed rock walls, steps, and water bars. Collaborated in remote backcountry teams, building resilience and teamwork in challenging conditions.',
+    // description:
+    //   'Maintained wilderness trails and constructed rock walls, steps, and water bars. Collaborated in remote backcountry teams, building resilience and teamwork in challenging conditions.',
     type: 'work',
-    skills: ['Teamwork', 'Manual Labor', 'Backcountry Safety']
+    // skills: ['Teamwork', 'Manual Labor', 'Backcountry Safety']
+    image: '/experience/ccc.png'
   },
   {
     title: 'Teaching Assistant',
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Fall 2014 – Spring 2017',
-    description:
-      'Led lab instruction for various biology courses, created assignments, and supported students with hands-on experiments. Coordinated field trips and collaborated with faculty on curriculum delivery.',
+    // description:
+    //   'Led lab instruction for various biology courses, created assignments, and supported students with hands-on experiments. Coordinated field trips and collaborated with faculty on curriculum delivery.',
     type: 'work',
-    skills: ['Teaching', 'Science Communication', 'Lab Management']
+    // skills: ['Teaching', 'Science Communication', 'Lab Management']
+    image: '/experience/utep.png'
   },
   {
     title: 'Graduate Field Researcher',
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Fall 2014 – Spring 2017',
-    description:
-      'Collected and analyzed field data on grasshopper populations and plant communities. Assisted with wildlife tagging and conducted biodiversity surveys. Developed strong research, documentation, and data collection skills.',
+    // description:
+    //   'Collected and analyzed field data on grasshopper populations and plant communities. Assisted with wildlife tagging and conducted biodiversity surveys. Developed strong research, documentation, and data collection skills.',
     type: 'work',
-    skills: ['Research', 'Fieldwork', 'Data Analysis']
+    // skills: ['Research', 'Fieldwork', 'Data Analysis']
+    image: '/experience/utep.png'
   },
   {
     title: 'M.S. Biological Sciences',
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Aug 2014 – May 2017',
-    description:
-      'Researched ecology and evolutionary biology topics. Conducted field work and data analysis on insect populations.',
-    type: 'education'
+    // description:
+    //   'Researched ecology and evolutionary biology topics. Conducted field work and data analysis on insect populations.',
+    type: 'education',
+    image: '/experience/utep.png'
   },
   {
     title: 'B.S. Ecology & Evolutionary Biology',
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Aug 2009 – May 2014',
-    description:
-      'Studied ecological systems and animal behavior. Participated in research and field studies throughout the Southwest.',
-    type: 'education'
+    // description:
+    //   'Studied ecological systems and animal behavior. Participated in research and field studies throughout the Southwest.',
+    type: 'education',
+    image: '/experience/utep.png'
   }
 ];

@@ -71,7 +71,6 @@ export function Experience() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="relative flex flex-col md:flex-row"
               >
-                {/* removed the green circle/dot */}
 
                 {/* period */}
                 <div className="flex items-center mb-3 md:mb-0 md:w-40 md:text-right md:pr-8">
@@ -95,8 +94,12 @@ export function Experience() {
                     )}
                   >
                     <div className="flex items-center mb-2">
-                      {item.type === "education" ? (
-                        <Book className="h-5 w-5 mr-2 text-primary" />
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={item.company || item.title}
+                          className="h-8 w-8 rounded-full object-cover mr-2"
+                        />
                       ) : (
                         <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center mr-2">
                           <span className="font-bold text-sm">
@@ -104,6 +107,15 @@ export function Experience() {
                           </span>
                         </div>
                       )}
+                      {/* {item.type === "education" ? (
+                        <Book className="h-5 w-5 mr-2 text-primary" />
+                      ) : (
+                        <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center mr-2">
+                          <span className="font-bold text-sm">
+                            {item.company?.charAt(0)}
+                          </span>
+                        </div>
+                      )} */}
                       <div className="min-w-0">
                         <h3 className="font-bold leading-tight">{item.title}</h3>
                         <div className="text-sm text-muted-foreground truncate">
