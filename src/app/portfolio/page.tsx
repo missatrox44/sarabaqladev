@@ -2,8 +2,8 @@ import { Projects } from '@/components/sections/Projects';
 import { Separator } from '@/components/ui/separator';
 
 export const metadata = {
-  title: 'All Projects | My Portfolio',
-  description: 'Explore my complete portfolio of projects and case studies'
+  title: 'SB | Portfolio',
+  description: 'A showcase of full stack web applications along with freelance apps and prototypes.'
 };
 
 export default function PortfolioPage() {
