@@ -6,19 +6,19 @@ import { Download, ArrowRight } from 'lucide-react';
 // import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function HeroSection() {
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/baqla_resume_2025.pdf';
-    link.download = 'baqla_resume_2025.pdf';
-    link.click();
-  };
+  // const handleDownloadResume = () => {
+  //   const link = document.createElement('a');
+  //   link.href = '/baqla_resume_2025.pdf';
+  //   link.download = 'baqla_resume_2025.pdf';
+  //   link.click();
+  // };
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
@@ -104,10 +104,21 @@ export default function HeroSection() {
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
+            <Button
+              variant="forest-outline"
+              size="xl"
+              onClick={() => window.open('/baqla_resume_2025.pdf', '_blank')}
+              className="min-w-[200px] group"
+            >
+              View Resume
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+
+
             {/* <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild> */}
-                  <Button
+                  {/* <Button
                     variant="forest-outline"
                     size="xl"
                     onClick={handleDownloadResume}
@@ -115,7 +126,7 @@ export default function HeroSection() {
                   >
                     <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     Download Resume
-                  </Button>
+                  </Button> */}
                 {/* </TooltipTrigger> */}
                 {/* <TooltipContent>
                   <p>Add your resume to /public and try again if file is missing</p>
