@@ -206,7 +206,7 @@ export function Projects() {
                   <Button
                     variant="forest-ghost"
                     size="sm"
-                    className="flex-1 text-xs"
+                    className="flex-1 text-xs group-hover:bg-primary/10 group-hover:border-primary"
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedProject(project);

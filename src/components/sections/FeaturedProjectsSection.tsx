@@ -103,7 +103,7 @@ export default function ProjectsSection() {
                     <Button
                       variant="forest-ghost"
                       size="sm"
-                      className="flex-1 text-xs"
+                      className="flex-1 text-xs group-hover:bg-primary/10 group-hover:border-primary"
                       onClick={(e) => {
                         e.stopPropagation();
                         setSelectedProject(project);
@@ -120,7 +120,7 @@ export default function ProjectsSection() {
 
         <div className="mt-10 text-center">
           <Link href="/portfolio">
-            <Button variant="hero">View All Projects</Button>
+            <Button variant="hero">View Portfolio</Button>
           </Link>
         </div>
 

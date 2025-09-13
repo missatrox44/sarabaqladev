@@ -70,7 +70,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Full-Stack Developer —{' '}
+              Full Stack Developer —{' '}
               <span className="text-accent font-medium">React</span>,{' '}
               <span className="text-accent font-medium">React Native</span>,{' '}
               <span className="text-accent font-medium">Next.js</span>
