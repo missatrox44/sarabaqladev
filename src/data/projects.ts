@@ -323,6 +323,22 @@ export const projects: Project[] = [
     }
   ]
 },
+{
+  id: "motorola-brand-guidelines",
+  title: "Motorola Brand Guidelines",
+  shortDescription: "CMS-driven brand guidelines site for Motorola Solutions with custom styling options and animated components.",
+  longDescription: "I contributed on the tail end of this project, making content updates and extending CMS functionality. My work included adding options for custom styles in Prismic, styling labels, and refining UI consistency. The site provides Motorola’s internal and external teams with centralized access to typography, imagery, and brand guidelines, ensuring cohesive use of their brand assets.",
+  problem: "Motorola needed a centralized, easy-to-update platform for maintaining brand consistency across typography, imagery, and other assets.",
+  solution: "Built a CMS-powered guidelines site with Prismic, allowing content editors to easily update styles and assets. Extended CMS schema for custom styles and applied design refinements to improve usability and brand fidelity.",
+  impact: "Streamlined Motorola’s ability to maintain and distribute brand guidelines, reducing manual overhead for their design and marketing teams and ensuring consistent brand execution.",
+  techStack: ["Prismic", "Tailwind", "SCSS", "GSAP", "Next.js"],
+  image: "/motorola.png",
+  liveDemo: "https://brand-guidelines.motorolasolutions.com/",
+  featured: false,
+  attributions: [
+    { org: "Reach", url: "https://reachcreative.com" }
+  ]
+},
   {
     id: 'quality-water-4-usa',
     title: 'Quality Water 4 USA',
