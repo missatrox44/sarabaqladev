@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from './providers';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow">
             {children}
+              <Analytics />
           </main>
           <Footer />
         </Providers>
