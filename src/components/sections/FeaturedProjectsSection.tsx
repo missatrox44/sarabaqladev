@@ -126,7 +126,7 @@ export default function ProjectsSection() {
 
         {/* Project Modal */}
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
             {selectedProject && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -218,10 +218,14 @@ export default function ProjectsSection() {
                     {selectedProject.liveDemo && (
                       <Button
                         variant="hero"
-                        onClick={() => window.open(selectedProject.liveDemo, '_blank')}
+                        onClick={() => window.open(selectedProject.liveDemo, "_blank")}
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
+                        {selectedProject.attributions?.some((a) =>
+                          ["Reach", "Freelance"].includes(a.org)
+                        )
+                          ? "Visit Site"
+                          : "Live Demo"}
                       </Button>
                     )}
                     {selectedProject.github ? (

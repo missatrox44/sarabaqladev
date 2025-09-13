@@ -74,9 +74,9 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Let&apos;s <span className="text-gradient">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          {/* <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Let&apos;s build something together. Whether it&apos;s a new project, collaboration, or just a chat about tech.
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="mx-auto grid lg:grid-cols-2 gap-12">
