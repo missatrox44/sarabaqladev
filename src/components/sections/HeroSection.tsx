@@ -22,7 +22,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/hero-abstract.jpg')` }}
+        style={{ backgroundImage: `url('/hero-abstract.webp')` }}
       />
       
       {/* Animated Background Elements */}

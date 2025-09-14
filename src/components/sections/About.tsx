@@ -107,25 +107,25 @@ export function About() {
               <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-3 p-2 md:p-3">
                 {/* Tall left */}
                 <div className="hidden md:block md:col-span-4 row-span-2">
-                  <img src="/sara-seattle.jpeg" alt="Sara hugging a tree at Mount Rainer National Park" className="h-full w-full object-cover rounded-xl aspect-[3/4]" />
+                  <img src="/sara-seattle.webp" alt="Sara hugging a tree at Mount Rainer National Park" className="h-full w-full object-cover rounded-xl aspect-[3/4]"   loading="lazy" />
                 </div>
 
                 {/* Wide top */}
                 <div className="col-span-6 md:col-span-8">
-                  <img src="/cactus-cats.jpeg" alt="Bagheera & Sylvester" className="h-full w-full object-cover rounded-xl aspect-[16/9]" />
+                  <img src="/cactus-cats.webp" alt="Bagheera & Sylvester" className="h-full w-full object-cover rounded-xl aspect-[16/9]"  loading="lazy" />
                 </div>
 
                 {/* Two squares */}
                 <div className="col-span-3 md:col-span-4">
-                  <img src="/profile.jpg" alt="Headshot of Sara Baqla" className="h-full w-full object-cover rounded-xl aspect-square" />
+                  <img src="/profile.webp" alt="Headshot of Sara Baqla" className="h-full w-full object-cover rounded-xl aspect-square"   loading="lazy" />
                 </div>
                 <div className="col-span-3 md:col-span-4">
-                  <img src="/dogs.jpeg" alt="Archimedes & Artemis" className="h-full w-full object-cover rounded-xl aspect-square" />
+                  <img src="/dogs.webp" alt="Archimedes & Artemis" className="h-full w-full object-cover rounded-xl aspect-square"   loading="lazy" />
                 </div>
 
                 {/* Wide bottom */}
                 <div className="col-span-6 md:col-span-12">
-                  <img src="clones.jpeg" alt="Sara with her mirror clones" className="h-full w-full object-cover rounded-xl aspect-[21/9]" />
+                  <img src="clones.webp" alt="Sara with her mirror clones" className="h-full w-full object-cover rounded-xl aspect-[21/9]"   loading="lazy" />
                 </div>
               </div>
             </div>
