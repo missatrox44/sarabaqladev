@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '../ui/enhanced-button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-// import { blogData } from '@/lib/data';
 import { format } from 'date-fns';
 import { wisp } from '@/lib/wisp';
 
@@ -12,7 +11,7 @@ export async function LatestBlogs() {
   // const result = await wisp.getPosts({ limit: "all" });
   const result = await wisp.getPosts({ limit: 3 });
 
-  console.log("Latest Blogs Data:", result);
+  // console.log("Latest Blogs Data:", result);
 
   const latestBlogs = result.posts.map(post => ({
     title: post.title,
