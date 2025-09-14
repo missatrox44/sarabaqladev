@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/enhanced-button';
 import { ModeToggle } from '@/components/theme/ModeToggle';
-import { 
+import {
   Menu, X, GithubIcon, LinkedinIcon, TwitterIcon
 } from 'lucide-react';
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
@@ -36,11 +36,11 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed w-full z-50 transition-all duration-300 ease-in-out backdrop-blur-sm",
-        scrolled 
-          ? "bg-background/95 border-b shadow-sm" 
+        scrolled
+          ? "bg-background/95 border-b shadow-sm"
           : "bg-transparent"
       )}
     >
@@ -72,18 +72,18 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-4 pl-8">
             <div className="flex items-center space-x-3">
-              <a 
-                href={GITHUB_URL} 
-                target="_blank" 
+              <a
+                href={GITHUB_URL}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <GithubIcon className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a 
+              <a
                 href={LINKEDIN_URL}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
@@ -100,7 +100,7 @@ export function Header() {
                 <span className="sr-only">Twitter</span>
               </a> */}
             </div>
-           {/* } <ModeToggle /> */}
+            {/* } <ModeToggle /> */}
             <Button asChild variant="hero">
               <Link href="/#contact">Contact</Link>
             </Button>
@@ -110,21 +110,21 @@ export function Header() {
           <div className="flex md:hidden items-center space-x-4">
             {/* } <ModeToggle /> */}
             <Button
-              variant="ghost"
+              variant="ghostIcon"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6 z-[999]" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div 
+      <div
         className={cn(
-          "md:hidden fixed inset-0  bg-background backdrop-blur-md flex flex-col justify-start pt-20 px-6 transform transition-transform duration-300 ease-in-out",
+          "md:hidden fixed inset-0 bg-background z-[100] backdrop-blur-md flex flex-col justify-start pt-16 px-6 transition-transform duration-300 ease-in-out h-[100dvh]",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -133,6 +133,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
+              onClick={() => setIsOpen(false)}
               className={cn(
                 "text-xl font-medium py-2 border-b border-border",
                 pathname === item.href
@@ -143,22 +144,22 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button asChild className="mt-4" variant="hero">
+          <Button asChild className="mt-4" variant="hero" onClick={() => setIsOpen(false)} >
             <Link href="/#contact">Contact</Link>
           </Button>
           <div className="flex justify-center space-x-6 pt-6">
-            <a 
-              href={GITHUB_URL} 
-              target="_blank" 
+            <a
+              href={GITHUB_URL}
+              target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <GithubIcon className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
             </a>
-            <a 
+            <a
               href={LINKEDIN_URL}
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
