@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Button } from '../ui/enhanced-button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 // import { blogData } from '@/lib/data';
 import { format } from 'date-fns';
@@ -10,7 +10,7 @@ import { wisp } from '@/lib/wisp';
 
 export async function LatestBlogs() {
   // const result = await wisp.getPosts({ limit: "all" });
-    const result = await wisp.getPosts({ limit: 3 });
+  const result = await wisp.getPosts({ limit: 3 });
 
   console.log("Latest Blogs Data:", result);
 
@@ -27,16 +27,16 @@ export async function LatestBlogs() {
     <section id="blog" className="py-12 md:py-24 relative overflow-hidden bg-muted/30">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 text-center mb-16">
-          <div className="inline-block">
+          {/* <div className="inline-block">
             <Badge variant="outline" className="text-sm font-medium rounded-full px-4 py-1">
               Latest Articles
             </Badge>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            My Blog
+          </div> */}
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Latest <span className="text-gradient">Articles</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Thoughts, learnings, and insights from my journey in tech and design.
+            Thoughts, learnings, and insights from my journey in tech.
           </p>
         </div>
 
@@ -76,11 +76,9 @@ export async function LatestBlogs() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" asChild>
             <Link href="/blog">
-              View All Articles <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+            <Button variant="hero">View All Articles</Button>
+          </Link>
         </div>
       </div>
     </section>
