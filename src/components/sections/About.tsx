@@ -1,19 +1,8 @@
 "use client";
 
-import { Code, Palette, Globe, Monitor, Figma, Layout, Laptop, Database, Smartphone, CheckSquare } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { Palette, Globe, Monitor, Layout, Database, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// const skills = [
-//   { name: 'Frontend Development', icon: <Layout className="h-5 w-5" /> },
-//   { name: 'Backend Development', icon: <Database className="h-5 w-5" /> },
-//   { name: 'UX/UI Design', icon: <Figma className="h-5 w-5" /> },
-//   { name: 'Responsive Design', icon: <Laptop className="h-5 w-5" /> },
-//   { name: 'JavaScript', icon: <Code className="h-5 w-5" /> },
-//   { name: 'React', icon: <Monitor className="h-5 w-5" /> },
-//   { name: 'CSS/SCSS', icon: <Palette className="h-5 w-5" /> },
-//   { name: 'Web Performance', icon: <Globe className="h-5 w-5" /> },
-// ];
 
 const skills = [
   { name: 'Full Stack Development', icon: <Layout className="h-5 w-5" /> },
@@ -21,9 +10,7 @@ const skills = [
   { name: 'React Native', icon: <Smartphone className="h-5 w-5" /> },
   { name: 'Node.js & APIs', icon: <Database className="h-5 w-5" /> },
   { name: 'Headless CMS Integration', icon: <Globe className="h-5 w-5" /> },
-  // { name: 'UX/UI Collaboration', icon: <Figma className="h-5 w-5" /> },
   { name: 'Tailwind & SCSS', icon: <Palette className="h-5 w-5" /> },
-  // { name: 'Testing (Cypress)', icon: <CheckSquare className="h-5 w-5" /> },
 ];
 
 export function About() {
@@ -86,26 +73,9 @@ export function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            {/* <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-8 border-background shadow-xl">
-              <img
-                src="/sara-seattle.jpeg"
-                alt="Professional working at desk"
-                className="h-full w-full object-cover object-top"
-              />
-
-              <div className="absolute top-6 left-0 bg-background/95 backdrop-blur-sm rounded-r-lg shadow-lg p-4 border">
-                <p className="text-sm font-medium text-muted-foreground">Remote Dev</p>
-                <p className="text-2xl font-bold">3+ Years</p>
-              </div>
-
-              <div className="absolute bottom-6 right-0 bg-background/95 backdrop-blur-sm rounded-l-lg shadow-lg p-4 border">
-                <p className="text-sm font-medium text-muted-foreground">Impact</p>
-                <p className="text-2xl font-bold">Happy Clients</p>
-              </div>
-            </div> */}
             <div className="relative rounded-2xl overflow-hidden">
               <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-3 p-2 md:p-3">
-                {/* Tall left */}
+                {/* Tall left - hidden mobile */}
                 <div className="hidden md:block md:col-span-4 row-span-2">
                   <img src="/sara-seattle.webp" alt="Sara hugging a tree at Mount Rainer National Park" className="h-full w-full object-cover rounded-xl aspect-[3/4]"   loading="lazy" />
                 </div>

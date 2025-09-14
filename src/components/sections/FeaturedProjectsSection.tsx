@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/enhanced-button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { ExternalLink, Github, X } from 'lucide-react';
+import { ExternalLink, Github} from 'lucide-react';
 import { projects, Project } from '@/data/projects';
 import Link from 'next/link';
 
@@ -49,6 +49,7 @@ export default function ProjectsSection() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                 </div>
                 <CardHeader>
@@ -176,6 +177,7 @@ export default function ProjectsSection() {
                       src={selectedProject.image}
                       alt={selectedProject.title}
                       className="w-full h-full object-cover object-top"
+                      loading="lazy"
                     />
                   </div>
 
@@ -242,13 +244,6 @@ export default function ProjectsSection() {
                         Private Repo
                       </Button>
                     )}
-                    {/* <Button
-                      variant="ghost"
-                      onClick={() => setSelectedProject(null)}
-                    >
-                      <X className="mr-2 h-4 w-4" />
-                      Close
-                    </Button> */}
                   </div>
                 </div>
               </motion.div>
