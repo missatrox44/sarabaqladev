@@ -41,7 +41,7 @@ export const experienceData = [
     description:
       'Built and launched web and mobile apps in React and React Native, integrating Firebase and MongoDB for secure, scalable performance. Designed intuitive interfaces with Figma and Material UI, and ensured quality through end-to-end testing and clear team documentation.',
     type: 'work',
-    skills: ['React Native', 'Firebase', 'Node.js', 'TypeScript', 'Cypress', 'MongoDB', 'React', 'Redux', 'JavaScript', 'Expess', 'REST'],
+    skills: ['React Native', 'Firebase', 'Node.js', 'TypeScript', 'Cypress', 'MongoDB', 'React', 'Redux', 'JavaScript', 'Express', 'REST'],
     image: '/experience/ibg.png'
   },
   {
