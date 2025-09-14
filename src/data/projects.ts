@@ -32,7 +32,7 @@ export const projects: Project[] = [
     impact:
       "Delivered a scalable hub that communicates the park’s mission, supports events and press coverage, and engages the community. The site strengthens outreach, fundraising, and transparency around restoration, reconnecting the public to the waterfront for the first time in 75 years.",
     techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
-    image: "/manresa.png",
+    image: "/projects/manresa.png",
     liveDemo: "https://www.manresawilds.org/",
     featured: true,
     attributions: [
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Salesforce",
       "Google Sheets + Apps Script"
     ],
-    image: "/premium-catalog.png",
+    image: "/projects/premium-catalog.png",
     liveDemo: "https://www.identity.digital/premium-catalog",
     featured: true,
     attributions: [
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     impact:
       "Improved site performance and organic visibility, streamlined editorial workflows, and expanded monetization opportunities without sacrificing usability.",
     techStack: ['Craft CMS', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript', 'Laravel', 'Vite', 'Tailwind', 'Craft Cloud'],
-    image: '/frommers.png',
+    image: '/projects/frommers.png',
     liveDemo: 'https://www.frommers.com/',
     github: '',
     featured: true,
@@ -117,7 +117,7 @@ export const projects: Project[] = [
       "Tailwind",
       "SCSS"
     ],
-    image: "/nant-bio.png",
+    image: "/projects/nant-bio.png",
     liveDemo: "https://nantbr.com/",
     featured: false,
     attributions: [
@@ -147,7 +147,7 @@ export const projects: Project[] = [
       "Tailwind",
       "Swiper.js", "GSAP", "SCSS", "Vercel"
     ],
-    image: "resolute.png",
+    image: "/projects/resolute.png",
     liveDemo: "https://www.resolute.vc/",
     featured: false,
     attributions: [
@@ -179,7 +179,7 @@ export const projects: Project[] = [
       "SCSS",
       "Vercel",
     ],
-    image: "/nhrl.png",
+    image: "/projects/nhrl.png",
     liveDemo: "https://www.nhrl.io/",
     featured: false,
     attributions: [
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     impact:
       "Delivered a polished, multilingual landing page that boosted API visibility and simplified customer engagement.",
     techStack: ["Vue", "Tailwind", "Vite", "Vue i18n", "TypeScript"],
-    image: "/nameapi.png",
+    image: "/projects/nameapi.png",
     liveDemo: "https://www.name.com/nameapi",
     featured: false,
     attributions: [
@@ -233,7 +233,7 @@ export const projects: Project[] = [
       "Keen Slider",
       "Tailwind"
     ],
-    image: "/travel-texas.png",
+    image: "/projects/travel-texas.png",
     liveDemo: "https://www.nationalgeographic.com/travel-texas/",
     featured: false,
     attributions: [
@@ -264,7 +264,7 @@ export const projects: Project[] = [
       "SCSS",
       "Formik"
     ],
-    image: "/nat-geo-earth-month.png",
+    image: "/projects/nat-geo-earth-month.png",
     liveDemo: "https://www.nationalgeographic.com/ourhomesweepstakes/",
     featured: false,
     attributions: [
@@ -295,7 +295,7 @@ export const projects: Project[] = [
       "Swiper.js",
       "Zustand",
     ],
-    image: "/travel-nevada.png",
+    image: "/projects/travel-nevada.png",
     liveDemo: "https://www.nationalgeographic.com/travel-nevada/",
     featured: false,
     attributions: [
@@ -328,7 +328,7 @@ export const projects: Project[] = [
       "Vercel"
 
     ],
-    image: "/core-spaces.png",
+    image: "/projects/core-spaces.png",
     liveDemo: "https://corespaces.com/strategy",
     featured: false,
     attributions: [
@@ -351,7 +351,7 @@ export const projects: Project[] = [
     solution: "Built a CMS-powered guidelines site with Prismic, allowing content editors to easily update styles and assets. Extended CMS schema for custom styles and applied design refinements to improve usability and brand fidelity.",
     impact: "Streamlined Motorola’s ability to maintain and distribute brand guidelines, reducing manual overhead for their design and marketing teams and ensuring consistent brand execution.",
     techStack: ["Prismic", "Tailwind", "SCSS", "GSAP", "Next.js"],
-    image: "/motorola.png",
+    image: "/projects/motorola.png",
     liveDemo: "https://brand-guidelines.motorolasolutions.com/",
     featured: false,
     attributions: [
