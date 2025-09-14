@@ -24,15 +24,13 @@ export const projects: Project[] = [
     shortDescription:
       "Next.js + Prismic site for a first-of-its-kind waterfront park in Norwalk, CT, built with a modular, mobile first approach.",
     longDescription:
-      "Manresa Wilds is a public facing Next.js application connected to Prismic that tells the story of a new, publicly accessible waterfront park. I worked on a cross functional team where I conducted PR reviews, gave implementation feedback, and collaborated on highly effective sprint planning. The site is fully responsive and designed for accessible, fast loading content updates via Prismic’s slice-based components.",
+      "At Reach, I helped launch a public facing Next.js site powered by Prismic for Manresa Wilds, a new waterfront park. I contributed to sprint planning, PR reviews, and implementation feedback, while building responsive, accessible layouts with slice-based components for easy content updates.",
     problem:
-      "Manresa Island Corporation needed a modern, flexible platform to share its vision of transforming a decommissioned power plant into 1.75 miles of new public waterfront access. The site had to host event listings, recaps, press releases, and rich storytelling about the site’s history, mission, and future ecological programs, while empowering non-technical staff to publish updates without developer support.",
-
+      "The Manresa Island Corporation needed a modern platform to share its vision of transforming a decommissioned power plant into 1.75 miles of public waterfront access, with flexible publishing for events, press, and ecological storytelling.",
     solution:
-      "Built a responsive Next.js application integrated with Prismic CMS, using slice based components for modular, editorially flexible content. Collaborated in effective sprint planning, PR reviews, and provided implementation feedback to maintain quality. Implemented accessible, performant layouts that adapt seamlessly across devices, ensuring the site could scale as new programming and ecological initiatives roll out.",
-
+      "We built a responsive Next.js app integrated with Prismic CMS, using slice-based components for modular content. I ensured accessible, performant layouts and components.",
     impact:
-      "Launched a scalable storytelling hub that communicates the park’s mission, showcases events and press coverage, and supports community engagement. The site strengthens outreach and fundraising efforts, provides transparency around remediation and ecological restoration, and lays a digital foundation for Manresa Wilds to inspire public connection to the waterfront for the first time in nearly 75 years.",
+      "Delivered a scalable hub that communicates the park’s mission, supports events and press coverage, and engages the community. The site strengthens outreach, fundraising, and transparency around restoration, reconnecting the public to the waterfront for the first time in 75 years.",
     techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
     image: "/manresa.png",
     liveDemo: "https://www.manresawilds.org/",
@@ -47,13 +45,13 @@ export const projects: Project[] = [
     shortDescription:
       "Standalone Next.js app embedded in Webflow for browsing and filtering premium domain names with CSV export and Hubspot/Salesforce integration.",
     longDescription:
-      "The Premium Catalog is a Next.js application built for Identity Digital to let clients explore and evaluate premium domain names. I owned this project end-to-end, from architecture to delivery. Users can toggle between grid and list views, filter domains by TLD, name length, and price range, and sort results by price or alphabetically. Filtered results can be exported as a CSV for stakeholder review. Selected domains flow into a Hubspot form, which feeds leads directly into Salesforce for the sales team. Data is maintained in a Google Sheet with a custom Apps Script that transforms the sheet into a JSON API endpoint consumed by the app. The application is fully mobile responsive and embedded seamlessly into Identity Digital’s Webflow site via iFrame.",
+      "At Reach, in collaboration with Heco, I delivered a standalone Next.js app embedded in Webflow that lets customers browse, filter, and export premium domains. The app connects with Hubspot and Salesforce to streamline lead capture while staying fully responsive and seamless within Identity Digital’s marketing site.",
     problem:
-      "Identity Digital needed a way for potential customers to explore premium domain names and quickly identify options that fit their needs. The solution had to support complex filtering, easy sharing of curated lists, and seamless lead capture integrated with existing Hubspot and Salesforce workflows, all while living inside a Webflow site.",
+      "Identity Digital needed a way to showcase premium domains with advanced filtering and simple list sharing, while tying directly into existing Hubspot and Salesforce workflows.",
     solution:
-      "Designed and developed a standalone Next.js application, embedded via iFrame in Webflow, to handle advanced filtering and search at scale. Implemented CSV export for stakeholder review, integrated a Hubspot form for user interest submissions, and ensured those leads were captured in Salesforce. Built a Google Apps Script pipeline to convert and expose domain data from Google Sheets as a JSON endpoint consumed by the app. Delivered a performant experience that can scale with Identity Digital’s catalog.",
+      "Built a Webflow-embedded Next.js application with filtering, CSV export, and lead capture integrated into Hubspot and Salesforce. Domain data is managed in Google Sheets and transformed into a JSON API for the app.",
     impact:
-      "Enabled Identity Digital to showcase its premium domain portfolio in a user friendly way that improved client engagement and reduced sales friction. The CSV export empowered clients to share tailored lists with decision makers, while Hubspot and Salesforce integration streamlined lead capture for the sales team. The modular setup allows the catalog to grow as inventory expands, all while staying embedded in the marketing site.",
+      "Provided a user-friendly catalog that improved client engagement and simplified sales. CSV exports supported faster decision making, and CRM integration reduced friction for the sales team while allowing the catalog to scale with new inventory.",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -77,13 +75,13 @@ export const projects: Project[] = [
     shortDescription:
       "A complete redesign and rebuild of Frommer’s travel site, migrating legacy data into Craft CMS and implementing modern SEO and ad solutions.",
     longDescription:
-      "Frommer’s, a leader in travel guides and content, needed a modernized digital platform. Their original site was outdated, not mobile-friendly, and poorly optimized for SEO. Our team delivered a full redesign and migration to Craft CMS, importing and restructuring their legacy database to support diverse travel content formats. We applied SEO best practices throughout the build, significantly improving visibility, and implemented a flexible ad injection system to open new revenue streams. The result is a faster, scalable, and user-friendly platform that better serves both readers and the business.",
+      "At Reach, I worked on the full redesign and rebuild of Frommer’s, migrating legacy content into Craft CMS and delivering a faster, mobile-friendly platform. The new site improved SEO, streamlined content workflows, and added flexible ad placements to open new revenue streams.",
     problem:
-      "The legacy Frommer’s site was outdated, difficult to maintain, and underperforming in SEO. Content was stored in inconsistent formats, making migration and scalability a challenge. Revenue opportunities through advertising were also limited.",
+      "Frommer’s legacy site was outdated, hard to maintain, poorly optimized for SEO, and lacked effective ad infrastructure.",
     solution:
-      "Rebuilt the site on Craft CMS with a clean, responsive design. Migrated and normalized legacy database content into structured entries, enabling efficient content management. Implemented SEO best practices across templates, metadata, and site architecture. Added an ad injection system to maximize monetization without disrupting the user experience.",
+      "Rebuilt the platform on Craft CMS with responsive templates, structured content migration, SEO best practices, and a flexible ad injection system.",
     impact:
-      "Improved organic search visibility and site performance, helping Frommer’s reach more readers. Streamlined editorial workflows with Craft CMS, reducing content management overhead. Introduced flexible ad placements that increased revenue opportunities while maintaining usability.",
+      "Improved site performance and organic visibility, streamlined editorial workflows, and expanded monetization opportunities without sacrificing usability.",
     techStack: ['Craft CMS', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript', 'Laravel', 'Vite', 'Tailwind', 'Craft Cloud'],
     image: '/frommers.png',
     liveDemo: 'https://www.frommers.com/',
@@ -99,13 +97,13 @@ export const projects: Project[] = [
     shortDescription:
       "WordPress site for a sustainability focused company selling compostable straws, tableware, and cutlery made from ocean calcium sand.",
     longDescription:
-      "NantBio Renewables needed a modern website to showcase its Wave Ware™ line of compostable straws, plates, bowls, cutlery, and trays. Built in WordPress with Blade templating, the site highlights the company’s sustainable, ocean sourced materials and product innovations. I contributed to the development of several pages and custom components, implemented interactive sliders, built modals connected to HubSpot forms, and create templates for custom post types. The result is a responsive, engaging site that communicates both the science and story of truly compostable materials.",
+      "At Reach, I contributed to the development of NantBio Renewables’ WordPress site showcasing Wave Ware™, a line of compostable straws, plates, bowls, and cutlery. I built custom pages and components, added interactive sliders and modals connected to HubSpot forms.",
     problem:
-      "NantBio Renewables required a flexible, marketing driven platform to promote its Wave Ware™ products and educate customers on the benefits of compostable, ocean calcium based alternatives to plastics. The site needed to combine storytelling with lead capture while supporting ongoing news and press release content.",
+      "NantBio Renewables needed a flexible marketing site to promote Wave Ware™, highlight its sustainable materials, and capture leads through storytelling and press content.",
     solution:
-      "Developed key site components in WordPress using Blade templating. Built custom pages and content types, implemented interactive features such as Swiper.js carousels, and integrated modals with HubSpot forms for seamless lead capture. Ensured mobile responsiveness and a cohesive brand experience across the product catalog and blog content.",
+      "Built key site components in WordPress with Blade templating, implemented Swiper.js carousels and HubSpot integrated modals, and ensured a mobile responsive, brand consistent experience across the catalog and blog.",
     impact:
-      "Delivered a sustainable focused web presence that helps NantBio Renewables tell the story of its carbon negative materials and eco friendly products. The site improved customer engagement, streamlined lead generation through HubSpot, and positioned the brand as a trusted provider of compostable, USA made tableware and packaging solutions.",
+      "Launched a sustainable focused web presence that improved customer engagement, streamlined lead capture, and positioned NantBio Renewables as a trusted provider of compostable, USA made tableware.",
     techStack: [
       "WordPress",
       "Blade",
@@ -135,13 +133,13 @@ export const projects: Project[] = [
     shortDescription:
       "Modernized venture fund site with rich motion, connected to Prismic with editable portfolio and team pages.",
     longDescription:
-      "Resolute Ventures is a lead pre-seed/seed investor known for a founder first approach and a strong community ethos. We rebuilt their marketing site as a Next.js app with thoughtful animations and a flexible Prismic CMS. The site highlights their story, people, and community while giving the team full control over content including portfolio companies, founder blurbs, retreat highlights, and more, without developer handoffs.",
+      "At Reach, I helped rebuild Resolute Ventures’ marketing site in Next.js with Prismic CMS. The redesign introduced subtle animations, modernized the brand, and gave the team full control over portfolio, bios, and community content without developer handoffs.",
     problem:
-      "The previous site looked dated and was difficult to update. Resolute needed a faster, modern experience that clearly communicated their founder first philosophy and allowed non technical team members to manage portfolio companies, bios, and community content.",
+      "Resolute’s old site was dated, slow, and difficult for the team to update.",
     solution:
-      "Rebuilt the site in Next.js with an animation system (GSAP) for subtle, performance minded motion. Modeled content in Prismic. Implemented pages for Companies, About (history + leadership), and Community (retreats, coaching, peer programs). Deployed on Vercel with image optimization and caching.",
+      "Rebuilt the site in Next.js with GSAP animations, modeled content in Prismic, and deployed on Vercel for speed and scalability.",
     impact:
-      "A contemporary look and feel that better reflects the brand. Faster load times and smoother interactions. Fully editable CMS where the Resolute team can update companies, bios, and community sections in minutes, keeping the site aligned with their active founder community.",
+      "Delivered a faster, contemporary site that reflects Resolute’s founder first ethos while enabling quick, non technical content updates.",
     techStack: [
       "Next.js",
       "JavaScript",
@@ -165,13 +163,13 @@ export const projects: Project[] = [
     shortDescription:
       "Contributed to NHRL’s legacy Next.js app by implementing new Prismic components promoting Havoc Academy.",
     longDescription:
-      "NHRL (National Havoc Robot League) is a competitive combat robotics league with events, live streaming, and community offerings. At Reach, I supported updates to their legacy Next.js app by building new marketing components to promote Havoc Academy. I created a reusable Prismic slice and ensured it was fully responsive across devices, aligning closely with designer specifications. While the app used custom CSS rather than Tailwind, I optimized layouts for mobile and maintained consistency with the existing codebase.",
+      "At Reach, I updated NHRL’s legacy Next.js app by developing a reusable Prismic slice to promote Havoc Academy. I ensured responsive layouts matched design specs and integrated smoothly with the existing custom CSS codebase.",
     problem:
-      "The client needed to promote a new educational product, Havoc Academy, within their existing site. Their marketing team required flexibility to update and reuse content through Prismic without heavy developer involvement.",
+      "NHRL needed a way to showcase Havoc Academy while giving their marketing team flexibility to update content without heavy dev support.",
     solution:
-      "Built a new Prismic slice for Havoc Academy with customizable fields and responsive layouts. Integrated the slice into the Next.js app with custom CSS, ensuring the component matched designs across breakpoints while preserving site performance and code standards.",
+      "Built a customizable Prismic slice with responsive layouts and integrated it into the Next.js app using the existing CSS approach.",
     impact:
-      "Delivered a scalable component that allowed the client’s content team to promote Havoc Academy independently. Improved mobile responsiveness and helped extend the lifespan of the legacy codebase by integrating modern, flexible content updates.",
+      "Enabled the client to promote Havoc Academy independently, improved mobile responsiveness, and extended the usefulness of their legacy site.",
     techStack: [
       "Next.js",
       "Prismic",
@@ -195,10 +193,14 @@ export const projects: Project[] = [
     id: "namecom-api",
     title: "Name.com API Landing Page",
     shortDescription: "Landing page for Name.com’s AI-ready API with localized content and HubSpot integration.",
-    longDescription: "Contributed to the Name.com API landing page, a Vue-powered site built to highlight the company’s AI-ready API offerings. My work focused on this page specifically, implementing Vue i18n for localization, styling with Tailwind, and collaborating on UI refinements. I also helped with the accompanying contact page, integrating form submissions through HubSpot to streamline lead capture.",
-    problem: "Name.com needed a dedicated, multilingual landing page to showcase its new AI-ready API and provide a clear contact path for interested developers and businesses.",
-    solution: "Built a performant, responsive page with Vue, Tailwind, and Vite, featuring Vue i18n for localization. Added a HubSpot-powered contact form to enable direct communication with potential customers.",
-    impact: "Delivered a polished, multilingual landing page that increased visibility for Name.com’s API product while providing a frictionless way for leads to connect with the sales team.",
+    longDescription:
+      "At Reach, in collaboration with Heco, I contributed to the landing page for Name.com’s AI-ready API. I implemented localization with Vue i18n, styled with Tailwind, refined UI details, and integrated a HubSpot contact form to streamline lead capture.",
+    problem:
+      "Name.com needed a multilingual landing page to showcase its API and connect developers and businesses with the sales team.",
+    solution:
+      "Built a responsive Vue page with localization and a HubSpot powered contact form for direct lead capture.",
+    impact:
+      "Delivered a polished, multilingual landing page that boosted API visibility and simplified customer engagement.",
     techStack: ["Vue", "Tailwind", "Vite", "Vue i18n", "TypeScript"],
     image: "/nameapi.png",
     liveDemo: "https://www.name.com/nameapi",
@@ -214,13 +216,13 @@ export const projects: Project[] = [
     shortDescription:
       "Enhanced National Geographic’s Travel Texas microsite with new articles, carousel media, films, and interactive map updates using Spline.",
     longDescription:
-      "National Geographic’s Travel Texas site is a rich, animated microsite highlighting the culture, landscapes, and destinations across Texas. At Reach, I supported major content updates, including refreshing carousel images, adding new editorial articles to the masonry grid, and updating the interactive map built with Spline by adding new points of interest. I also integrated two new short films into the experience, updating the playback logic to accommodate their external hosting. The site makes heavy use of advanced animation and 3D libraries including Three.js, React Three Fiber, GSAP, and Spline, requiring careful integration to maintain smooth performance and responsive behavior.",
+      "At Reach, I supported content and feature updates for National Geographic’s Travel Texas microsite. I refreshed carousel media, added articles, integrated two films, and updated the Spline powered interactive map with new points of interest, all while preserving smooth performance across its animation heavy design.",
     problem:
-      "The client needed to refresh the campaign with new articles, films, and map content, but the site’s reliance on complex 3D/animation libraries and custom logic meant updates risked breaking layouts, animations, or film playback.",
+      "The client needed fresh articles, films, and map updates while ensuring the site’s complex 3D and animation framework remained stable.",
     solution:
-      "Updated carousel images and masonry grid articles while maintaining visual balance and responsive layout. Added new points of interest to the Spline-powered interactive map, ensuring they rendered correctly across breakpoints. Integrated two externally hosted films, adjusting playback logic so users could view them seamlessly without breaking the flow of the microsite.",
+      "Updated media, articles, and map points while integrating films with adjusted playback logic to fit seamlessly into the experience.",
     impact:
-      "Kept a highly interactive National Geographic microsite current and engaging with new stories, films, and map experiences. Maintained the integrity of complex animations and 3D interactions, allowing visitors to continue exploring Texas’s highlights through a performant, visually dynamic interface.",
+      "Kept the microsite engaging and performant, showcasing new Texas stories while maintaining the integrity of animations and 3D interactions.",
     techStack: [
       "Next.js",
       "SCSS",
@@ -247,13 +249,13 @@ export const projects: Project[] = [
     shortDescription:
       "Supported National Geographic’s annual sweepstakes campaign with content updates and Supabase driven entry restrictions.",
     longDescription:
-      "National Geographic’s annual Earth Month Sweepstakes celebrated our planet with a once-in-a-lifetime grand prize: a National Geographic–Lindblad Expeditions cruise to Antarctica. At Reach, I contributed to the legacy Next.js + Tailwind app by updating content for the 2025 campaign and implementing new logic with Supabase. I ensured users could enter only once per day during the April 15–30 sweepstakes window and added date based logic to automatically disable the form after the promotion ended, showing a clear 'promotion ended' message instead of an inactive form. This improved compliance with sweepstakes rules, reduced manual intervention, and created a smoother experience for participants.",
+      "At Reach, I updated the legacy Next.js app for National Geographic’s Earth Month Sweepstakes, refreshing campaign content and adding Supabase logic to enforce daily entry limits and automatically close the form when the promotion ended.",
     problem:
-      "The sweepstakes microsite needed fresh content for the 2025 promotion and lacked guardrails to enforce daily entry limits.",
+      "The sweepstakes site needed updated content and guardrails to prevent multiple daily entries.",
     solution:
-      "Updated copy and assets for the current year’s sweepstakes. Integrated Supabase logic to validate one entry per user per day.",
+      "Refreshed copy and assets for 2025 and integrated Supabase to validate one entry per user per day with automatic form disable after the deadline.",
     impact:
-      "Delivered an improved sweepstakes experience: users could confidently enter daily without loopholes, admins no longer had to sort and clean a large database of duplicate entries at the end, and visitors saw clear messaging once the promotion concluded.",
+      "Created a smoother, compliant sweepstakes experience that reduced admin cleanup and gave users clear, reliable participation rules.",
     techStack: [
       "Next.js",
       "Tailwind",
@@ -278,13 +280,13 @@ export const projects: Project[] = [
     shortDescription:
       "Maintained National Geographic’s Travel Nevada microsite with new media, stories, and shorts integrated into its highly animated layouts.",
     longDescription:
-      "National Geographic’s Travel Nevada site showcases the best of Nevada — from scenic drives and cultural landmarks to adventure tourism. Built as a highly animated Next.js experience, the site included a dynamic masonry grid, interactive carousels, and stacking card effects to highlight stories and shorts. At Reach, I supported annual content updates, adding new videos and images to the masonry grid while preserving proper heights and responsive behavior. I also integrated new editorial stories and shorts into their respective components, ensuring animations and transitions continued to function smoothly. This work extended the life of the site and kept the campaign fresh and engaging for visitors exploring Nevada’s attractions.",
+      "At Reach, I added content udpates for National Geographic’s Travel Nevada microsite, adding new stories, images, and shorts into its animation heavy Next.js build. I ensured the masonry grid, carousels, and stacking card effects continued to perform smoothly across devices.",
     problem:
-      "The site required fresh yearly content to keep audiences engaged, but its complex animated layouts (masonry grid, carousels, stacking cards) meant updates risked breaking layouts or animations if not implemented carefully.",
+      "The site needed content refreshes while its complex animated layouts risked breaking during updates.",
     solution:
-      "Updated the masonry grid with new videos and images, adjusting sizing logic to preserve consistent heights. Added new stories into the carousel and new shorts into the stacking card effect, ensuring animations and responsive behavior continued to work seamlessly across devices.",
+      "Integrated new media and editorial content into the grid, carousel, and card components, maintaining animations and responsive behavior.",
     impact:
-      "Kept a National Geographic microsite current with new editorial content and media, maintained the integrity of complex interactive layouts, and ensured a smooth, visually engaging experience for audiences exploring Nevada’s tourism highlights.",
+      "Kept the microsite fresh and engaging with new content while preserving the integrity of its interactive design and performance.",
     techStack: [
       "Next.js",
       "JavaScript",
@@ -309,13 +311,13 @@ export const projects: Project[] = [
     shortDescription:
       "Built the new Strategy page for Core Spaces, integrating dynamic content from Prismic and showcasing their student housing and build-to-rent strategies.",
     longDescription:
-      "Core Spaces is a vertically integrated real estate developer and operator specializing in student housing and build-to-rent communities. At Reach (in collaboration with Heco), I built the Strategy page of their corporate site. Connected to Prismic, the page highlights Core’s vision, mission, industry leadership, and strategies across student housing and build-to-rent markets. I implemented sections for metrics, strategy pillars, and case studies (oLiv Madison, Oxenfree WEHO), ensuring content editors could update copy, stats, and media without developer support. The page integrates advanced animation and UI libraries to deliver a smooth, polished experience aligned with Core’s innovative brand.",
+      "At Reach, in collaboration with Heco, I built the Strategy page for Core Spaces’ corporate site. Powered by Prismic, the page highlights strategy pillars, metrics, and case studies with CMS driven content, supported by smooth animations for a polished, responsive experience.",
     problem:
-      "Core Spaces needed a new page to clearly communicate its strategy and leadership in student housing and build-to-rent sectors. The challenge was to deliver a content-rich, design-driven experience that could be easily updated by non-technical staff.",
+      "Core Spaces needed a new page to communicate its strategy and market leadership in a way that was design driven yet easy for non technical staff to update.",
     solution:
-      "Implemented a fully CMS-driven Strategy page using Prismic, structured with reusable slices for sections like stats, strategy pillars, case studies, and video. Leveraged animation and UI libraries to bring the design vision to life, while ensuring the page was responsive and easy for admins to update year-to-year.",
+      "Built a CMS driven page with reusable Prismic slices for metrics, pillars, case studies, and video, enhanced with animation and UI libraries.",
     impact:
-      "Delivered a visually engaging and content-rich Strategy page that communicated Core’s market leadership and growth strategy. Empowered admins with a flexible, CMS-driven system for future updates and ensured smooth, responsive animations that elevated the brand’s digital presence.",
+      "Delivered a visually engaging, flexible page that elevated the brand, clearly communicated Core’s growth strategy, and empowered staff to manage updates independently.",
     techStack: [
       "Next.js",
       "Prismic",
