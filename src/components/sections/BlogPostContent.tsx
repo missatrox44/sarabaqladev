@@ -59,7 +59,7 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
         <h1 className="font-bold">{title}</h1>
         <PostContent content={content} />
 
-        <div className="mt-10 opacity-40 text-sm">
+        <div className="mt-10 opacity-80 text-sm">
           {tags.map((tag) => (
             <Link
               key={tag.id}
@@ -70,7 +70,7 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
             </Link>
           ))}
         </div>
-        <div className="text-sm opacity-40 mt-4">
+        <div className="text-sm opacity-80 mt-4">
           {Intl.DateTimeFormat("en-US").format(
             new Date(publishedAt || createdAt)
           )}
