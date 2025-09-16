@@ -65,13 +65,14 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
         </div>
         <div className="opacity-80 text-sm mb-8">
           {tags.map((tag) => (
-            <Link
+            // change span to Link in future
+            <span
               key={tag.id}
-              href={`/tag/${tag.name}`}
+              // href={`/tag/${tag.name}`}
               className="text-primary mr-2"
             >
               #{tag.name}
-            </Link>
+            </span>
           ))}
         </div>
      
