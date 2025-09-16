@@ -55,11 +55,15 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
   const { title, publishedAt, createdAt, content, tags } = post;
   return (
     <div className={styles.blogText}>
-      <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
+      <div className="max-w-4xl mx-auto mb-10 lg:mt-20 break-words">
         <h1 className="font-bold">{title}</h1>
-        <PostContent content={content} />
-
-        <div className="mt-10 opacity-80 text-sm">
+           <div className="text-sm opacity-80 mt-4 mb-2">
+            <span className="block mb-2">By Sara Baqla</span>
+          {Intl.DateTimeFormat("en-US").format(
+            new Date(publishedAt || createdAt)
+          )}
+        </div>
+        <div className="opacity-80 text-sm mb-8">
           {tags.map((tag) => (
             <Link
               key={tag.id}
@@ -70,11 +74,9 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
             </Link>
           ))}
         </div>
-        <div className="text-sm opacity-80 mt-4">
-          {Intl.DateTimeFormat("en-US").format(
-            new Date(publishedAt || createdAt)
-          )}
-        </div>
+     
+        <PostContent content={content} />
+
       </div>
     </div>
   );
