@@ -7,16 +7,26 @@ import { format } from "date-fns";
 import { ArrowRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+// use the same enhanced button + variants as Featured
+import { Button } from "@/components/ui/enhanced-button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 export interface BlogItem {
   title: string;
   excerpt: string;
   coverImage?: string;
-  date: Date |string;          // ISO string
+  date: Date | string; // ISO string
   slug: string;
-  category: string;
+  category?: string;
+  // Optional tags if you have them; safe to omit in data
+  tags?: string[];
 }
 
 interface BlogsClientProps {
@@ -24,26 +34,36 @@ interface BlogsClientProps {
 }
 
 export function BlogsClient({ posts }: BlogsClientProps) {
-  // derive all unique categories from your incoming posts
-  const allCategories = Array.from(new Set(posts.map(p => p.category))).sort();
+  const allTags = Array.from(
+    new Set(posts.flatMap((p) => p.tags ?? []))
+  ).sort((a, b) => a.localeCompare(b));
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  const filtered = posts.filter(post => {
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory ? post.category === selectedCategory : true;
-    return matchesSearch && matchesCategory;
+  const filtered = posts.filter((post) => {
+    const q = searchQuery.toLowerCase();
+
+    const inTitle = post.title.toLowerCase().includes(q);
+    const inExcerpt = post.excerpt.toLowerCase().includes(q);
+    const inTags = (post.tags ?? []).some((t) =>
+      t.toLowerCase().includes(q)
+    );
+
+    const matchesSearch = !q || inTitle || inExcerpt || inTags;
+
+    const matchesTag = selectedTag
+      ? (post.tags ?? []).includes(selectedTag)
+      : true;
+
+    return matchesSearch && matchesTag;
   });
 
-  const toggleCategory = (cat: string) =>
-    setSelectedCategory(selectedCategory === cat ? null : cat);
-
+  const toggleTag = (tag: string) =>
+    setSelectedTag(selectedTag === tag ? null : tag);
   return (
-    <div className="space-y-8">
-      {/* search + clear badge */}
+    <div className="space-y-10">
+      {/* Search + clear */}
       <div className="flex flex-col md:flex-row gap-4 md:items-center justify-between">
         <div className="relative w-full md:w-96">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -51,74 +71,95 @@ export function BlogsClient({ posts }: BlogsClientProps) {
             placeholder="Search articles..."
             className="pl-10"
             value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
-        {selectedCategory && (
+        {selectedTag && (
           <Badge
             variant="secondary"
             className="cursor-pointer"
-            onClick={() => setSelectedCategory(null)}
+            onClick={() => setSelectedTag(null)}
           >
             Clear filter
           </Badge>
         )}
       </div>
 
-      {/* category strip */}
+      {/* Category strip */}
       <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar">
-        {allCategories.map(cat => (
+        {allTags.map((tag) => (
           <Badge
-            key={cat}
-            variant={selectedCategory === cat ? "default" : "outline"}
+            key={tag}
+            variant={selectedTag === tag ? "default" : "outline"}
             className="cursor-pointer whitespace-nowrap"
-            onClick={() => toggleCategory(cat)}
+            onClick={() => toggleTag(tag)}
           >
-            {cat}
+            {tag}
           </Badge>
         ))}
       </div>
 
-      {/* grid of cards */}
+      {/* Grid of cards — styled to match LatestBlogs */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filtered.map((blog, i) => (
-          <Card key={i} className="overflow-hidden group h-full flex flex-col">
-            <div className="relative aspect-video overflow-hidden">
-              <img
-                src={blog.coverImage}
-                alt={blog.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <CardHeader className="pb-2 flex-grow">
-              <div className="flex justify-between items-center mb-2">
-                <Badge
-                  variant={selectedCategory === blog.category ? "default" : "outline"}
-                  className="cursor-pointer"
-                  onClick={() => toggleCategory(blog.category)}
-                >
-                  {blog.category}
-                </Badge>
-                <span className="text-xs text-muted-foreground">
-                  {format(new Date(blog.date), "MMM dd, yyyy")}
-                </span>
-              </div>
-              <Link href={`/blog/${blog.slug}`} className="hover:underline">
-                <h3 className="text-xl font-bold line-clamp-2">{blog.title}</h3>
+        {filtered.map((blog) => {
+          const img = blog.coverImage || "/fallback-blog.png";
+          return (
+            <Card
+              key={blog.slug}
+              className="card-forest h-full group flex flex-col transition-transform hover:-translate-y-1"
+            >
+              <Link href={`/blog/${blog.slug}`} className="block">
+                <div className="aspect-video overflow-hidden rounded-t-xl">
+                  <img
+                    src={img}
+                    alt={blog.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
               </Link>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground line-clamp-3">{blog.excerpt}</p>
-            </CardContent>
-            <CardFooter>
-              <Button variant="ghost" size="sm" asChild className="mt-2">
-                <Link href={`/blog/${blog.slug}`}>
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
+
+              <CardHeader>
+                <div className="flex items-start justify-between gap-3">
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <Link href={`/blog/${blog.slug}`} className="hover:underline">
+                      {blog.title}
+                    </Link>
+                  </CardTitle>
+
+                </div>
+
+                <CardDescription className="text-muted-foreground">
+                  {format(new Date(blog.date), "MMM dd, yyyy")}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="flex flex-col flex-1">
+                <p className="text-muted-foreground line-clamp-3 mb-4">
+                  {blog.excerpt}
+                </p>
+
+                {!!blog.tags?.length && (
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {blog.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+
+              <CardFooter>
+                <Button variant="forest-ghost" size="sm" asChild className="flex-1">
+                  <Link href={`/blog/${blog.slug}`}>
+                    Read More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          );
+        })}
       </div>
 
       {filtered.length === 0 && (
