@@ -55,9 +55,9 @@ export async function LatestBlogs() {
                   </CardTitle>
 
                   {/* Right-aligned pill to mirror ProjectsSection attributions */}
-                  <Badge variant="outline" className="whitespace-nowrap">
+                  {/* <Badge variant="outline" className="whitespace-nowrap">
                     {blog.category}
-                  </Badge>
+                  </Badge> */}
                 </div>
 
                 {/* subtle meta line like CardDescription in projects */}

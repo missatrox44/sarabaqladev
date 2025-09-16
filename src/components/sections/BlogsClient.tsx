@@ -138,16 +138,21 @@ export function BlogsClient({ posts }: BlogsClientProps) {
                 <p className="text-muted-foreground line-clamp-3 mb-4">
                   {blog.excerpt}
                 </p>
-
                 {!!blog.tags?.length && (
                   <div className="flex flex-wrap gap-2 mt-auto">
-                    {blog.tags.map((tag) => (
+                    {blog.tags.slice(0, 3).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
+                    {blog.tags.length > 3 && (
+                      <Badge variant="outline" className="text-xs">
+                        +{blog.tags.length - 3} more
+                      </Badge>
+                    )}
                   </div>
                 )}
+
               </CardContent>
 
               <CardFooter>
