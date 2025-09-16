@@ -24,11 +24,11 @@ export const Footer: FunctionComponent = () => {
           </Link>
         </div> */}
         <div>
-          {/* <Link href="/rss">
+          <Link href="/rss">
             <Button variant="ghost">
               <Rss className="w-4 h-4" />
             </Button>
-          </Link> */}
+          </Link>
           {/* <ModeToggle /> */}
           <Link href={GITHUB_URL} target="_blank" rel="noreferrer">
             <Button variant="ghost">

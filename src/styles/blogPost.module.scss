@@ -1,0 +1,48 @@
+.blogText {
+  h1 {
+    font-size: 2rem;
+    // padding-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      // padding-bottom: 1.5rem;
+    }
+  }
+
+  p {
+    padding-bottom: 1.5rem;
+    // line-height: 1.75;
+    font-size: 1rem;
+    letter-spacing: .025rem;
+
+
+    @media (min-width: 768px) {
+      padding-bottom: 2rem;
+      font-size: 1.25rem;
+      // line-height: 1.8;
+    }
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: hsl(var(--pink-accent));
+
+    &:hover {
+      //  text-decoration: underline;
+      color: hsl(var(--primary));
+    }
+  }
+
+  img {
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+
+}
