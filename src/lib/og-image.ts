@@ -25,7 +25,7 @@ export const signOgImageParams = ({
 
 export const verifyOgImageSignature = (
   params: OpenGraphImageParams,
-  signature: string
+  signature: string,
 ) => {
   const { signature: expectedSignature } = signOgImageParams(params);
   return expectedSignature === signature;

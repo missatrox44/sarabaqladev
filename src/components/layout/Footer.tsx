@@ -3,11 +3,10 @@ import { config } from "@/config";
 import { Rss } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 // import { ModeToggle } from '@/components/theme/ModeToggle';
 import { Github, Linkedin } from "lucide-react";
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
-
 
 export const Footer: FunctionComponent = () => {
   return (
@@ -35,7 +34,7 @@ export const Footer: FunctionComponent = () => {
               <Github className="w-4 h-4" />
             </Button>
           </Link>
-            <Link href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+          <Link href={LINKEDIN_URL} target="_blank" rel="noreferrer">
             <Button variant="ghost">
               <Linkedin className="w-4 h-4" />
             </Button>
