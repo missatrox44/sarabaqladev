@@ -381,6 +381,28 @@ export const projects: Project[] = [
     ],
   },
   {
+  id: 'paleteria-snacks',
+  title: 'Paleteria & Snacks',
+  shortDescription:
+    'A playful, mobile responsive landing page for a demo Paleteria & Snacks store with bilingual support, interactive menu, and engaging animations.',
+  longDescription:
+    'Paleteria & Snacks is a demo landing page built to showcase a modern, customer-friendly design for a local dessert and snack shop. The site features a looping video hero section, a sticky navigation bar, and a category-driven food menu with swipe navigation for mobile users. Each food item is displayed on an animated flip card, showing images and details in a fun, interactive way. A language toggle powered by Zustand allows seamless switching between English and Spanish, making the site accessible to a wider audience. The landing page also includes a location and hours section with Google Maps integration and dummy contact information for a realistic storefront feel.',
+  problem:
+    'Demonstrate how a small local business, like a snack and dessert shop, can benefit from a modern, responsive, and bilingual landing page to attract and engage customers.',
+  solution:
+    'Designed and developed a demo web app with responsive layouts, bilingual support, interactive food menus, and embedded location details to highlight the possibilities for small business storefronts online.',
+  impact:
+    'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
+  techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
+  image: 'projects/paleteria-snacks.png',
+  liveDemo: 'https://kds-paleteria.vercel.app/',
+  github: 'https://github.com/missatrox44/paleteria-and-snacks',
+  featured: false,
+  attributions: [
+    { org: 'Prototype' }
+  ],
+},
+  {
     id: 'crab-city-server-rotation',
     title: 'Crab City Server Rotation',
     shortDescription:
