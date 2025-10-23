@@ -74,39 +74,3 @@ export default async function BlogPage({
       <BlogPostsPagination pagination={result.pagination} />
     </div>);
 }
-
-
-// import { BlogsClient } from '@/components/sections/BlogsClient';
-// import { Separator } from '@/components/ui/separator';
-
-// export const metadata = {
-//   title: 'Blog | My Portfolio',
-//   description: 'Read my latest articles on web development, design, and technology'
-// };
-
-// export default function BlogPage() {
-//     const result = await wisp.getPosts({ limit: 100, page });
-//   // map Wisp’s post shape into our BlogItem shape
-//   const posts: BlogItem[] = result.posts.map(post => ({
-//     title: post.title,
-//     excerpt: post.description,
-//     coverImage: post.image || "/images/placeholder.webp",
-//     date: post.publishedAt || post.updatedAt,
-//     slug: post.slug,
-//     // you can pick your taxonomy/tag logic here:
-//     category: post.tags[0]?.name ?? "Uncategorized",
-//   }));
-
-//   return (
-//     <div className="container max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-//       <div className="space-y-2 text-center mb-12">
-//         <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
-//         <p className="text-muted-foreground max-w-2xl mx-auto">
-//           Thoughts, learnings, and insights from my journey in tech and design
-//         </p>
-//       </div>
-//       <Separator className="my-8" />
-//       <BlogsClient posts={posts} />
-//     </div>
-//   );
-// }
