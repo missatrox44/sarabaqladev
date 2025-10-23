@@ -16,13 +16,6 @@ export const Footer: FunctionComponent = () => {
         <div className="text-sm text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
         </div>
-        {/* <div className="text-xs text-muted-foreground hidden lg:block">
-          <Link
-            href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
-          >
-            Blog powered by wisp
-          </Link>
-        </div> */}
         <div>
           <Link href="/rss">
             <Button variant="ghost">
@@ -42,12 +35,6 @@ export const Footer: FunctionComponent = () => {
           </Link>
         </div>
       </div>
-      {/* <div className="text-xs text-muted-foreground lg:hidden">
-        <Link
-          href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`} target="_blank" rel="noreferrer">
-          Blog powered by wisp
-        </Link>
-      </div> */}
     </footer>
   );
 };
