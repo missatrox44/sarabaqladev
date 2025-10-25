@@ -45,4 +45,27 @@
     margin: 0 auto;
   }
 
+  ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol,
+  ul {
+    li {
+
+      p {
+        padding-bottom: .5rem !important;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
 }
