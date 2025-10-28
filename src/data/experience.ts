@@ -82,7 +82,7 @@ export const experienceData = [
   {
     title: 'AIM Technician',
     company: 'Southwest Conservation Corps',
-    location: 'Las Cruces, New Mexico',
+    location: 'Las Cruces, NM',
     period: 'Apr 2018 – Oct 2018',
     type: 'work',
     image: '/experience/scc.webp'
