@@ -6,6 +6,7 @@ import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
 import type { BlogPosting, WithContext } from "schema-dts";
+import { CommentSection } from "@/components/sections/CommentSection";
 
 interface Params {
   slug: string;
@@ -75,9 +76,10 @@ const Page = async (props: { params: Promise<Params> }) => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <BlogPostContent post={result.post} />
+      <CommentSection slug={params.slug} />
       <RelatedPosts posts={posts} />
-      </div>
-      );
+    </div>
+  );
 };
 
-      export default Page;
+export default Page;

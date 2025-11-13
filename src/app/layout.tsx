@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Analytics } from "@vercel/analytics/next"
 
+
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow">
             {children}
-              <Analytics />
+            <Analytics />
           </main>
           <Footer />
         </Providers>
