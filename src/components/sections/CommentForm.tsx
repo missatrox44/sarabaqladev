@@ -21,6 +21,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { wisp } from "@/lib/wisp";
 
+
 const formSchema = z.object({
   author: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
@@ -202,9 +203,10 @@ export function CommentForm({ slug, config, onSuccess }: CommentFormProps) {
         )}
 
         <div className="flex items-center justify-between pt-2">
-          <Button type="submit" disabled={form.formState.isSubmitting}>
+          <Button variant="hero" type="submit" disabled={form.formState.isSubmitting}>
             Post Comment
           </Button>
+
         </div>
       </form>
     </Form>
