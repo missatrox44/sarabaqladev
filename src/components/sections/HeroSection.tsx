@@ -13,22 +13,26 @@ export default function HeroSection() {
   //   link.click();
   // };
 
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  // const scrollToProjects = () => {
+  //   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  // };
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/hero-abstract.webp')` }}
       />
-      
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
             opacity: [0.1, 0.2, 0.1]
@@ -37,7 +41,7 @@ export default function HeroSection() {
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-forest blur-3xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
             opacity: [0.1, 0.3, 0.1]
@@ -55,7 +59,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-7xl font-bold mb-6"
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
@@ -63,32 +67,30 @@ export default function HeroSection() {
               <span className="text-foreground">Sara</span>{' '}
               <span className="text-gradient">Baqla</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Full Stack Developer —{' '}
-              <span className="text-accent font-medium">React</span>,{' '}
-              <span className="text-accent font-medium">React Native</span>,{' '}
-              <span className="text-accent font-medium">Next.js</span>
+              <span className="text-accent font-medium">React, React Native, Next.js </span>
             </motion.p>
 
-            <motion.p 
+            <motion.p
               className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Crafting exceptional digital experiences with modern technologies. 
+              Crafting exceptional digital experiences with modern technologies.
               Passionate about creating scalable applications that make a difference.
             </motion.p>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,7 +99,7 @@ export default function HeroSection() {
             <Button
               variant="hero"
               size="xl"
-              onClick={scrollToProjects}
+              onClick={() => scrollToSection('projects')}
               className="min-w-[200px] group"
             >
               Featured Work
@@ -105,6 +107,16 @@ export default function HeroSection() {
             </Button>
 
             <Button
+              variant="hero"
+              size="xl"
+              onClick={() => scrollToSection('blog')}
+              className="min-w-[200px] group"
+            >
+              Latest Blogs
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+
+            {/* <Button
               variant="forest-outline"
               size="xl"
               onClick={() => window.open('/baqla_resume_2025.pdf', '_blank')}
@@ -112,13 +124,13 @@ export default function HeroSection() {
             >
               View Resume
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            </Button> */}
 
 
             {/* <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild> */}
-                  {/* <Button
+            {/* <Button
                     variant="forest-outline"
                     size="xl"
                     onClick={handleDownloadResume}
@@ -127,16 +139,16 @@ export default function HeroSection() {
                     <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     Download Resume
                   </Button> */}
-                {/* </TooltipTrigger> */}
-                {/* <TooltipContent>
+            {/* </TooltipTrigger> */}
+            {/* <TooltipContent>
                   <p>Add your resume to /public and try again if file is missing</p>
                 </TooltipContent> */}
-              {/* </Tooltip>
+            {/* </Tooltip>
             </TooltipProvider> */}
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div 
+          <motion.div
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
