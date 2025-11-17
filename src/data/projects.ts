@@ -323,7 +323,6 @@ export const projects: Project[] = [
       "Prismic",
       "SCSS",
       "GSAP",
-      "Linus",
       "JavaScript",
       "Vercel"
 
