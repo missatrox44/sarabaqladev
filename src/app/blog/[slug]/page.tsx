@@ -58,12 +58,12 @@ const Page = async (props: { params: Promise<Params> }) => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: title,
-    image: image ? image : undefined,
+    image: image ? image : "/fallback-blog.png",
     datePublished: publishedAt ? publishedAt.toString() : undefined,
     dateModified: updatedAt.toString(),
     author: {
       "@type": "Person",
-      name: author.name ?? undefined,
+      name: author.name ?? "Sara Baqla",
       image: author.image ?? undefined,
     },
   };
