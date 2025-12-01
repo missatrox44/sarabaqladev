@@ -102,67 +102,22 @@ export default function HeroSection() {
               onClick={() => scrollToSection('projects')}
               className="min-w-[200px] group"
             >
-              Featured Work
+              Explore Apps
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
             <Button
-              variant="hero"
+              variant="outline"
               size="xl"
               onClick={() => scrollToSection('blog')}
               className="min-w-[200px] group"
             >
-              Latest Blogs
+              Behind the Build
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
-            {/* <Button
-              variant="forest-outline"
-              size="xl"
-              onClick={() => window.open('/baqla_resume_2025.pdf', '_blank')}
-              className="min-w-[200px] group"
-            >
-              View Resume
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button> */}
-
-
-            {/* <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild> */}
-            {/* <Button
-                    variant="forest-outline"
-                    size="xl"
-                    onClick={handleDownloadResume}
-                    className="min-w-[200px] group"
-                  >
-                    <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                    Download Resume
-                  </Button> */}
-            {/* </TooltipTrigger> */}
-            {/* <TooltipContent>
-                  <p>Add your resume to /public and try again if file is missing</p>
-                </TooltipContent> */}
-            {/* </Tooltip>
-            </TooltipProvider> */}
           </motion.div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center text-muted-foreground"
-            >
-              {/* <span className="text-sm mb-2">Scroll to explore</span>
-              <ArrowDown className="h-4 w-4" /> */}
-            </motion.div>
-          </motion.div>
         </div>
       </div>
     </section>

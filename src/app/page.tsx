@@ -5,6 +5,8 @@ import HeroSection from '@/components/sections/HeroSection';
 import FeaturedProjectsSection from '@/components/sections/FeaturedProjectsSection';
 import ContactSection from '@/components/sections/ContactSection';
 
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <>
