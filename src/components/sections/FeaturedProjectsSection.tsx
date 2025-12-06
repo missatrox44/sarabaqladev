@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/enhanced-button';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { ExternalLink, Github} from 'lucide-react';
 import { projects, Project } from '@/data/projects';
 import Link from 'next/link';
 import ProjectModal from '@/components/ProjectModal';
