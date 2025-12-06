@@ -10,6 +10,8 @@ import { Label } from '@/components/ui/label';
 import { Mail, Github, Linkedin, Send, ExternalLink } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useForm, ValidationError } from '@formspree/react';
+import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL, BLUESKY_URL } from "@/lib/constants";
+import { RiBlueskyLine, RiTwitterXFill } from "react-icons/ri";
 
 export default function ContactSection() {
   const { toast } = useToast();
@@ -42,20 +44,32 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'missatrox44@gmail.com',
-      href: 'mailto:missatrox44@gmail.com'
+      value: 'sara@artemisbytes.com',
+      href: 'mailto:sara@artemisbytes.com'
     },
     {
       icon: Github,
       label: 'GitHub',
       value: 'github.com/missatrox44',
-      href: 'https://github.com/missatrox44'
+      href: GITHUB_URL
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'linkedin.com/in/sara-baqla',
-      href: 'https://www.linkedin.com/in/sara-baqla/'
+      href: LINKEDIN_URL
+    },
+    {
+      icon: RiBlueskyLine,
+      label: 'Bluesky',
+      value: '@artemisbytes.bsky.social',
+      href: BLUESKY_URL
+    },
+    {
+      icon: RiTwitterXFill,
+      label: 'X',
+      value: '@artemisbytes',
+      href: TWITTER_URL
     }
   ];
 
@@ -92,7 +106,12 @@ export default function ContactSection() {
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 I&apos;m always interested in new opportunities, interesting projects, and great conversations.
-                Whether you&apos;re looking to collaborate or just want to say hello, feel free to reach out!
+
+                {/* Whether you&apos;re looking to collaborate or just want to say hello, feel free to reach out! */}
+
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed pt-2 md:pt-4">
+                Got feedback or found a bug on the site? Let me know and I&apos;ll get right one it!
               </p>
             </div>
 
