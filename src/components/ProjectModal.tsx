@@ -13,7 +13,7 @@ type ProjectDialogProps = {
 export default function ProjectDialog({ project, onClose }: ProjectDialogProps) {
   return (
     <Dialog open={!!project} onOpenChange={onClose}>
-      <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto p-10">
         {project && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -61,11 +61,11 @@ export default function ProjectDialog({ project, onClose }: ProjectDialogProps) 
 
             <div className="mt-6 space-y-6">
               {/* Project Image */}
-              <div className="aspect-video overflow-hidden rounded-lg">
+              <div className=" rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-top"
+                  className=" px-12"
                   loading="lazy"
                 />
               </div>
