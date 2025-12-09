@@ -60,12 +60,30 @@ export default function ProjectDialog({ project, onClose }: ProjectDialogProps) 
             <div className="mt-6 space-y-6">
               {/* Project Image */}
               <div className="rounded-lg flex justify-center">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full max-w-3xl rounded-lg md:object-top md:object-cover md:h-[50vh]"
-                  loading="lazy"
-                />
+                {project.liveDemo ? (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="w-full max-w-3xl block"
+                    aria-label={`Open ${project.title} live demo in a new tab`}
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full rounded-lg md:object-top md:object-cover md:h-[50vh]"
+                      loading="lazy"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full max-w-3xl rounded-lg md:object-top md:object-cover md:h-[50vh]"
+                    loading="lazy"
+                  />
+                )}
               </div>
 
               {/* Problem, Solution, Impact */}
