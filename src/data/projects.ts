@@ -19,39 +19,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "manresa-wilds",
-    title: "Manresa Wilds",
-    shortDescription:
-      "Next.js + Prismic site for a first-of-its-kind waterfront park in Norwalk, CT, built with a modular, mobile first approach.",
-    longDescription:
-      "At Reach, I helped launch a public facing Next.js site powered by Prismic for Manresa Wilds, a new waterfront park. I contributed to sprint planning, PR reviews, and implementation feedback, while building responsive, accessible layouts with slice-based components for easy content updates.",
-    problem:
-      "The Manresa Island Corporation needed a modern platform to share its vision of transforming a decommissioned power plant into 1.75 miles of public waterfront access, with flexible publishing for events, press, and ecological storytelling.",
-    solution:
-      "We built a responsive Next.js app integrated with Prismic CMS, using slice-based components for modular content. I ensured accessible, performant layouts and components.",
-    impact:
-      "Delivered a scalable hub that communicates the park’s mission, supports events and press coverage, and engages the community. The site strengthens outreach, fundraising, and transparency around restoration, reconnecting the public to the waterfront for the first time in 75 years.",
-    techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
-    image: "/projects/manresa.png",
-    liveDemo: "https://www.manresawilds.org/",
-    featured: true,
-    attributions: [
-      { org: 'Reach', url: 'https://reachcreative.com' },
-    ]
-  },
-  {
     id: "identity-digital-premium",
     title: "Identity Digital – Premium Catalog",
     shortDescription:
-      "Standalone Next.js app embedded in Webflow for browsing and filtering premium domain names with CSV export and Hubspot/Salesforce integration.",
+      "Next.js catalog embedded in Webflow with advanced domain filtering, CSV export, and a HubSpot form feeding directly into Salesforce.",
     longDescription:
       "At Reach, in collaboration with Heco, I delivered a standalone Next.js app embedded in Webflow that lets customers browse, filter, and export premium domains. The app connects with Hubspot and Salesforce to streamline lead capture while staying fully responsive and seamless within Identity Digital’s marketing site.",
     problem:
-      "Identity Digital needed a way to showcase premium domains with advanced filtering and simple list sharing, while tying directly into existing Hubspot and Salesforce workflows.",
+      "Identity Digital needed a way for customers to explore thousands of premium domain names and share selections, while syncing leads to existing HubSpot + Salesforce pipelines.",
     solution:
-      "Built a Webflow-embedded Next.js application with filtering, CSV export, and lead capture integrated into Hubspot and Salesforce. Domain data is managed in Google Sheets and transformed into a JSON API for the app.",
+      "Built a standalone Next.js app with advanced filtering, CSV export, and embedded CRM capture, then integrated it seamlessly into Webflow. Inventory is maintained via Google Sheets and transformed into an optimized JSON API.",
     impact:
-      "Provided a user-friendly catalog that improved client engagement and simplified sales. CSV exports supported faster decision making, and CRM integration reduced friction for the sales team while allowing the catalog to scale with new inventory.",
+      "Enabled faster sales cycles through self-serve browsing and CSV exports, while CRM integration streamlined lead routing and reduced manual effort. The catalog now scales smoothly alongside growing premium inventory.",
+    // problem:
+    //   "Identity Digital needed a way to showcase premium domains with advanced filtering and simple list sharing, while tying directly into existing Hubspot and Salesforce workflows.",
+    // solution:
+    //   "Built a Webflow-embedded Next.js application with filtering, CSV export, and lead capture integrated into Hubspot and Salesforce. Domain data is managed in Google Sheets and transformed into a JSON API for the app.",
+    // impact:
+    //   "Provided a user-friendly catalog that improved client engagement and simplified sales. CSV exports supported faster decision making, and CRM integration reduced friction for the sales team while allowing the catalog to scale with new inventory.",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -70,18 +55,46 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: "manresa-wilds",
+    title: "Manresa Wilds",
+    shortDescription:
+      "A high-impact Next.js + Prismic site that launches the vision for a new public waterfront park and ecosystem restoration effort in Norwalk, CT.",
+    longDescription:
+      "At Reach, I helped launch a public facing Next.js site powered by Prismic for Manresa Wilds, a new waterfront park. I contributed to sprint planning, PR reviews, and implementation feedback, while building responsive, accessible layouts with slice-based components for easy content updates.",
+    problem:
+      "Manresa Island Corporation needed a compelling, flexible site to rally support for transforming a retired power plant into 1.75 miles of public waterfront access and ecological restoration.",
+    solution:
+      "Designed and developed modular, mobile-first slice components in Next.js + Prismic to allow rapid publishing of events, press, and conservation updates with accessible, high-performance layouts.",
+    impact:
+      "Launched a public hub that boosts community engagement, supports fundraising, and builds transparency around restoration—helping reconnect Norwalk to the waterfront for the first time in 75+ years.",
+    // problem:
+    //   "The Manresa Island Corporation needed a modern platform to share its vision of transforming a decommissioned power plant into 1.75 miles of public waterfront access, with flexible publishing for events, press, and ecological storytelling.",
+    // solution:
+    //   "We built a responsive Next.js app integrated with Prismic CMS, using slice-based components for modular content. I ensured accessible, performant layouts and components.",
+    // impact:
+    //   "Delivered a scalable hub that communicates the park’s mission, supports events and press coverage, and engages the community. The site strengthens outreach, fundraising, and transparency around restoration, reconnecting the public to the waterfront for the first time in 75 years.",
+    techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
+    image: "/projects/manresa.png",
+    liveDemo: "https://www.manresawilds.org/",
+    featured: true,
+    attributions: [
+      { org: 'Reach', url: 'https://reachcreative.com' },
+    ]
+  },
+  {
     id: 'frommers',
     title: "Frommer's",
     shortDescription:
-      "A complete redesign and rebuild of Frommer’s travel site, migrating legacy data into Craft CMS and implementing modern SEO and ad solutions.",
+      "Modern rebuild of Frommer’s travel site using Craft CMS, with SEO-driven architecture and flexible ad placement for new revenue.",
     longDescription:
       "At Reach, I worked on the full redesign and rebuild of Frommer’s, migrating legacy content into Craft CMS and delivering a faster, mobile-friendly platform. The new site improved SEO, streamlined content workflows, and added flexible ad placements to open new revenue streams.",
     problem:
-      "Frommer’s legacy site was outdated, hard to maintain, poorly optimized for SEO, and lacked effective ad infrastructure.",
+      "Frommer’s legacy platform was slow, difficult to update, and missing modern SEO structure and scalable ad capabilities.",
+    // "Frommer’s legacy site was outdated, hard to maintain, poorly optimized for SEO, and lacked effective ad infrastructure.",
     solution:
-      "Rebuilt the platform on Craft CMS with responsive templates, structured content migration, SEO best practices, and a flexible ad injection system.",
+      "Migrated legacy content into Craft CMS, implemented structured templates with SEO best practices, and built a modular ad system for targeted placements.",
     impact:
-      "Improved site performance and organic visibility, streamlined editorial workflows, and expanded monetization opportunities without sacrificing usability.",
+      "Boosted site performance and organic traffic, streamlined editorial publishing, and opened new monetization opportunities without disrupting the reader experience.",
     techStack: ['Craft CMS', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript', 'Laravel', 'Vite', 'Tailwind', 'Craft Cloud'],
     image: '/projects/frommers.png',
     liveDemo: 'https://www.frommers.com/',
@@ -95,15 +108,15 @@ export const projects: Project[] = [
     id: "nantbio-renewables",
     title: "NantBio Renewables",
     shortDescription:
-      "WordPress site for a sustainability focused company selling compostable straws, tableware, and cutlery made from ocean calcium sand.",
+      "WordPress build for a sustainable tableware brand, featuring product storytelling and HubSpot-powered lead capture.",
     longDescription:
       "At Reach, I contributed to the development of NantBio Renewables’ WordPress site showcasing Wave Ware™, a line of compostable straws, plates, bowls, and cutlery. I built custom pages and components, added interactive sliders and modals connected to HubSpot forms.",
     problem:
-      "NantBio Renewables needed a flexible marketing site to promote Wave Ware™, highlight its sustainable materials, and capture leads through storytelling and press content.",
+      "NantBio needed a compelling site to showcase Wave Ware™’s compostable products and convert interest into sales through educational content and lead generation.",
     solution:
-      "Built key site components in WordPress with Blade templating, implemented Swiper.js carousels and HubSpot integrated modals, and ensured a mobile responsive, brand consistent experience across the catalog and blog.",
+      "Developed custom WordPress components with interactive carousels and HubSpot-integrated modals, ensuring a mobile-first, brand-consistent experience across product and press pages.",
     impact:
-      "Launched a sustainable focused web presence that improved customer engagement, streamlined lead capture, and positioned NantBio Renewables as a trusted provider of compostable, USA made tableware.",
+      "Delivered a sustainable product showcase that boosted engagement and streamlined lead collection, strengthening NantBio’s position in the eco-friendly consumer market.",
     techStack: [
       "WordPress",
       "Blade",
@@ -380,27 +393,27 @@ export const projects: Project[] = [
     ],
   },
   {
-  id: 'paleteria-snacks',
-  title: 'Paleteria & Snacks',
-  shortDescription:
-    'A playful, mobile responsive landing page for a demo Paleteria & Snacks store with bilingual support, interactive menu, and engaging animations.',
-  longDescription:
-    'Paleteria & Snacks is a demo landing page built to showcase a modern, customer-friendly design for a local dessert and snack shop. The site features a looping video hero section, a sticky navigation bar, and a category-driven food menu with swipe navigation for mobile users. Each food item is displayed on an animated flip card, showing images and details in a fun, interactive way. A language toggle powered by Zustand allows seamless switching between English and Spanish, making the site accessible to a wider audience. The landing page also includes a location and hours section with Google Maps integration and dummy contact information for a realistic storefront feel.',
-  problem:
-    'Demonstrate how a small local business, like a snack and dessert shop, can benefit from a modern, responsive, and bilingual landing page to attract and engage customers.',
-  solution:
-    'Designed and developed a demo web app with responsive layouts, bilingual support, interactive food menus, and embedded location details to highlight the possibilities for small business storefronts online.',
-  impact:
-    'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
-  techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
-  image: 'projects/paleteria-snacks.png',
-  liveDemo: 'https://kds-paleteria.vercel.app/',
-  github: 'https://github.com/missatrox44/paleteria-and-snacks',
-  featured: false,
-  attributions: [
-    { org: 'Prototype' }
-  ],
-},
+    id: 'paleteria-snacks',
+    title: 'Paleteria & Snacks',
+    shortDescription:
+      'A playful, mobile responsive landing page for a demo Paleteria & Snacks store with bilingual support, interactive menu, and engaging animations.',
+    longDescription:
+      'Paleteria & Snacks is a demo landing page built to showcase a modern, customer-friendly design for a local dessert and snack shop. The site features a looping video hero section, a sticky navigation bar, and a category-driven food menu with swipe navigation for mobile users. Each food item is displayed on an animated flip card, showing images and details in a fun, interactive way. A language toggle powered by Zustand allows seamless switching between English and Spanish, making the site accessible to a wider audience. The landing page also includes a location and hours section with Google Maps integration and dummy contact information for a realistic storefront feel.',
+    problem:
+      'Demonstrate how a small local business, like a snack and dessert shop, can benefit from a modern, responsive, and bilingual landing page to attract and engage customers.',
+    solution:
+      'Designed and developed a demo web app with responsive layouts, bilingual support, interactive food menus, and embedded location details to highlight the possibilities for small business storefronts online.',
+    impact:
+      'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
+    techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
+    image: 'projects/paleteria-snacks.png',
+    liveDemo: 'https://kds-paleteria.vercel.app/',
+    github: 'https://github.com/missatrox44/paleteria-and-snacks',
+    featured: false,
+    attributions: [
+      { org: 'Prototype' }
+    ],
+  },
   {
     id: 'crab-city-server-rotation',
     title: 'Crab City Server Rotation',
