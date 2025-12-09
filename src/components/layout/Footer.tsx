@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FunctionComponent } from "react";
 import { Button } from '@/components/ui/button';
 // import { ModeToggle } from '@/components/theme/ModeToggle';
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL, BLUESKY_URL } from "@/lib/constants";
 import { RiBlueskyLine, RiTwitterXFill } from "react-icons/ri";
 
