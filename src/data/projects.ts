@@ -144,15 +144,15 @@ export const projects: Project[] = [
     id: "resolute-ventures",
     title: "Resolute Ventures",
     shortDescription:
-      "Modernized venture fund site with rich motion, connected to Prismic with editable portfolio and team pages.",
+      "Next.js + Prismic rebuild with motion-rich branding and fully editable portfolio + team pages.",
     longDescription:
       "At Reach, I helped rebuild Resolute Ventures’ marketing site in Next.js with Prismic CMS. The redesign introduced subtle animations, modernized the brand, and gave the team full control over portfolio, bios, and community content without developer handoffs.",
     problem:
-      "Resolute’s old site was dated, slow, and difficult for the team to update.",
+      "Resolute’s outdated site couldn’t reflect its modern brand or allow quick updates to portfolio companies, team bios, or community resources.",
     solution:
-      "Rebuilt the site in Next.js with GSAP animations, modeled content in Prismic, and deployed on Vercel for speed and scalability.",
+      "Rebuilt the platform in Next.js with GSAP-powered motion, modeled flexible content types in Prismic, and deployed on Vercel for speed and scalability.",
     impact:
-      "Delivered a faster, contemporary site that reflects Resolute’s founder first ethos while enabling quick, non technical content updates.",
+      "Delivered a fast, modern brand experience while giving the team full control of content—reducing developer dependency and keeping the portfolio up to date.",
     techStack: [
       "Next.js",
       "JavaScript",
@@ -174,15 +174,15 @@ export const projects: Project[] = [
     id: "nhrl",
     title: "NHRL",
     shortDescription:
-      "Contributed to NHRL’s legacy Next.js app by implementing new Prismic components promoting Havoc Academy.",
+      "Developed new Prismic components for NHRL’s legacy Next.js app to promote Havoc Academy with flexible, marketing-driven updates.",
     longDescription:
       "At Reach, I updated NHRL’s legacy Next.js app by developing a reusable Prismic slice to promote Havoc Academy. I ensured responsive layouts matched design specs and integrated smoothly with the existing custom CSS codebase.",
     problem:
-      "NHRL needed a way to showcase Havoc Academy while giving their marketing team flexibility to update content without heavy dev support.",
+      "NHRL needed a scalable way to promote Havoc Academy on their existing site without relying on frequent engineering support.",
     solution:
-      "Built a customizable Prismic slice with responsive layouts and integrated it into the Next.js app using the existing CSS approach.",
+      "“Built a reusable Prismic slice integrated into their legacy Next.js architecture, matching existing styling conventions while ensuring fully responsive layouts.",
     impact:
-      "Enabled the client to promote Havoc Academy independently, improved mobile responsiveness, and extended the usefulness of their legacy site.",
+      "Gave their marketing team control to publish updates independently, extended the lifespan of the legacy codebase, and improved mobile responsiveness for new content",
     techStack: [
       "Next.js",
       "Prismic",
@@ -205,15 +205,15 @@ export const projects: Project[] = [
   {
     id: "namecom-api",
     title: "Name.com API Landing Page",
-    shortDescription: "Landing page for Name.com’s AI-ready API with localized content and HubSpot integration.",
+    shortDescription: "Multilingual Vue landing page for Name.com’s AI-ready API with HubSpot lead capture.",
     longDescription:
       "At Reach, in collaboration with Heco, I contributed to the landing page for Name.com’s AI-ready API. I implemented localization with Vue i18n, styled with Tailwind, refined UI details, and integrated a HubSpot contact form to streamline lead capture.",
     problem:
-      "Name.com needed a multilingual landing page to showcase its API and connect developers and businesses with the sales team.",
+      "Name.com needed a multilingual page to showcase its API and convert developer interest into qualified leads for the sales team.",
     solution:
-      "Built a responsive Vue page with localization and a HubSpot powered contact form for direct lead capture.",
+      "Built a responsive Vue landing page with localized content (Vue i18n) and a HubSpot-integrated contact form for direct conversion.",
     impact:
-      "Delivered a polished, multilingual landing page that boosted API visibility and simplified customer engagement.",
+      "Increased API visibility across global markets and streamlined developer outreach through automated lead routing to sales.",
     techStack: ["Vue", "Tailwind", "Vite", "Vue i18n", "TypeScript"],
     image: "/projects/nameapi.png",
     liveDemo: "https://www.name.com/nameapi",
@@ -227,15 +227,15 @@ export const projects: Project[] = [
     id: "nat-geo-travel-texas",
     title: "National Geographic – Travel Texas",
     shortDescription:
-      "Enhanced National Geographic’s Travel Texas microsite with new articles, carousel media, films, and interactive map updates using Spline.",
+      "Maintained and enhanced National Geographic’s animation-rich Travel Texas microsite with new films, articles, and interactive map updates.",
     longDescription:
       "At Reach, I supported content and feature updates for National Geographic’s Travel Texas microsite. I refreshed carousel media, added articles, integrated two films, and updated the Spline powered interactive map with new points of interest, all while preserving smooth performance across its animation heavy design.",
     problem:
-      "The client needed fresh articles, films, and map updates while ensuring the site’s complex 3D and animation framework remained stable.",
+      "The site needed fresh media and new points of interest added without breaking its complex 3D map, animations, and performance constraints.",
     solution:
-      "Updated media, articles, and map points while integrating films with adjusted playback logic to fit seamlessly into the experience.",
+      "Integrated new articles, films, and carousel media, and expanded the Spline-powered map with updated POIs while preserving performance and motion logic.",
     impact:
-      "Kept the microsite engaging and performant, showcasing new Texas stories while maintaining the integrity of animations and 3D interactions.",
+      "Kept the microsite current and captivating, extending its lifespan and ensuring a smooth, high-fidelity experience across heavy 3D and animation components.",
     techStack: [
       "Next.js",
       "SCSS",
@@ -260,13 +260,13 @@ export const projects: Project[] = [
     id: "nat-geo-earth-month-sweepstakes",
     title: "National Geographic Earth Month Sweepstakes",
     shortDescription:
-      "Supported National Geographic’s annual sweepstakes campaign with content updates and Supabase driven entry restrictions.",
+      "Updated National Geographic’s Earth Month sweepstakes with refreshed campaign content and Supabase logic to enforce secure, time-boxed entries.",
     longDescription:
       "At Reach, I updated the legacy Next.js app for National Geographic’s Earth Month Sweepstakes, refreshing campaign content and adding Supabase logic to enforce daily entry limits and automatically close the form when the promotion ended.",
     problem:
-      "The sweepstakes site needed updated content and guardrails to prevent multiple daily entries.",
+      "The sweepstakes needed updated campaign content and reliable guardrails to prevent multiple daily entries and automatically close submissions at the promotion deadline.",
     solution:
-      "Refreshed copy and assets for 2025 and integrated Supabase to validate one entry per user per day with automatic form disable after the deadline.",
+      "Refreshed 2025 assets and implemented Supabase validation for one entry per user per day, with automatic form disablement after the campaign end date.",
     impact:
       "Created a smoother, compliant sweepstakes experience that reduced admin cleanup and gave users clear, reliable participation rules.",
     techStack: [
@@ -291,15 +291,15 @@ export const projects: Project[] = [
     id: "nat-geo-travel-nevada",
     title: "National Geographic – Travel Nevada",
     shortDescription:
-      "Maintained National Geographic’s Travel Nevada microsite with new media, stories, and shorts integrated into its highly animated layouts.",
+      "Enhanced National Geographic’s Travel Nevada microsite with new stories, shorts, and media without disrupting its animation-heavy layouts.",
     longDescription:
       "At Reach, I added content udpates for National Geographic’s Travel Nevada microsite, adding new stories, images, and shorts into its animation heavy Next.js build. I ensured the masonry grid, carousels, and stacking card effects continued to perform smoothly across devices.",
     problem:
-      "The site needed content refreshes while its complex animated layouts risked breaking during updates.",
+      "The site required fresh editorial content, but its complex animations and interactive layouts were prone to breakage during updates.",
     solution:
-      "Integrated new media and editorial content into the grid, carousel, and card components, maintaining animations and responsive behavior.",
+      "Integrated new stories, shorts, and media into masonry grids, carousels, and animated card components while maintaining responsive behavior and motion performance.",
     impact:
-      "Kept the microsite fresh and engaging with new content while preserving the integrity of its interactive design and performance.",
+      "Kept the microsite engaging and up-to-date, extending its lifespan and preserving a smooth, high-fidelity experience across motion-rich components.",
     techStack: [
       "Next.js",
       "JavaScript",
