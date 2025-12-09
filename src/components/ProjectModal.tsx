@@ -13,7 +13,7 @@ type ProjectDialogProps = {
 export default function ProjectDialog({ project, onClose }: ProjectDialogProps) {
   return (
     <Dialog open={!!project} onOpenChange={onClose}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto p-10">
+      <DialogContent className="max-w-6xl max-h-[95vh] overflow-y-auto p-10">
         {project && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -56,13 +56,14 @@ export default function ProjectDialog({ project, onClose }: ProjectDialogProps) 
               </DialogDescription> */}
             </DialogHeader>
 
+
             <div className="mt-6 space-y-6">
               {/* Project Image */}
-              <div className="rounded-lg">
+              <div className="rounded-lg flex justify-center">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="md:px-12 rounded-lg"
+                  className="w-full max-w-3xl rounded-lg md:object-top md:object-cover md:h-[50vh]"
                   loading="lazy"
                 />
               </div>
