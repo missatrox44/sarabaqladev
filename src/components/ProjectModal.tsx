@@ -22,50 +22,47 @@ export default function ProjectDialog({ project, onClose }: ProjectDialogProps) 
             transition={{ duration: 0.3 }}
           >
             <DialogHeader>
-              <div className="flex items-start justify-between">
-                <div>
-                  <div className="flex justify-between items-center">
-                    <DialogTitle className="text-2xl mb-2 text-gradient">
-                      {project.title}
-                    </DialogTitle>
+              <div className="flex items-start w-full">
+                <DialogTitle className="text-2xl mb-2 text-gradient">
+                  {project.title}
+                </DialogTitle>
 
-                    {project.attributions?.length ? (
-                      <div className="flex gap-2 mr-3">
-                        {project.attributions.map((a, i) => (
-                          <a
-                            key={i}
-                            href={a.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative inline-flex"
-                            aria-label={`Open ${a.org} in a new tab`}
-                          >
-                            <Badge
-                              className="h-fit hover:bg-pink-600 focus:ring-pink-500"
-                              variant="highlight"
-                            >
-                              {a.org}
-                            </Badge>
-                          </a>
-                        ))}
-                      </div>
-                    ) : null}
+                {project.attributions?.length ? (
+                  <div className="flex gap-2 items-center ml-auto">
+                    {project.attributions.map((a, i) => (
+                      <a
+                        key={i}
+                        href={a.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative inline-flex"
+                        aria-label={`Open ${a.org} in a new tab`}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Badge
+                          className="h-fit hover:bg-pink-600 focus:ring-pink-500"
+                          variant="highlight"
+                        >
+                          {a.org}
+                        </Badge>
+                      </a>
+                    ))}
                   </div>
+                ) : null}
 
-                  <DialogDescription className="text-base">
-                    {project.longDescription}
-                  </DialogDescription>
-                </div>
               </div>
+              {/* <DialogDescription className="text-base">
+                {project.longDescription}
+              </DialogDescription> */}
             </DialogHeader>
 
             <div className="mt-6 space-y-6">
               {/* Project Image */}
-              <div className=" rounded-lg">
+              <div className="rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className=" px-12"
+                  className="md:px-12 rounded-lg"
                   loading="lazy"
                 />
               </div>
