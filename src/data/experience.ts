@@ -16,7 +16,7 @@ export const experienceData = [
     location: 'Remote',
     period: 'Jan 2024 – Sept 2025',
     description:
-      'Partnered with clients like National Geographic and Core Spaces to deliver performant, CMS-driven web experiences. Developed Next.js components and Craft CMS integrations, provided PR/code review feedback, and translated intricate designs into responsive, engaging sites.',
+      'Built Next.js applications for clients across diverse industries, integrating with multiple CMS platforms to deliver scalable, content-driven websites. Provided PR/code review feedback and translated complex designs into responsive, engaging user interfaces.',
     type: 'work',
     skills: [
       'Next.js',
