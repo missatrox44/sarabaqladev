@@ -6,7 +6,7 @@ import {
 } from "@wisp-cms/client";
 
 export const wisp = buildWispClient({
-  blogId: config.wisp.blogId,
+  blogId: config.blog.blogId,
 });
 
 export type { GetPostsResult, GetPostResult };
