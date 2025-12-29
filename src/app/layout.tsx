@@ -8,19 +8,29 @@ import { Analytics } from "@vercel/analytics/next"
 import { config } from "@/config";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const fallbackOgImage = new URL("/fallback-blog.png", config.baseUrl).toString();
+// const fallbackOgImage = new URL("/fallback-blog.png", config.baseUrl).toString();
 
 export const metadata: Metadata = {
   title: 'SB | Full Stack Developer',
   description: 'Personal portfolio showcasing my projects, experience, and skills as a professional developer',
-  openGraph: {
-    images: [fallbackOgImage],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: [fallbackOgImage],
-  },
+  // openGraph: {
+  //   images: [fallbackOgImage],
+  // },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   images: [fallbackOgImage],
+  // },
+  metadataBase: new URL(config.baseUrl),
+  openGraph: { images: ["/fallback-blog.png"] },
+  twitter: { images: ["/fallback-blog.png"] },
 };
+
+
+// export const metadata: Metadata = {
+//   metadataBase: new URL(config.baseUrl),
+//   openGraph: { images: ["/fallback-blog.png"] },
+//   twitter: { images: ["/fallback-blog.png"] },
+// };
 
 
 export default function RootLayout({
@@ -35,7 +45,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow">
             {children}
-              <Analytics />
+            <Analytics />
           </main>
           <Footer />
         </Providers>
