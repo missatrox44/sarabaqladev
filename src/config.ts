@@ -37,6 +37,7 @@ const buildConfig = () => {
       displayName: process.env.NEXT_PUBLIC_BLOG_DISPLAY_NAME || "SEB",
       copyright:
         process.env.NEXT_PUBLIC_BLOG_COPYRIGHT || siteName,
+        description: "Thoughts, learnings, and insights from my journey in tech."
     },
 
     ogImageSecret:

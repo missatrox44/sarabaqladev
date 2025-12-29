@@ -3,7 +3,7 @@ export const revalidate = 3600; // 1 hour
 import { NextResponse } from "next/server";
 import RSS from "rss";
 import urlJoin from "url-join";
-import { wisp } from "../../lib/wisp";
+import { wisp } from "@/lib/wisp";
 import { config } from "@/config";
 
 const baseUrl = config.baseUrl;
@@ -21,8 +21,8 @@ export async function GET() {
   });
 
   const feed = new RSS({
-    title: config.blog.name,
-    description: config.blog.metadata.description,
+    title: config.site.name,
+    description: config.blog.description,
     site_url: baseUrl,
     feed_url: urlJoin(baseUrl, "/rss"),
     pubDate: new Date(),
