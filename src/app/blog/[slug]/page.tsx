@@ -25,7 +25,7 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
   }
 
   const { title, description, image } = result.post;
-  const generatedOgImage = signOgImageUrl({ title, brand: config.blog.name });
+  const generatedOgImage = signOgImageUrl({ title, brand: config.site.name });
   const fallbackOgImage = "/fallback-blog.png";
   const ogImages = image ? [generatedOgImage, image] : [fallbackOgImage];
 
