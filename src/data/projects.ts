@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   shortDescription: string;
-  longDescription: string;
+  longDescription?: string;
   problem: string;
   solution: string;
   impact: string;
@@ -18,6 +18,32 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+    id: "imrs",
+    title: "IMRS Biodiversity Explorer",
+    shortDescription:
+      "A digital biodiversity reference for Indio Mountains Research Station, combining handbook species records with live iNaturalist observations.",
+  problem:
+    "The IMRS Biotics handbook existed only as a static PDF, making species records difficult to search, filter, or integrate with modern observation data.",
+  solution:
+    "Built a web application that digitizes the handbook’s species index and integrates real-time iNaturalist observations. The platform provides searchable species records, sortable filters, and mapped gazetteer data.",
+  impact:
+    "Gives students, researchers, and prospective field scientists fast, searchable access to IMRS biodiversity data.",
+    techStack: [
+      "TanStack Start",
+      "TanStack Query",
+      "Tailwind",
+      "Turso",
+      "iNaturalist API",
+    ],
+    image: "/projects/imrs.png",
+    github: 'https://github.com/missatrox44/imrs',
+    liveDemo: "https://imrs.vercel.app/",
+    featured: true,
+    attributions: [
+      { org: 'Freelance' }
+    ]
+  },
   {
     id: "identity-digital-premium",
     title: "Identity Digital – Premium Catalog",
@@ -76,7 +102,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
     image: "/projects/manresa.png",
     liveDemo: "https://www.manresawilds.org/",
-    featured: true,
+    featured: false,
     attributions: [
       { org: 'Reach', url: 'https://reachcreative.com' },
     ]
