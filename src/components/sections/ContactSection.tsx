@@ -76,7 +76,7 @@ export default function ContactSection() {
 
 
   return (
-    <section id="contact" className="py-20 scroll-mt-[80px]">
+    <section id="contact" className="py-20 scroll-mt-[80px] overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

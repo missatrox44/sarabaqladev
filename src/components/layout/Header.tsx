@@ -125,7 +125,7 @@ export function Header() {
       <div
         className={cn(
           "md:hidden fixed inset-0 bg-background z-[100] backdrop-blur-md flex flex-col justify-start pt-16 px-6 transition-transform duration-300 ease-in-out h-[100dvh]",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0 visible" : "translate-x-full invisible"
         )}
       >
         <nav className="flex flex-col space-y-6 text-center pt-8">

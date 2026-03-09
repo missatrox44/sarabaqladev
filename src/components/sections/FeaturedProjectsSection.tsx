@@ -13,7 +13,7 @@ export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-12 md:py-24 scroll-mt-[80px]">
+    <section id="projects" className="py-12 md:py-24 scroll-mt-[80px] overflow-hidden">
       <div className="container max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
