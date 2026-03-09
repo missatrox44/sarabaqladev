@@ -5,9 +5,8 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/enhanced-button';
-import { ModeToggle } from '@/components/theme/ModeToggle';
 import {
-  Menu, X, GithubIcon, LinkedinIcon, TwitterIcon
+  Menu, X, GithubIcon, LinkedinIcon
 } from 'lucide-react';
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
@@ -90,17 +89,7 @@ export function Header() {
                 <LinkedinIcon className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              {/* <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <TwitterIcon className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a> */}
             </div>
-            {/* } <ModeToggle /> */}
             <Button asChild variant="hero">
               <Link href="/#contact">Contact</Link>
             </Button>
@@ -108,12 +97,12 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
-            {/* } <ModeToggle /> */}
             <Button
               variant="ghostIcon"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle Menu"
+              aria-expanded={isOpen}
             >
               {isOpen ? <X className="h-6 w-6 z-[999]" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -166,15 +155,6 @@ export function Header() {
               <LinkedinIcon className="h-6 w-6" />
               <span className="sr-only">LinkedIn</span>
             </a>
-            {/* <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <TwitterIcon className="h-6 w-6" />
-              <span className="sr-only">Twitter</span>
-            </a> */}
           </div>
         </nav>
       </div>

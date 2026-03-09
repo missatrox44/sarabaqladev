@@ -177,6 +177,14 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   @keyframes glow-pink {
     0%, 100% {
       box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);

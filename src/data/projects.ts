@@ -411,7 +411,7 @@ export const projects: Project[] = [
     impact:
       'Improved the company’s digital visibility and customer engagement, helping convert site visitors into leads with a streamlined scheduling flow.',
     techStack: ['Next.js', 'Tailwind', 'Formspree', 'Vercel', 'TypeScript'],
-    image: 'projects/quality-water-4-usa.png',
+    image: '/projects/quality-water-4-usa.png',
     liveDemo: 'https://qualitywater4usa.com',
     github: '',
     featured: false,
@@ -433,7 +433,7 @@ export const projects: Project[] = [
     impact:
       'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
     techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
-    image: 'projects/paleteria-snacks.png',
+    image: '/projects/paleteria-snacks.png',
     liveDemo: 'https://kds-paleteria.vercel.app/',
     github: 'https://github.com/missatrox44/paleteria-and-snacks',
     featured: false,

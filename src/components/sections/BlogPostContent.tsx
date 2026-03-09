@@ -2,6 +2,7 @@
 import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
 import sanitize, { defaults } from "sanitize-html";
+import { format } from "date-fns";
 import styles from "@/styles/blogPost.module.scss";
 
 export const PostContent = ({ content }: { content: string }) => {
@@ -52,16 +53,14 @@ export const PostContent = ({ content }: { content: string }) => {
 
 export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
   if (!post) return null;
-  const { title, publishedAt, createdAt, content, tags } = post;
+  const { title, publishedAt, createdAt, content, tags, author } = post;
   return (
     <div className={styles.blogText}>
       <div className="max-w-4xl mx-auto mb-10 lg:mt-20 break-words">
         <h1 className="font-bold">{title}</h1>
            <div className="text-sm opacity-80 mt-4 mb-2">
-            <span className="block mb-2">By Sara Baqla</span>
-          {Intl.DateTimeFormat("en-US").format(
-            new Date(publishedAt || createdAt)
-          )}
+            <span className="block mb-2">By {author?.name ?? "Sara Baqla"}</span>
+          {format(new Date(publishedAt || createdAt), "MMM dd, yyyy")}
         </div>
         <div className="opacity-80 text-sm mb-8">
           {tags.map((tag) => (

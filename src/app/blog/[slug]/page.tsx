@@ -39,9 +39,6 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
     },
   };
 }
-interface Params {
-  slug: string;
-}
 
 const Page = async (props: { params: Promise<Params> }) => {
   const params = await props.params;

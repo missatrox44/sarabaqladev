@@ -22,7 +22,7 @@ export async function LatestBlogs() {
 
   return (
     <section id="blog" className="py-12 md:py-24 relative overflow-hidden">
-      <div className="container max-w-7xl mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Latest <span className="text-gradient">Articles</span>

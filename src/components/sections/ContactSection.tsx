@@ -111,7 +111,7 @@ export default function ContactSection() {
 
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed pt-2 md:pt-4">
-                Got feedback or found a bug on the site? Let me know and I&apos;ll get right one it!
+                Got feedback or found a bug on the site? Let me know and I&apos;ll get right on it!
               </p>
             </div>
 
