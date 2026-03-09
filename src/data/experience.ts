@@ -11,6 +11,17 @@ export type Experience = {
 
 export const experienceData = [
   {
+    title: 'Owner & Developer',
+    company: 'Artemis Bytes LLC',
+    location: 'Remote',
+    period: 'Jan 2025 – Present',
+    description:
+      'Builds custom web solutions for clients seeking to grow their digital presence and achieve measurable ROI. Owns the full project lifecycle — from discovery and requirements gathering through development and delivery. Also contracts through third-party agencies for frontend development on e-commerce and web platform projects.',
+    type: 'work',
+    skills: ['Shopify', 'Next.js', 'TypeScript', 'Project Management', 'Technical Writing', 'Client Relations'],
+    image: '/experience/artemisbytes.webp',
+  },
+  {
     title: 'Full Stack Developer',
     company: 'Reach Creative',
     location: 'Remote',

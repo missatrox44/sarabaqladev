@@ -33,8 +33,8 @@ export const RelatedPosts: FunctionComponent<{
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.slice(0, 3).map((post) => {
-          const date = (post as any).publishedAt || (post as any).updatedAt || null;
-          const tags = (post as any).tags?.map((t: { name: string }) => t.name) ?? [];
+          const postData = post as unknown as { publishedAt?: string; updatedAt?: string; tags?: { name: string }[] };
+          const date = postData.publishedAt || postData.updatedAt || null;
           const cover = post.image || "/fallback-blog.png";
 
           return (

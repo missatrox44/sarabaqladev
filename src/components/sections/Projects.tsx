@@ -16,7 +16,6 @@ const allTechnologies = Array.from(
 
 export function Projects() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
 
@@ -50,29 +49,6 @@ export function Projects() {
     return matchesSearch && matchesTech;
   });
 
-  // Filter projects based on search query and selected technology
-  // const filteredProjects: Project[] = projects.filter(project => {
-  //   const q = searchQuery.trim().toLowerCase();
-  //   const matchesSearch =
-  //     project.title.toLowerCase().includes(q) ||
-  //     project.shortDescription.toLowerCase().includes(q) ||
-  //     project.longDescription.toLowerCase().includes(q) ||
-  //     project.problem.toLowerCase().includes(q) ||
-  //     project.solution.toLowerCase().includes(q) ||
-  //     project.impact.toLowerCase().includes(q) ||
-  //     project.techStack.some(tech => tech.toLowerCase().includes(q) ||
-  //       (project.attributions &&
-  //         project.attributions.some(attr =>
-  //           attr.org.toLowerCase().includes(q)
-  //         )
-  //       ));
-  //   const matchesTech = selectedTech ? project.techStack.includes(selectedTech) : true;
-  //   return matchesSearch && matchesTech;
-  // });
-
-  // const handleTechFilter = (tech: string) => {
-  //   setSelectedTech(selectedTech === tech ? null : tech);
-  // };
 
   return (
     <div className="space-y-8">
@@ -110,24 +86,13 @@ export function Projects() {
             </>
           )}
         </div>
-        {/* <div className="flex flex-wrap gap-2">
-          {selectedTech && (
-            <Badge
-              variant="secondary"
-              className="cursor-pointer"
-              onClick={() => setSelectedTech(null)}
-            >
-              Clear filter
-            </Badge>
-          )}
-        </div> */}
       </div>
 
       <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar">
         {allTechnologies.map((tech) => (
           <Badge
             key={tech}
-            variant={selectedTech === tech ? "default" : "outline"}
+            variant={selectedTechs.includes(tech) ? "default" : "outline"}
             className="cursor-pointer whitespace-nowrap"
             onClick={() => handleTechFilter(tech)}
           >
