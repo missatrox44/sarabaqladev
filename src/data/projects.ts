@@ -419,51 +419,51 @@ export const projects: Project[] = [
       { org: 'Freelance' }
     ],
   },
-  {
-    id: 'paleteria-snacks',
-    title: 'Paleteria & Snacks',
-    shortDescription:
-      'A playful, mobile responsive landing page for a demo Paleteria & Snacks store with bilingual support, interactive menu, and engaging animations.',
-    longDescription:
-      'Paleteria & Snacks is a demo landing page built to showcase a modern, customer-friendly design for a local dessert and snack shop. The site features a looping video hero section, a sticky navigation bar, and a category-driven food menu with swipe navigation for mobile users. Each food item is displayed on an animated flip card, showing images and details in a fun, interactive way. A language toggle powered by Zustand allows seamless switching between English and Spanish, making the site accessible to a wider audience. The landing page also includes a location and hours section with Google Maps integration and dummy contact information for a realistic storefront feel.',
-    problem:
-      'Demonstrate how a small local business, like a snack and dessert shop, can benefit from a modern, responsive, and bilingual landing page to attract and engage customers.',
-    solution:
-      'Designed and developed a demo web app with responsive layouts, bilingual support, interactive food menus, and embedded location details to highlight the possibilities for small business storefronts online.',
-    impact:
-      'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
-    techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
-    image: '/projects/paleteria-snacks.png',
-    liveDemo: 'https://kds-paleteria.vercel.app/',
-    github: 'https://github.com/missatrox44/paleteria-and-snacks',
-    featured: false,
-    attributions: [
-      { org: 'Prototype' }
-    ],
-  },
-  {
-    id: 'crab-city-server-rotation',
-    title: 'Crab City Server Rotation',
-    shortDescription:
-      'A React app with Firebase Realtime Database that digitized table rotation for a local restaurant, replacing a manual whiteboard system.',
-    longDescription:
-      'Crab City Server Rotation is a modern and efficient solution designed to streamline table rotations for a local restaurant. Initially, the restaurant managed rotations using a manual whiteboard system which proved challenging during peak hours. To provide a more optimized solution, my colleagues and I developed this React web app. At its core, the application leverages Firebase’s Realtime Database to ensure that table rotation data is managed in real time, giving staff an up-to-date view of table statuses. This improved customer service and streamlined operations. We also incorporated Tailwind to create an intuitive and visually appealing interface. While the provided link showcases the demo, the actual implementation for the restaurant remains private, complete with its own secure login.',
-    problem:
-      'The restaurant’s manual whiteboard system for tracking table rotations was inefficient and difficult to manage during peak hours.',
-    solution:
-      'Developed a React app backed by Firebase Realtime Database, providing real-time updates of table statuses and a user-friendly Tailwind interface.',
-    impact:
-      'Enhanced restaurant operations by eliminating manual processes, improving staff efficiency, and ensuring better customer service during busy times.',
-    techStack: ['React', 'Firebase Realtime Database', 'Tailwind'],
-    image: 'projects/crab-city.png',
-    liveDemo: 'https://crab-city.vercel.app/',
-    github: 'https://github.com/missatrox44/server-rotation-crab-city',
-    featured: false,
-    attributions: [
-      { org: 'Prototype' }
-    ],
+  // {
+  //   id: 'paleteria-snacks',
+  //   title: 'Paleteria & Snacks',
+  //   shortDescription:
+  //     'A playful, mobile responsive landing page for a demo Paleteria & Snacks store with bilingual support, interactive menu, and engaging animations.',
+  //   longDescription:
+  //     'Paleteria & Snacks is a demo landing page built to showcase a modern, customer-friendly design for a local dessert and snack shop. The site features a looping video hero section, a sticky navigation bar, and a category-driven food menu with swipe navigation for mobile users. Each food item is displayed on an animated flip card, showing images and details in a fun, interactive way. A language toggle powered by Zustand allows seamless switching between English and Spanish, making the site accessible to a wider audience. The landing page also includes a location and hours section with Google Maps integration and dummy contact information for a realistic storefront feel.',
+  //   problem:
+  //     'Demonstrate how a small local business, like a snack and dessert shop, can benefit from a modern, responsive, and bilingual landing page to attract and engage customers.',
+  //   solution:
+  //     'Designed and developed a demo web app with responsive layouts, bilingual support, interactive food menus, and embedded location details to highlight the possibilities for small business storefronts online.',
+  //   impact:
+  //     'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
+  //   techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
+  //   image: '/projects/paleteria-snacks.png',
+  //   liveDemo: 'https://kds-paleteria.vercel.app/',
+  //   github: 'https://github.com/missatrox44/paleteria-and-snacks',
+  //   featured: false,
+  //   attributions: [
+  //     { org: 'Prototype' }
+  //   ],
+  // },
+  // {
+  //   id: 'crab-city-server-rotation',
+  //   title: 'Crab City Server Rotation',
+  //   shortDescription:
+  //     'A React app with Firebase Realtime Database that digitized table rotation for a local restaurant, replacing a manual whiteboard system.',
+  //   longDescription:
+  //     'Crab City Server Rotation is a modern and efficient solution designed to streamline table rotations for a local restaurant. Initially, the restaurant managed rotations using a manual whiteboard system which proved challenging during peak hours. To provide a more optimized solution, my colleagues and I developed this React web app. At its core, the application leverages Firebase’s Realtime Database to ensure that table rotation data is managed in real time, giving staff an up-to-date view of table statuses. This improved customer service and streamlined operations. We also incorporated Tailwind to create an intuitive and visually appealing interface. While the provided link showcases the demo, the actual implementation for the restaurant remains private, complete with its own secure login.',
+  //   problem:
+  //     'The restaurant’s manual whiteboard system for tracking table rotations was inefficient and difficult to manage during peak hours.',
+  //   solution:
+  //     'Developed a React app backed by Firebase Realtime Database, providing real-time updates of table statuses and a user-friendly Tailwind interface.',
+  //   impact:
+  //     'Enhanced restaurant operations by eliminating manual processes, improving staff efficiency, and ensuring better customer service during busy times.',
+  //   techStack: ['React', 'Firebase Realtime Database', 'Tailwind'],
+  //   image: 'projects/crab-city.png',
+  //   liveDemo: 'https://crab-city.vercel.app/',
+  //   github: 'https://github.com/missatrox44/server-rotation-crab-city',
+  //   featured: false,
+  //   attributions: [
+  //     { org: 'Prototype' }
+  //   ],
 
-  },
+  // },
   // {
   //   id: 'love-thy-selfie',
   //   title: 'Love Thy Selfie',
@@ -508,48 +508,48 @@ export const projects: Project[] = [
   //     { org: 'Freelance' }
   //   ],
   // },
-  {
-    id: 'pomodoro-timer',
-    title: 'Pomodoro Timer',
-    shortDescription:
-      'A productivity app built during a week-long Chingu paired programming challenge, featuring a unique "Developer Mode" for rapid testing.',
-    longDescription:
-      'The fruit of a dynamic week-long paired programming challenge, curated by Chingu. Crafted by two efficiency enthusiasts, this app breathes fresh life into the revered Pomodoro technique. While inspired by existing apps, we added our flair with a unique "Developer Mode," which accelerates time to let users quickly experience all functionalities. Enhance your productivity cycles with the Pomodoro Timer, and witness time-management in a whole new light!',
-    problem:
-      'Existing Pomodoro apps felt generic and lacked developer-focused enhancements or ways to quickly demo features.',
-    solution:
-      'Built a React/Vite app that not only replicates the Pomodoro technique but also adds a unique "Developer Mode" to fast-forward cycles for testing and demos.',
-    impact:
-      'Helped users improve productivity by streamlining focus cycles, while also serving as a creative showcase of rapid prototyping and collaborative programming.',
-    techStack: ['React', 'Vite', 'TypeScript', 'JavaScript'],
-    image: 'projects/pomodoro_timer.png',
-    liveDemo: 'https://missatrox44.github.io/pomodoro-clock/',
-    github: 'https://github.com/missatrox44/pomodoro-clock',
-    featured: false,
-    attributions: [
-      { org: 'Prototype' }
-    ],
-  },
-  {
-    id: 'travel-2-it',
-    title: 'Travel 2 It',
-    shortDescription:
-      'A collaborative trip-planning app built during Chingu Voyage 41, featuring editable stacks, drag-and-drop cards, and light/dark modes.',
-    longDescription:
-      'Introducing Travel 2 It – your next must-have travel companion, masterfully crafted during the 6-week Chingu Voyage 41 journey. Dive into a seamless trip-planning experience, where organizing is as simple as creating editable stacks and cards. From jotting down must-visit spots to curating detailed plans, each card is your canvas. Not set on the order? Fluidly drag and drop cards or entire stacks until it feels just right. Enjoy elegant Dark & Light Modes, and share your journeys with loved ones via Email, Facebook, or WhatsApp. Make every trip a masterpiece with Travel 2 It.',
-    problem:
-      'Travel planning often involves scattered notes, rigid tools, or inflexible itineraries that make organizing trips frustrating.',
-    solution:
-      'Developed a React/Vite app with Chakra UI that lets users create editable stacks and cards, reorder them with drag-and-drop, toggle light/dark modes, and share trips directly with others.',
-    impact:
-      'Simplified the trip-planning process, making it intuitive and collaborative. Empowered users to stay organized and easily share their plans with friends and family.',
-    techStack: ['React', 'Vite', 'Chakra UI', 'JavaScript'],
-    image: 'projects/travel_2_it.png',
-    liveDemo: 'https://cosmic-gnome-4fc624.netlify.app/',
-    github: 'https://github.com/missatrox44/travel2it',
-    featured: false,
-    attributions: [
-      { org: 'Prototype' }
-    ],
-  }
+  // {
+  //   id: 'pomodoro-timer',
+  //   title: 'Pomodoro Timer',
+  //   shortDescription:
+  //     'A productivity app built during a week-long Chingu paired programming challenge, featuring a unique "Developer Mode" for rapid testing.',
+  //   longDescription:
+  //     'The fruit of a dynamic week-long paired programming challenge, curated by Chingu. Crafted by two efficiency enthusiasts, this app breathes fresh life into the revered Pomodoro technique. While inspired by existing apps, we added our flair with a unique "Developer Mode," which accelerates time to let users quickly experience all functionalities. Enhance your productivity cycles with the Pomodoro Timer, and witness time-management in a whole new light!',
+  //   problem:
+  //     'Existing Pomodoro apps felt generic and lacked developer-focused enhancements or ways to quickly demo features.',
+  //   solution:
+  //     'Built a React/Vite app that not only replicates the Pomodoro technique but also adds a unique "Developer Mode" to fast-forward cycles for testing and demos.',
+  //   impact:
+  //     'Helped users improve productivity by streamlining focus cycles, while also serving as a creative showcase of rapid prototyping and collaborative programming.',
+  //   techStack: ['React', 'Vite', 'TypeScript', 'JavaScript'],
+  //   image: 'projects/pomodoro_timer.png',
+  //   liveDemo: 'https://missatrox44.github.io/pomodoro-clock/',
+  //   github: 'https://github.com/missatrox44/pomodoro-clock',
+  //   featured: false,
+  //   attributions: [
+  //     { org: 'Prototype' }
+  //   ],
+  // },
+  // {
+  //   id: 'travel-2-it',
+  //   title: 'Travel 2 It',
+  //   shortDescription:
+  //     'A collaborative trip-planning app built during Chingu Voyage 41, featuring editable stacks, drag-and-drop cards, and light/dark modes.',
+  //   longDescription:
+  //     'Introducing Travel 2 It – your next must-have travel companion, masterfully crafted during the 6-week Chingu Voyage 41 journey. Dive into a seamless trip-planning experience, where organizing is as simple as creating editable stacks and cards. From jotting down must-visit spots to curating detailed plans, each card is your canvas. Not set on the order? Fluidly drag and drop cards or entire stacks until it feels just right. Enjoy elegant Dark & Light Modes, and share your journeys with loved ones via Email, Facebook, or WhatsApp. Make every trip a masterpiece with Travel 2 It.',
+  //   problem:
+  //     'Travel planning often involves scattered notes, rigid tools, or inflexible itineraries that make organizing trips frustrating.',
+  //   solution:
+  //     'Developed a React/Vite app with Chakra UI that lets users create editable stacks and cards, reorder them with drag-and-drop, toggle light/dark modes, and share trips directly with others.',
+  //   impact:
+  //     'Simplified the trip-planning process, making it intuitive and collaborative. Empowered users to stay organized and easily share their plans with friends and family.',
+  //   techStack: ['React', 'Vite', 'Chakra UI', 'JavaScript'],
+  //   image: 'projects/travel_2_it.png',
+  //   liveDemo: 'https://cosmic-gnome-4fc624.netlify.app/',
+  //   github: 'https://github.com/missatrox44/travel2it',
+  //   featured: false,
+  //   attributions: [
+  //     { org: 'Prototype' }
+  //   ],
+  // }
 ];
