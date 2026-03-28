@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 95%;
 
     --muted: 220 26% 18%;
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 0 0% 72%;
 
     --accent: 145 76% 69%; /* #6EE7B7 fern */
     --accent-foreground: 220 39% 11%;
@@ -108,6 +108,31 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+  }
+
+  /* Global focus-visible styles for interactive elements */
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   /* Custom scrollbar */

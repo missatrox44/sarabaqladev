@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { format } from "date-fns";
 import { ArrowRight, Search } from "lucide-react";
@@ -68,6 +69,7 @@ export function BlogsClient({ posts }: BlogsClientProps) {
         <div className="relative w-full md:w-96">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
+            aria-label="Search articles"
             placeholder="Search articles..."
             className="pl-10"
             value={searchQuery}
@@ -75,27 +77,31 @@ export function BlogsClient({ posts }: BlogsClientProps) {
           />
         </div>
         {selectedTag && (
-          <Badge
-            variant="secondary"
-            className="cursor-pointer"
+          <button
             onClick={() => setSelectedTag(null)}
+            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-secondary text-secondary-foreground hover:bg-secondary/80 cursor-pointer"
           >
             Clear filter
-          </Badge>
+          </button>
         )}
       </div>
 
       {/* Category strip */}
-      <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar">
+      <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar" role="group" aria-label="Filter by tag">
         {allTags.map((tag) => (
-          <Badge
+          <button
             key={tag}
-            variant={selectedTag === tag ? "default" : "outline"}
-            className="cursor-pointer whitespace-nowrap"
+            aria-pressed={selectedTag === tag}
+            className={cn(
+              "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap",
+              selectedTag === tag
+                ? "border-transparent bg-primary text-primary-foreground hover:bg-primary/80"
+                : "text-foreground border-border hover:bg-accent hover:text-accent-foreground"
+            )}
             onClick={() => toggleTag(tag)}
           >
             {tag}
-          </Badge>
+          </button>
         ))}
       </div>
 

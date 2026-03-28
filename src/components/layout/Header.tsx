@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/enhanced-button';
@@ -20,6 +20,8 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,29 @@ export function Header() {
     setIsOpen(false);
   }, [pathname]);
 
+  // Close mobile menu on Escape and trap focus
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    // Focus first menu link when menu opens
+    firstMenuLinkRef.current?.focus();
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
+  const closeMenu = useCallback(() => {
+    setIsOpen(false);
+    menuButtonRef.current?.focus();
+  }, []);
+
   return (
     <header
       className={cn(
@@ -43,6 +68,12 @@ export function Header() {
           : "bg-transparent"
       )}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:font-medium"
+      >
+        Skip to content
+      </a>
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex-1 flex items-center">
@@ -52,7 +83,7 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav aria-label="Main navigation" className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -98,6 +129,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
             <Button
+              ref={menuButtonRef}
               variant="ghostIcon"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
@@ -117,12 +149,13 @@ export function Header() {
           isOpen ? "translate-x-0 visible" : "translate-x-full invisible"
         )}
       >
-        <nav className="flex flex-col space-y-6 text-center pt-8">
-          {navItems.map((item) => (
+        <nav aria-label="Mobile navigation" className="flex flex-col space-y-6 text-center pt-8">
+          {navItems.map((item, index) => (
             <Link
               key={item.name}
               href={item.href}
-              onClick={() => setIsOpen(false)}
+              ref={index === 0 ? firstMenuLinkRef : undefined}
+              onClick={closeMenu}
               className={cn(
                 "text-xl font-medium py-2 border-b border-border",
                 pathname === item.href
@@ -133,7 +166,7 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button asChild className="mt-4" variant="hero" onClick={() => setIsOpen(false)} >
+          <Button asChild className="mt-4" variant="hero" onClick={closeMenu} >
             <Link href="/#contact">Contact</Link>
           </Button>
           <div className="flex justify-center space-x-6 pt-6">

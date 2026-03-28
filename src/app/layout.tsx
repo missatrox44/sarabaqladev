@@ -57,7 +57,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col overflow-x-hidden`}>
         <Providers>
           <Header />
-          <main className="flex-grow">
+          <main className="flex-grow" id="main-content">
             {children}
             <Analytics />
           </main>

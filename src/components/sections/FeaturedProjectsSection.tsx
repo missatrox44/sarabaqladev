@@ -40,7 +40,16 @@ export default function ProjectsSection() {
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
               className="cursor-pointer"
+              role="button"
+              tabIndex={0}
+              aria-label={`View details for ${project.title}`}
               onClick={() => setSelectedProject(project)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedProject(project);
+                }
+              }}
             >
               <Card className="card-forest h-full group flex flex-col">
                 <div className="aspect-video overflow-hidden rounded-t-xl">
