@@ -178,9 +178,13 @@ export default function ContactSection() {
                       name="name"
                       placeholder="Your name"
                       required
+                      aria-required="true"
+                      aria-describedby="name-error"
                       className="bg-background/50"
                     />
-                    <ValidationError prefix="Name" field="name" errors={state.errors} />
+                    <div id="name-error">
+                      <ValidationError prefix="Name" field="name" errors={state.errors} />
+                    </div>
                   </div>
 
                   <div className="space-y-2">
@@ -191,9 +195,13 @@ export default function ContactSection() {
                       name="email"
                       placeholder="your.email@example.com"
                       required
+                      aria-required="true"
+                      aria-describedby="email-error"
                       className="bg-background/50"
                     />
-                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                    <div id="email-error">
+                      <ValidationError prefix="Email" field="email" errors={state.errors} />
+                    </div>
                   </div>
 
                   <div className="space-y-2">
@@ -204,9 +212,13 @@ export default function ContactSection() {
                       placeholder="Tell me about your project or just say hello!"
                       rows={5}
                       required
+                      aria-required="true"
+                      aria-describedby="message-error"
                       className="bg-background/50 resize-none"
                     />
-                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    <div id="message-error">
+                      <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    </div>
                   </div>
 
                   <Button

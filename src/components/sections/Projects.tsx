@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -56,6 +57,7 @@ export function Projects() {
         <div className="relative w-full md:w-96">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
+            aria-label="Search portfolio"
             placeholder="Search portfolio..."
             className="pl-10"
             value={searchQuery}
@@ -66,38 +68,41 @@ export function Projects() {
           {selectedTechs.length > 0 && (
             <>
               {selectedTechs.map(t => (
-                <Badge
+                <button
                   key={t}
-                  variant="secondary"
-                  className="cursor-pointer"
+                  className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-secondary text-secondary-foreground hover:bg-secondary/80 cursor-pointer"
                   onClick={() => handleTechFilter(t)}
-                  title="Remove filter"
+                  aria-label={`Remove ${t} filter`}
                 >
                   {t} ✕
-                </Badge>
+                </button>
               ))}
-              <Badge
-                variant="secondary"
-                className="cursor-pointer"
+              <button
+                className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-secondary text-secondary-foreground hover:bg-secondary/80 cursor-pointer"
                 onClick={() => setSelectedTechs([])}
               >
                 Clear all
-              </Badge>
+              </button>
             </>
           )}
         </div>
       </div>
 
-      <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar">
+      <div className="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar" role="group" aria-label="Filter by technology">
         {allTechnologies.map((tech) => (
-          <Badge
+          <button
             key={tech}
-            variant={selectedTechs.includes(tech) ? "default" : "outline"}
-            className="cursor-pointer whitespace-nowrap"
+            aria-pressed={selectedTechs.includes(tech)}
+            className={cn(
+              "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap",
+              selectedTechs.includes(tech)
+                ? "border-transparent bg-primary text-primary-foreground hover:bg-primary/80"
+                : "text-foreground border-border hover:bg-accent hover:text-accent-foreground"
+            )}
             onClick={() => handleTechFilter(tech)}
           >
             {tech}
-          </Badge>
+          </button>
         ))}
       </div>
 
@@ -111,7 +116,16 @@ export function Projects() {
             viewport={{ once: true }}
             whileHover={{ y: -8 }}
             className="cursor-pointer"
+            role="button"
+            tabIndex={0}
+            aria-label={`View details for ${project.title}`}
             onClick={() => setSelectedProject(project)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setSelectedProject(project);
+              }
+            }}
           >
             <Card className="card-forest h-full group flex flex-col">
               <div className="aspect-video overflow-hidden rounded-t-xl">
