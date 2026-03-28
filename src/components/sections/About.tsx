@@ -5,15 +5,15 @@ import { motion } from 'framer-motion';
 
 
 const skills = [
-  { name: 'React & Next.js', icon: <Monitor className="h-5 w-5" /> },
-  { name: 'TypeScript', icon: <Code className="h-5 w-5" /> },
-  { name: 'Python', icon: <Terminal className="h-5 w-5" /> },
-  { name: 'REST & GraphQL APIs', icon: <Globe className="h-5 w-5" /> },
-  { name: 'SQL & NoSQL Databases', icon: <Database className="h-5 w-5" /> },
-  { name: 'Shopify & Headless CMS', icon: <Layout className="h-5 w-5" /> },
-  { name: 'Accessibility (WCAG 2.1)', icon: <Eye className="h-5 w-5" /> },
-  { name: 'Modern Dev Tooling', icon: <Sparkles className="h-5 w-5" /> },
-  { name: 'Tailwind & SCSS', icon: <Palette className="h-5 w-5" /> }
+  { name: 'React & Next.js', icon: <Monitor className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'TypeScript', icon: <Code className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'Python', icon: <Terminal className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'REST & GraphQL APIs', icon: <Globe className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'SQL & NoSQL Databases', icon: <Database className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'Shopify & Headless CMS', icon: <Layout className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'Accessibility (WCAG 2.1)', icon: <Eye className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'Modern Dev Tooling', icon: <Sparkles className="h-4 w-4 md:h-5 md:w-5" /> },
+  { name: 'Tailwind & SCSS', icon: <Palette className="h-4 w-4 md:h-5 md:w-5" /> }
 ];
 
 export function About() {
@@ -59,7 +59,7 @@ export function About() {
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 bg-background border rounded-full px-4 py-2"
+                    className="flex items-center gap-1.5 md:gap-2 bg-background border rounded-full px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base"
                   >
                     {skill.icon}
                     <span>{skill.name}</span>

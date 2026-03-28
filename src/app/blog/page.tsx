@@ -65,7 +65,7 @@ export default async function BlogPage({
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="text-gradient">Blog</span>
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
           Thoughts, learnings, and insights from my journey in tech.
         </p>
       </div>

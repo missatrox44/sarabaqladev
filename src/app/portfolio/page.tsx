@@ -13,7 +13,7 @@ export default function PortfolioPage() {
       <h2 className="text-4xl md:text-5xl font-bold mb-6">
            <span className="text-gradient">Portfolio</span>
           </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
           Explore my complete portfolio of work, from web applications to design projects
         </p>
       </div>
