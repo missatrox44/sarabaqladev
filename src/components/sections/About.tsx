@@ -1,16 +1,19 @@
 "use client";
 
-import { Palette, Globe, Monitor, Layout, Database, Smartphone } from 'lucide-react';
+import { Palette, Code, Sparkles, Eye, Globe, Monitor, Layout, Database, Terminal, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 
 const skills = [
-  { name: 'Full Stack Development', icon: <Layout className="h-5 w-5" /> },
   { name: 'React & Next.js', icon: <Monitor className="h-5 w-5" /> },
-  { name: 'React Native', icon: <Smartphone className="h-5 w-5" /> },
-  { name: 'Node.js & APIs', icon: <Database className="h-5 w-5" /> },
-  { name: 'Headless CMS Integration', icon: <Globe className="h-5 w-5" /> },
-  { name: 'Tailwind & SCSS', icon: <Palette className="h-5 w-5" /> },
+  { name: 'TypeScript', icon: <Code className="h-5 w-5" /> },
+  { name: 'Python', icon: <Terminal className="h-5 w-5" /> },
+  { name: 'REST & GraphQL APIs', icon: <Globe className="h-5 w-5" /> },
+  { name: 'SQL & NoSQL Databases', icon: <Database className="h-5 w-5" /> },
+  { name: 'Shopify & Headless CMS', icon: <Layout className="h-5 w-5" /> },
+  { name: 'Accessibility (WCAG 2.1)', icon: <Eye className="h-5 w-5" /> },
+  { name: 'Modern Dev Tooling', icon: <Sparkles className="h-5 w-5" /> },
+  { name: 'Tailwind & SCSS', icon: <Palette className="h-5 w-5" /> }
 ];
 
 export function About() {
