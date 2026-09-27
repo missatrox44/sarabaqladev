@@ -13,7 +13,7 @@ export const experienceData: Experience[] = [
   {
     title: 'Full Stack Developer',
     company: 'NoTambourine',
-    location: 'Austin, TX',
+    location: 'Remote',
     period: 'Apr 2026 – Present',
     description:
       'Full-stack engineer embedded in Shopify e-commerce clients end-to-end: in the repo, in the rituals, in the work. AI-native by default. Here to ship. Absolutely no tambourines.',
@@ -22,7 +22,7 @@ export const experienceData: Experience[] = [
   {
     title: 'Owner & Developer',
     company: 'Artemis Bytes LLC',
-    location: 'Remote',
+    location: 'Odessa, TX',
     period: 'Jan 2025 – Present',
     description:
       'Builds custom web solutions for clients seeking to grow their digital presence and achieve measurable ROI. Owns the full project lifecycle — from discovery and requirements gathering through development and delivery. Also contracts through third-party agencies for frontend development on e-commerce and web platform projects.',

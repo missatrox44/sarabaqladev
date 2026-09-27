@@ -9,7 +9,7 @@ const buildConfig = () => {
 
   const defaultDescription =
     process.env.NEXT_PUBLIC_BLOG_DESCRIPTION ??
-    "Personal portfolio showcasing my projects, experience, and skills as a professional developer";
+    "Sara Baqla is a full stack developer in Odessa, Texas, and the founder of Artemis Bytes. She builds React, Next.js, TanStack, and Shopify sites.";
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
