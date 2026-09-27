@@ -1,6 +1,5 @@
 /* Redesign palette as RGB channels so Tailwind opacity modifiers work. */
 :root {
-  /* Figma "Roam Report" palette. */
   --baqla-sky: 202 219 252;      /* #CADBFC: panel */
   --baqla-blue: 33 82 204;       /* #2152CC: panel ink, focus ring */
   --baqla-lime: 236 249 186;     /* #ECF9BA: text on band */
@@ -11,24 +10,13 @@
   --baqla-muted: 110 105 102;    /* #6E6966: Figma #746F6C is 4.41:1 on paper, fails AA */
   --baqla-line: 217 208 190;     /* #D9D0BE */
 
-  /* shadcn variables (HSL triples) pointed at the palette */
+  /* shadcn variables (HSL triples): default border color and the toast */
   --background: 40 60% 93%;
   --foreground: 26 35% 14%;
-  --card: 0 0% 100%;
-  --card-foreground: 26 35% 14%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 26 35% 14%;
-  --primary: 75 25% 34%;
-  --primary-foreground: 72 84% 85%;
-  --secondary: 72 84% 85%;
-  --secondary-foreground: 75 25% 34%;
-  --muted: 40 60% 93%;
-  --muted-foreground: 22 4% 42%;
-  --accent: 72 84% 85%;
-  --accent-foreground: 75 25% 34%;
   --border: 40 26% 80%;
-  --input: 22 4% 42%;
-  --ring: 223 72% 46%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --radius: 0.75rem;
 }
 
 body {

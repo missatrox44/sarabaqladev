@@ -2,78 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
-@layer base {
-  :root {
-    /* Dark Forest Theme - Charcoal & Onyx Base */
-    --background: 220 26% 14%; /* #1F2937 charcoal */
-    --foreground: 0 0% 95%; /* light text */
-
-    --card: 220 39% 11%; /* #111827 onyx */
-    --card-foreground: 0 0% 95%;
-
-    --popover: 220 39% 11%;
-    --popover-foreground: 0 0% 95%;
-
-    /* Forest Canopy Accents */
-    --primary: 158 64% 52%; /* #10B981 emerald */
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 160 84% 20%; /* #065F46 moss green */
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 220 26% 18%;
-    --muted-foreground: 0 0% 72%;
-
-    --accent: 145 76% 69%; /* #6EE7B7 fern */
-    --accent-foreground: 220 39% 11%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 220 26% 18%;
-    --input: 220 26% 18%;
-    --ring: 158 64% 52%;
-
-    --radius: 0.75rem;
-
-    /* Forest Gradients */
-    --gradient-subtle: linear-gradient(
-      180deg,
-      hsl(220 26% 14%),
-      hsl(220 39% 11%)
-    );
-  }
-}
-
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
-    background: var(--gradient-subtle);
+    @apply antialiased;
   }
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
   }
 
-  /* Global focus-visible styles for interactive elements */
-  a:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 2px;
-  }
-
-  /* Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -82,10 +23,6 @@ All colors MUST be HSL.
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
-    }
-
-    html {
-      scroll-behavior: auto;
     }
   }
 }
