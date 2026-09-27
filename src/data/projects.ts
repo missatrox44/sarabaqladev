@@ -51,7 +51,7 @@ export const projects: Project[] = [
     shortDescription:
       "Next.js catalog embedded in Webflow with advanced domain filtering, CSV export, and a HubSpot form feeding directly into Salesforce.",
     longDescription:
-      "At Reach, in collaboration with Heco, I delivered a standalone Next.js app embedded in Webflow that lets customers browse, filter, and export premium domains. The app connects with Hubspot and Salesforce to streamline lead capture while staying fully responsive and seamless within Identity Digital’s marketing site.",
+      "At Reach, in collaboration with Heco, I delivered a standalone Next.js app embedded in Webflow that lets customers browse, filter, and export premium domains. The app connects with HubSpot and Salesforce to streamline lead capture while staying fully responsive and seamless within Identity Digital’s marketing site.",
     problem:
       "Identity Digital needed a way for customers to explore thousands of premium domain names and share selections, while syncing leads to existing HubSpot + Salesforce pipelines.",
     solution:
@@ -59,9 +59,9 @@ export const projects: Project[] = [
     impact:
       "Enabled faster sales cycles through self-serve browsing and CSV exports, while CRM integration streamlined lead routing and reduced manual effort. The catalog now scales smoothly alongside growing premium inventory.",
     // problem:
-    //   "Identity Digital needed a way to showcase premium domains with advanced filtering and simple list sharing, while tying directly into existing Hubspot and Salesforce workflows.",
+    //   "Identity Digital needed a way to showcase premium domains with advanced filtering and simple list sharing, while tying directly into existing HubSpot and Salesforce workflows.",
     // solution:
-    //   "Built a Webflow-embedded Next.js application with filtering, CSV export, and lead capture integrated into Hubspot and Salesforce. Domain data is managed in Google Sheets and transformed into a JSON API for the app.",
+    //   "Built a Webflow-embedded Next.js application with filtering, CSV export, and lead capture integrated into HubSpot and Salesforce. Domain data is managed in Google Sheets and transformed into a JSON API for the app.",
     // impact:
     //   "Provided a user-friendly catalog that improved client engagement and simplified sales. CSV exports supported faster decision making, and CRM integration reduced friction for the sales team while allowing the catalog to scale with new inventory.",
     techStack: [
@@ -69,7 +69,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind",
       "Webflow",
-      "Hubspot",
+      "HubSpot",
       "Salesforce",
       "Google Sheets + Apps Script"
     ],
