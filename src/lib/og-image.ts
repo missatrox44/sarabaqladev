@@ -11,7 +11,7 @@ export interface OpenGraphImageParams {
   brand?: string;
 }
 
-export const signOgImageParams = ({
+const signOgImageParams = ({
   title,
   label,
   brand,
@@ -21,14 +21,6 @@ export const signOgImageParams = ({
     .update(valueString)
     .digest("hex");
   return { valueString, signature };
-};
-
-export const verifyOgImageSignature = (
-  params: OpenGraphImageParams,
-  signature: string
-) => {
-  const { signature: expectedSignature } = signOgImageParams(params);
-  return expectedSignature === signature;
 };
 
 export const signOgImageUrl = (param: OpenGraphImageParams) => {

@@ -67,36 +67,6 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        // Forest Canopy Extended Colors
-        emerald: {
-          400: '#34D399',
-          500: '#10B981',
-          600: '#059669',
-          700: '#047857'
-        },
-        lime: {
-          400: '#A3E635',
-          500: '#84CC16',
-          600: '#65A30D'
-        },
-        forest: {
-          moss: '#065F46',
-          fern: '#6EE7B7',
-          charcoal: '#1F2937',
-          onyx: '#111827'
-        },
-        pink: {
-          400: '#F472B6',
-          500: '#EC4899',
-          600: '#DB2777',
-          DEFAULT: 'hsl(var(--pink))',
-          foreground: 'hsl(var(--pink-foreground))',
-        },
-      },
-      backgroundImage: {
-        'gradient-forest': 'linear-gradient(135deg, #10B981, #A3E635, #047857)',
-        'gradient-forest-subtle': 'linear-gradient(180deg, #1F2937, #111827)',
-        'gradient-fern': 'linear-gradient(90deg, #6EE7B7, #10B981)'
       },
       fontFamily: {
         sans: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
@@ -108,54 +78,6 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
-        },
-        'fade-in-up': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(30px)'
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)'
-          }
-        },
-        'float': {
-          '0%, 100%': {
-            transform: 'translateY(0px)'
-          },
-          '50%': {
-            transform: 'translateY(-10px)'
-          }
-        },
-        'glow': {
-          '0%, 100%': {
-            boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)'
-          },
-          '50%': {
-            boxShadow: '0 0 40px rgba(16, 185, 129, 0.6)'
-          }
-        },
-        'glow-pink': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(236,72,153,0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(236,72,153,0.6)' },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in-up': 'fade-in-up 0.6s ease-out',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'glow-pink': 'glow-pink 2s ease-in-out infinite alternate'
-      }
     }
   },
   plugins: [require("tailwindcss-animate")],

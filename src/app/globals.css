@@ -34,11 +34,6 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --pink: 330 81% 60%; /* #EC4899 */
-    --pink-accent: 333 71% 67%; /* #F472B6 */
-    --pink-deep: 335 77% 45%; /* #DB2777 */
-    --pink-foreground: 0 0% 98%; 
-
     --border: 220 26% 18%;
     --input: 220 26% 18%;
     --ring: 158 64% 52%;
@@ -52,46 +47,11 @@ All colors MUST be HSL.
       hsl(84 81% 69%),
       hsl(120 61% 50%)
     );
-    --gradient-accent: linear-gradient(
-      90deg,
-      hsl(145 76% 69%),
-      hsl(158 64% 52%)
-    );
     --gradient-subtle: linear-gradient(
       180deg,
       hsl(220 26% 14%),
       hsl(220 39% 11%)
     );
-
-    /* Shadows */
-    --shadow-forest: 0 10px 40px -10px hsl(158 64% 52% / 0.2);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .light {
-    /* Light mode disabled - portfolio uses dark theme */
-    --background: 220 26% 14%;
-    --foreground: 0 0% 95%;
   }
 }
 
@@ -147,75 +107,5 @@ All colors MUST be HSL.
   ::-webkit-scrollbar-thumb {
     background: var(--gradient-primary);
     border-radius: 4px;
-  }
-}
-
-@layer components {
-  /* Forest Button Variants */
-  .btn-forest {
-    background: var(--gradient-primary);
-    @apply text-white font-medium px-6 py-3 rounded-xl shadow-lg;
-    box-shadow: var(--shadow-forest);
-    transition: var(--transition-smooth);
-  }
-
-  .btn-forest:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
-    @apply ring-2 ring-primary/30;
-  }
-
-  .btn-ghost-forest {
-    @apply border border-primary/30 text-primary bg-transparent;
-    transition: var(--transition-smooth);
-  }
-
-  .btn-ghost-forest:hover {
-    @apply bg-primary/10 border-primary;
-  }
-
-  /* Card styles */
-  .card-forest {
-    @apply bg-card border border-border/50 rounded-xl;
-    box-shadow: var(--shadow-card);
-    transition: var(--transition-smooth);
-  }
-
-  .card-forest:hover {
-    transform: translateY(-4px);
-    @apply border-primary/30;
-    box-shadow: var(--shadow-forest);
-  }
-
-  /* Gradient text */
-  .text-gradient {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Navigation */
-  .nav-sticky {
-    @apply backdrop-blur-xl bg-background/80 border-b border-border/50;
-  }
-}
-
-@layer utilities {
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  @keyframes glow-pink {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
-    }
-    50% {
-      box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
-    }
   }
 }
