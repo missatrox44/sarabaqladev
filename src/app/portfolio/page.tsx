@@ -14,7 +14,7 @@ export default function PortfolioPage() {
       <h1 className="text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold text-baqla-ink">Portfolio</h1>
       <ul className="mt-10 grid gap-6 tablet:grid-cols-2">
         {projects.map((p) => (
-          <li key={p.id}><BAQLA_Reveal><BAQLA_ProjectCard project={p} headingLevel="h2" /></BAQLA_Reveal></li>
+          <li key={p.id}><BAQLA_Reveal className="h-full"><BAQLA_ProjectCard project={p} headingLevel="h2" /></BAQLA_Reveal></li>
         ))}
       </ul>
     </section>
