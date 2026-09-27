@@ -2,17 +2,11 @@ import Link from 'next/link';
 import { Rss, Github, Linkedin } from 'lucide-react';
 import { RiBlueskyLine, RiTwitterXFill } from 'react-icons/ri';
 import { config } from '@/config';
-import { GITHUB_URL, LINKEDIN_URL, BLUESKY_URL, TWITTER_URL } from '@/lib/constants';
+import { GITHUB_URL, LINKEDIN_URL, BLUESKY_URL, TWITTER_URL, NAV_LINKS } from '@/lib/constants';
 
 const RIDGE = 'M0,52 C9,47 28,30 55,24 C82,18 114,20 165,16 C216,12 313,2 364,2 C415,2 443,8 473,16 C503,24 523,43 546,50 C569,57 580,60 610,60 C640,60 684,54 728,52 C772,50 838,51 874,48 C910,45 925,42 946,36 C967,30 982,14 1001,10 C1020,6 1033,10 1060,12 C1087,14 1129,20 1165,24 C1201,28 1228,29 1274,36 C1320,43 1412,61 1440,66';
 
-const pages = [
-  { href: '/', label: 'Home' },
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About' },
-  { href: '/about#contact', label: 'Contact' },
-];
+const pages = [...NAV_LINKS, { href: '/about#contact', label: 'Contact' }];
 
 const socials = [
   { href: '/rss', label: 'RSS feed', Icon: Rss, external: false },

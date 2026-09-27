@@ -1,6 +1,7 @@
 import { wisp } from '@/lib/wisp';
 import { config } from '@/config';
 import { BAQLA_PostCard } from '@/components/sections/BAQLA_PostCard';
+import { HEADING_CLASS } from '@/lib/constants';
 
 export const metadata = { title: 'Blog', description: config.blog.description };
 
@@ -10,7 +11,7 @@ export default async function BlogPage() {
   return (
     <section className="px-6 pt-20 pb-32 tablet:px-12 desktop:pt-16">
       <p className="font-hand text-[26px] text-baqla-olive">notes from the trail</p>
-      <h1 className="text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold text-baqla-ink">Blog</h1>
+      <h1 className={`${HEADING_CLASS} text-baqla-ink`}>Blog</h1>
       <p className="mt-2 max-w-prose text-baqla-muted">{config.blog.description}</p>
       <ul className="mt-10 grid gap-6 tablet:grid-cols-2">
         {posts.map((post) => (

@@ -1,4 +1,6 @@
 // src/config.ts
+import { FALLBACK_IMAGE } from "@/lib/constants";
+
 const buildConfig = () => {
   const blogId = process.env.NEXT_PUBLIC_BLOG_ID;
   if (!blogId) throw new Error("NEXT_PUBLIC_BLOG_ID is missing");
@@ -14,8 +16,6 @@ const buildConfig = () => {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
-  const defaultOgImage = "/fallback-blog.png";
-
   return {
     baseUrl,
 
@@ -28,7 +28,7 @@ const buildConfig = () => {
           template: `%s | ${siteName}`,
         },
         description: defaultDescription,
-        images: [defaultOgImage],
+        images: [FALLBACK_IMAGE],
       },
     },
 

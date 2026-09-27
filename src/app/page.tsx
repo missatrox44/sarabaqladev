@@ -6,10 +6,10 @@ import { wisp } from '@/lib/wisp';
 import { BAQLA_FeaturedProject } from '@/components/sections/BAQLA_FeaturedProject';
 import { BAQLA_PostCard } from '@/components/sections/BAQLA_PostCard';
 import { BAQLA_ExperienceList } from '@/components/sections/BAQLA_ExperienceList';
+import { HEADING_CLASS } from '@/lib/constants';
 
 export const revalidate = 60;
 
-const heading = 'text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold';
 const moreLink = 'mt-8 inline-block font-semibold underline-offset-4 hover:underline';
 
 export default async function Home() {
@@ -29,7 +29,7 @@ export default async function Home() {
       </section>
 
       <section className="relative bg-baqla-paper px-6 py-16 tablet:px-12">
-        <h2 className={`${heading} text-baqla-ink`}>Latest posts</h2>
+        <h2 className={`${HEADING_CLASS} text-baqla-ink`}>Latest posts</h2>
         <ul className="mt-8 grid gap-6 tablet:grid-cols-2">
           {posts.map((post) => (
             <li key={post.id}><BAQLA_PostCard post={post} /></li>
@@ -39,7 +39,7 @@ export default async function Home() {
       </section>
 
       <section className="baqla-band relative bg-baqla-olive px-6 pt-16 pb-32 tablet:px-12">
-        <h2 className={`${heading} text-baqla-lime`}>Where I&apos;ve worked</h2>
+        <h2 className={`${HEADING_CLASS} text-baqla-lime`}>Where I&apos;ve worked</h2>
         <div className="mt-6"><BAQLA_ExperienceList entries={work} limit={4} tone="band" /></div>
         <Link href="/about" className={`${moreLink} text-baqla-lime`}>Full history on About →</Link>
       </section>

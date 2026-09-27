@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { format } from 'date-fns';
+import { FALLBACK_IMAGE } from '@/lib/constants';
 
 export type BAQLA_PostCardPost = {
   slug: string;
@@ -18,7 +19,7 @@ export function BAQLA_PostCard({ post, headingLevel = 'h3' }: { post: BAQLA_Post
   return (
     <Link href={`/blog/${post.slug}`} className="group flex h-full flex-col rounded-2xl bg-baqla-card p-3 shadow-sm ring-1 ring-baqla-line/60 transition hover:-translate-y-1 hover:shadow-md">
       <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-baqla-paper">
-        <Image src={post.image || '/fallback-blog.png'} alt="" fill sizes="(min-width: 800px) 33vw, 100vw" className="object-cover" />
+        <Image src={post.image || FALLBACK_IMAGE} alt="" fill sizes="(min-width: 800px) 33vw, 100vw" className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col px-1 pb-1 pt-4">
         <time dateTime={date.toISOString()} className="text-[13px] desktop:text-sm text-baqla-muted">{format(date, 'MMM d, yyyy')}</time>

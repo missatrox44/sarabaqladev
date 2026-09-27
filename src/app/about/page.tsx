@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { experienceData } from '@/data/experience';
 import { BAQLA_ExperienceList } from '@/components/sections/BAQLA_ExperienceList';
 import { BAQLA_ContactForm } from '@/components/sections/BAQLA_ContactForm';
+import { HEADING_CLASS } from '@/lib/constants';
 
 export const metadata = { title: 'About', description: 'About Sara Baqla, full stack developer.' };
 
@@ -13,8 +14,6 @@ const photos = [
   { src: '/clones.webp', alt: 'Sara with her mirror clones' },
 ];
 
-const heading = 'text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold';
-
 export default function AboutPage() {
   return (
     <>
@@ -23,7 +22,7 @@ export default function AboutPage() {
       </div>
       <section className="baqla-band relative bg-baqla-olive px-6 pt-16 pb-16 text-baqla-lime tablet:px-12">
         <p className="font-hand text-[26px]">hi, I&apos;m Sara</p>
-        <h1 className={heading}>About</h1>
+        <h1 className={HEADING_CLASS}>About</h1>
         <div className="mt-6 max-w-prose space-y-4 text-lg">
           <p>I&apos;m a full stack developer based in Texas with 3+ years of professional experience building dynamic, modern, scalable applications.</p>
           <p>My background in ecology research and teaching sharpens my communication and analytical skills, making me as comfortable bridging teams as I am writing code.</p>
@@ -48,12 +47,12 @@ export default function AboutPage() {
       </section>
 
       <section className="relative bg-baqla-paper px-6 pb-16 tablet:px-12">
-        <h2 className={`${heading} text-baqla-ink`}>Experience</h2>
+        <h2 className={`${HEADING_CLASS} text-baqla-ink`}>Experience</h2>
         <div className="mt-6"><BAQLA_ExperienceList entries={experienceData} tone="paper" /></div>
       </section>
 
       <section id="contact" className="baqla-band relative scroll-mt-20 desktop:scroll-mt-0 bg-baqla-olive px-6 pt-16 pb-32 text-baqla-lime tablet:px-12">
-        <h2 className={heading}>Get in touch</h2>
+        <h2 className={HEADING_CLASS}>Get in touch</h2>
         <p className="mt-3 max-w-prose">Always up for new projects and good conversations. Found a bug on the site? Tell me.</p>
         <div className="mt-8 max-w-xl"><BAQLA_ContactForm /></div>
       </section>

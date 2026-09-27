@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects } from '@/data/projects';
 import { BAQLA_ProjectCard } from '@/components/sections/BAQLA_ProjectCard';
+import { HEADING_CLASS } from '@/lib/constants';
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -46,7 +47,7 @@ export default async function ProjectPage({ params }: Props) {
         <Image src={project.image} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
       <div className="relative bg-baqla-paper px-6 pt-10 pb-16 tablet:px-12">
-        <h1 className="text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold text-baqla-ink">{project.title}</h1>
+        <h1 className={`${HEADING_CLASS} text-baqla-ink`}>{project.title}</h1>
         {project.attributions && (
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Built with">
             {project.attributions.map((a) => (

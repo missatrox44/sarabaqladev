@@ -3,6 +3,7 @@ import { BAQLA_BlogPostContent } from "@/components/sections/BAQLA_BlogPostConte
 import { BAQLA_PostCard } from "@/components/sections/BAQLA_PostCard";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
+import { FALLBACK_IMAGE, HEADING_CLASS } from "@/lib/constants";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -29,8 +30,7 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
 
   const { title, description, image } = result.post;
   const generatedOgImage = signOgImageUrl({ title, brand: config.site.name });
-  const fallbackOgImage = "/fallback-blog.png";
-  const ogImages = image ? [generatedOgImage, image] : [fallbackOgImage];
+  const ogImages = image ? [generatedOgImage, image] : [FALLBACK_IMAGE];
 
   return {
     title,
@@ -62,7 +62,7 @@ const Page = async (props: { params: Promise<Params> }) => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: title,
-    image: image ? image : "/fallback-blog.png",
+    image: image || FALLBACK_IMAGE,
     datePublished: publishedAt ? publishedAt.toString() : undefined,
     dateModified: updatedAt.toString(),
     author: {
@@ -76,10 +76,10 @@ const Page = async (props: { params: Promise<Params> }) => {
     <article>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="sticky top-0 aspect-[16/9] w-full bg-baqla-card">
-        <Image src={image || '/fallback-blog.png'} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
+        <Image src={image || FALLBACK_IMAGE} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
       <div className="relative bg-baqla-paper px-6 pt-10 pb-16 tablet:px-12">
-        <h1 className="max-w-[24ch] text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold leading-tight text-baqla-ink">{title}</h1>
+        <h1 className={`${HEADING_CLASS} max-w-[24ch] leading-tight text-baqla-ink`}>{title}</h1>
         <p className="mt-3 text-[13px] desktop:text-sm text-baqla-muted">
           <time dateTime={date.toISOString()}>{format(date, 'MMM d, yyyy')}</time> · {minutes} min read
           {tags.length > 0 && <> · {tags.map((t) => `#${t.name}`).join(' ')}</>}
