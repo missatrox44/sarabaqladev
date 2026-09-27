@@ -1,8 +1,5 @@
-// WISP TEMPLATE
 import { BAQLA_BlogPostContent } from "@/components/sections/BAQLA_BlogPostContent";
 import { BAQLA_PostCard } from "@/components/sections/BAQLA_PostCard";
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
 import { FALLBACK_IMAGE, HEADING_CLASS } from "@/lib/constants";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
@@ -15,12 +12,8 @@ interface Params {
   slug: string;
 }
 
-
 export async function generateMetadata(props: { params: Promise<Params> }) {
-  const params = await props.params;
-
-  const { slug } = params;
-
+  const { slug } = await props.params;
   const result = await wisp.getPost(slug);
   if (!result || !result.post) {
     return {
@@ -29,8 +22,6 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
   }
 
   const { title, description, image } = result.post;
-  const generatedOgImage = signOgImageUrl({ title, brand: config.site.name });
-  const ogImages = image ? [generatedOgImage, image] : [FALLBACK_IMAGE];
 
   return {
     title,
@@ -38,17 +29,14 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
     openGraph: {
       title,
       description,
-      images: ogImages,
+      images: [image || FALLBACK_IMAGE],
     },
   };
 }
 
 const Page = async (props: { params: Promise<Params> }) => {
-  const params = await props.params;
-
-  const { slug } = params;
-  const result = await wisp.getPost(slug);
-  const { posts } = await wisp.getRelatedPosts({ slug, limit: 2 });
+  const { slug } = await props.params;
+  const [result, { posts }] = await Promise.all([wisp.getPost(slug), wisp.getRelatedPosts({ slug, limit: 2 })]);
 
   if (!result || !result.post) {
     return notFound();

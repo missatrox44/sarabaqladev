@@ -1,4 +1,3 @@
-// src/config.ts
 import { FALLBACK_IMAGE } from "@/lib/constants";
 
 const buildConfig = () => {
@@ -34,15 +33,10 @@ const buildConfig = () => {
 
     blog: {
       blogId,
-      displayName: process.env.NEXT_PUBLIC_BLOG_DISPLAY_NAME || "SEB",
       copyright:
         process.env.NEXT_PUBLIC_BLOG_COPYRIGHT || siteName,
         description: "Thoughts, learnings, and insights from my journey in tech."
     },
-
-    ogImageSecret:
-      process.env.OG_IMAGE_SECRET ||
-      "secret_used_for_signing_and_verifying_the_og_image_url",
   };
 };
 
