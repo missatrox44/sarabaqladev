@@ -1,10 +1,12 @@
 // WISP TEMPLATE
-import { BlogPostContent } from "@/components/sections/BlogPostContent";
-import { RelatedPosts } from "@/components/sections/RelatedPosts";
+import { BAQLA_BlogPostContent } from "@/components/sections/BAQLA_BlogPostContent";
+import { BAQLA_PostCard } from "@/components/sections/BAQLA_PostCard";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+import { format } from "date-fns";
 import type { BlogPosting, WithContext } from "schema-dts";
 
 interface Params {
@@ -51,7 +53,9 @@ const Page = async (props: { params: Promise<Params> }) => {
     return notFound();
   }
 
-  const { title, publishedAt, updatedAt, image, author } = result.post;
+  const { title, publishedAt, updatedAt, image, author, content, tags, description } = result.post;
+  const date = new Date(publishedAt ?? updatedAt);
+  const minutes = Math.max(1, Math.round(content.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length / 200));
 
   const jsonLd: WithContext<BlogPosting> = {
     "@context": "https://schema.org",
@@ -68,15 +72,30 @@ const Page = async (props: { params: Promise<Params> }) => {
   };
 
   return (
-    <div className="container max-w-7xl mx-auto pt-[80px] pb-16 px-4 sm:px-6 lg:px-8">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <BlogPostContent post={result.post} />
-      <RelatedPosts posts={posts} />
+    <article className="pb-32">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <div className="relative aspect-[16/9] w-full bg-baqla-card">
+        <Image src={image || '/fallback-blog.png'} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
-      );
+      <div className="px-6 pt-10 tablet:px-12">
+        <h1 className="max-w-[24ch] text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold leading-tight text-baqla-ink">{title}</h1>
+        <p className="mt-3 text-[13px] desktop:text-sm text-baqla-muted">
+          <time dateTime={date.toISOString()}>{format(date, 'MMM d, yyyy')}</time> · {minutes} min read
+          {tags.length > 0 && <> · {tags.map((t) => `#${t.name}`).join(' ')}</>}
+        </p>
+        {description && <p className="mt-6 max-w-[68ch] text-lg text-baqla-ink">{description}</p>}
+        <div className="mt-8"><BAQLA_BlogPostContent content={content} /></div>
+        {posts.length > 0 && (
+          <section className="mt-20">
+            <h2 className="text-[26px] tablet:text-[30px] font-semibold text-baqla-ink">Related posts</h2>
+            <ul className="mt-8 grid gap-6 tablet:grid-cols-2 desktop:grid-cols-3">
+              {posts.map((p) => <li key={p.id}><BAQLA_PostCard post={p} /></li>)}
+            </ul>
+          </section>
+        )}
+      </div>
+    </article>
+  );
 };
 
-      export default Page;
+export default Page;

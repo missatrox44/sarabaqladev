@@ -1,0 +1,149 @@
+.blogText {
+  color: rgb(var(--baqla-ink));
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+
+    @media (min-width: 800px) {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: .015rem;
+    line-height: 1.25;
+
+    @media (min-width: 800px) {
+      font-size: 2.25rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: .75rem;
+    letter-spacing: .01rem;
+    line-height: 1.3;
+
+    @media (min-width: 800px) {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  p {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: .025rem;
+
+    @media (min-width: 800px) {
+      padding-bottom: 2rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: rgb(var(--baqla-olive));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  s {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(var(--baqla-olive));
+    opacity: 0.8;
+  }
+
+  code {
+    background: rgb(var(--baqla-olive) / 0.06);
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.35rem;
+  }
+
+  pre {
+    background: rgb(var(--baqla-olive) / 0.06);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+
+    code {
+      background: transparent;
+      padding: 0;
+    }
+  }
+
+  img {
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+
+    @media (min-width: 800px) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol,
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    li {
+
+      p {
+        padding-bottom: .5rem !important;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  blockquote {
+    margin-bottom: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid rgb(var(--baqla-olive));
+    background: rgb(var(--baqla-olive) / 0.06);
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgb(var(--baqla-ink));
+
+    @media (min-width: 800px) {
+      font-size: 1.125rem;
+      padding: 1.5rem 2rem;
+    }
+
+    p {
+      padding-bottom: 0;
+    }
+  }
+}
