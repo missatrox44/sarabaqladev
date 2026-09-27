@@ -5,8 +5,7 @@ import { BAQLA_ContactForm } from '@/components/sections/BAQLA_ContactForm';
 
 export const metadata = { title: 'About', description: 'About Sara Baqla, full stack developer.' };
 
-const skills = ['React & Next.js', 'TypeScript', 'Python', 'REST & GraphQL APIs', 'SQL & NoSQL Databases', 'Shopify & Headless CMS', 'Accessibility (WCAG 2.1)', 'Modern Dev Tooling', 'Tailwind & SCSS'];
-
+const skills = ['AI-native development', 'React & Next.js', 'TypeScript', 'Python', 'SQL & NoSQL Databases', 'Shopify & Headless CMS', 'Accessibility (WCAG 2.1)'];
 const photos = [
   { src: '/sara-seattle.webp', alt: 'Sara hugging a tree at Mount Rainer National Park' },
   { src: '/cactus-cats.webp', alt: 'Bagheera & Sylvester' },
@@ -26,7 +25,7 @@ export default function AboutPage() {
         <p className="font-hand text-[26px]">hi, I&apos;m Sara</p>
         <h1 className={heading}>About</h1>
         <div className="mt-6 max-w-prose space-y-4 text-lg">
-          <p>I&apos;m a full stack developer with 3+ years of professional experience building dynamic, modern, scalable applications.</p>
+          <p>I&apos;m a full stack developer based in Texas with 3+ years of professional experience building dynamic, modern, scalable applications.</p>
           <p>My background in ecology research and teaching sharpens my communication and analytical skills, making me as comfortable bridging teams as I am writing code.</p>
           <p>When I&apos;m not coding, you&apos;ll find me outdoors, reading, or playing trumpet. Always learning, always building.</p>
         </div>
