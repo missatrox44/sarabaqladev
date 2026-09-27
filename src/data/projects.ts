@@ -12,7 +12,7 @@ export interface Project {
   github?: string;
   featured: boolean;
   attributions?: {
-    org: 'Reach' | 'Heco' | 'Freelance' | 'Personal' | 'Experimental' | 'Prototype';
+    org: 'Reach Creative' | 'Hello Heco' | 'Artemis Bytes' | 'Personal' | 'Experimental' | 'Prototype';
     url?: string;
   }[];
 }
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     liveDemo: "https://www.imrs.bio/",
     featured: true,
     attributions: [
-      { org: 'Freelance' }
+      { org: 'Artemis Bytes', url: 'https://www.artemisbytes.com/' }
     ]
   },
   {
@@ -77,8 +77,8 @@ export const projects: Project[] = [
     liveDemo: "https://www.identity.digital/premium-catalog",
     featured: true,
     attributions: [
-      { org: 'Reach', url: 'https://reachcreative.com' },
-      { org: 'Heco', url: 'https://www.helloheco.com' },
+      { org: 'Reach Creative', url: 'https://www.reachcreative.com/' },
+      { org: 'Hello Heco', url: 'https://heco.partners/' },
     ]
   },
   {
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     liveDemo: "https://www.manresawilds.org/",
     featured: false,
     attributions: [
-      { org: 'Reach', url: 'https://reachcreative.com' },
+      { org: 'Reach Creative', url: 'https://www.reachcreative.com/' },
     ]
   },
   {
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     github: '',
     featured: true,
     attributions: [
-      { org: 'Reach', url: 'https://reachcreative.com' },
+      { org: 'Reach Creative', url: 'https://www.reachcreative.com/' },
     ],
   },
   {
@@ -162,8 +162,8 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
-        url: "https://reachcreative.com"
+        org: "Reach Creative",
+        url: "https://www.reachcreative.com/"
       }
     ]
   },
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
+        org: "Reach Creative",
         url: "https://www.reachcreative.com/"
       }
     ]
@@ -224,7 +224,7 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
+        org: "Reach Creative",
         url: "https://www.reachcreative.com/"
       }
     ]
@@ -246,8 +246,8 @@ export const projects: Project[] = [
     liveDemo: "https://www.name.com/nameapi",
     featured: false,
     attributions: [
-      { org: "Reach", url: "https://reachcreative.com" },
-      { org: "Heco", url: "https://helloheco.com" }
+      { org: "Reach Creative", url: "https://www.reachcreative.com/" },
+      { org: "Hello Heco", url: "https://heco.partners/" }
     ]
   },
   {
@@ -278,8 +278,8 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
-        url: "https://reachcreative.com"
+        org: "Reach Creative",
+        url: "https://www.reachcreative.com/"
       }
     ]
   },
@@ -309,8 +309,8 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
-        url: "https://reachcreative.com"
+        org: "Reach Creative",
+        url: "https://www.reachcreative.com/"
       }
     ]
   },
@@ -340,8 +340,8 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
-        url: "https://reachcreative.com"
+        org: "Reach Creative",
+        url: "https://www.reachcreative.com/"
       }
     ]
   },
@@ -372,12 +372,12 @@ export const projects: Project[] = [
     featured: false,
     attributions: [
       {
-        org: "Reach",
-        url: "https://reachcreative.com"
+        org: "Reach Creative",
+        url: "https://www.reachcreative.com/"
       },
       {
-        org: "Heco",
-        url: "https://helloheco.com"
+        org: "Hello Heco",
+        url: "https://heco.partners/"
       }
     ]
   },
@@ -394,7 +394,7 @@ export const projects: Project[] = [
     liveDemo: "https://brand-guidelines.motorolasolutions.com/",
     featured: false,
     attributions: [
-      { org: "Reach", url: "https://reachcreative.com" }
+      { org: "Reach Creative", url: "https://www.reachcreative.com/" }
     ]
   },
   {
@@ -416,7 +416,7 @@ export const projects: Project[] = [
     github: '',
     featured: false,
     attributions: [
-      { org: 'Freelance' }
+      { org: 'Artemis Bytes', url: 'https://www.artemisbytes.com/' }
     ],
   },
   // {
@@ -483,7 +483,7 @@ export const projects: Project[] = [
   //   github: 'https://github.com/missatrox44/love-thy-selfie',
   //   featured: false,
   //   attributions: [
-  //     { org: 'Freelance' }
+  //     { org: 'Artemis Bytes', url: 'https://www.artemisbytes.com/' }
   //   ],
   // },
   // {
@@ -505,7 +505,7 @@ export const projects: Project[] = [
   //   github: '',
   //   featured: false,
   //   attributions: [
-  //     { org: 'Freelance' }
+  //     { org: 'Artemis Bytes', url: 'https://www.artemisbytes.com/' }
   //   ],
   // },
   // {
