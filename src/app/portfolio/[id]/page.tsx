@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects } from '@/data/projects';
+import { BAQLA_ProjectCard } from '@/components/sections/BAQLA_ProjectCard';
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -27,7 +28,7 @@ export default async function ProjectPage({ params }: Props) {
   const index = projects.findIndex((p) => p.id === id);
   if (index === -1) notFound();
   const project = projects[index];
-  const next = projects[(index + 1) % projects.length];
+  const others = [1, 2].map((offset) => projects[(index + offset) % projects.length]);
 
   const blocks = [
     { heading: 'Problem', body: project.problem },
@@ -40,11 +41,11 @@ export default async function ProjectPage({ params }: Props) {
   ].filter((l): l is { href: string; label: string } => Boolean(l.href));
 
   return (
-    <article className="pb-32">
-      <div className="relative aspect-[16/9] w-full bg-baqla-card">
+    <article>
+      <div className="sticky top-0 aspect-[16/9] w-full bg-baqla-card">
         <Image src={project.image} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
-      <div className="px-6 pt-10 tablet:px-12">
+      <div className="relative bg-baqla-paper px-6 pt-10 pb-16 tablet:px-12">
         <h1 className="text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold text-baqla-ink">{project.title}</h1>
         {project.attributions && (
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Built with">
@@ -84,10 +85,14 @@ export default async function ProjectPage({ params }: Props) {
             ))}
           </ul>
         </section>
-        <Link href={`/portfolio/${next.id}`} className="mt-16 inline-block font-semibold text-baqla-olive underline-offset-4 hover:underline">
-          Next project: {next.title} →
-        </Link>
       </div>
+      <section className="baqla-band relative bg-baqla-olive px-6 pt-16 pb-32 tablet:px-12">
+        <h2 className="text-[26px] tablet:text-[30px] font-semibold text-baqla-lime">More projects</h2>
+        <ul className="mt-8 grid gap-6 tablet:grid-cols-2">
+          {others.map((p) => <li key={p.id}><BAQLA_ProjectCard project={p} /></li>)}
+        </ul>
+        <Link href="/portfolio" className="mt-8 inline-block font-semibold text-baqla-lime underline-offset-4 hover:underline">All projects →</Link>
+      </section>
     </article>
   );
 }

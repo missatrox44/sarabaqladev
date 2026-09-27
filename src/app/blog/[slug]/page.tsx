@@ -6,6 +6,7 @@ import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { format } from "date-fns";
 import type { BlogPosting, WithContext } from "schema-dts";
 
@@ -47,7 +48,7 @@ const Page = async (props: { params: Promise<Params> }) => {
 
   const { slug } = params;
   const result = await wisp.getPost(slug);
-  const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
+  const { posts } = await wisp.getRelatedPosts({ slug, limit: 2 });
 
   if (!result || !result.post) {
     return notFound();
@@ -72,12 +73,12 @@ const Page = async (props: { params: Promise<Params> }) => {
   };
 
   return (
-    <article className="pb-32">
+    <article>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="relative aspect-[16/9] w-full bg-baqla-card">
+      <div className="sticky top-0 aspect-[16/9] w-full bg-baqla-card">
         <Image src={image || '/fallback-blog.png'} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
-      <div className="px-6 pt-10 tablet:px-12">
+      <div className="relative bg-baqla-paper px-6 pt-10 pb-16 tablet:px-12">
         <h1 className="max-w-[24ch] text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibold leading-tight text-baqla-ink">{title}</h1>
         <p className="mt-3 text-[13px] desktop:text-sm text-baqla-muted">
           <time dateTime={date.toISOString()}>{format(date, 'MMM d, yyyy')}</time> · {minutes} min read
@@ -85,15 +86,18 @@ const Page = async (props: { params: Promise<Params> }) => {
         </p>
         {description && <p className="mt-6 max-w-[68ch] text-lg text-baqla-ink">{description}</p>}
         <div className="mt-8"><BAQLA_BlogPostContent content={content} /></div>
+      </div>
+      <section className="baqla-band relative bg-baqla-olive px-6 pt-16 pb-32 tablet:px-12">
         {posts.length > 0 && (
-          <section className="mt-20">
-            <h2 className="text-[26px] tablet:text-[30px] font-semibold text-baqla-ink">Related posts</h2>
-            <ul className="mt-8 grid gap-6 tablet:grid-cols-2 desktop:grid-cols-3">
+          <>
+            <h2 className="text-[26px] tablet:text-[30px] font-semibold text-baqla-lime">Related posts</h2>
+            <ul className="mt-8 grid gap-6 tablet:grid-cols-2">
               {posts.map((p) => <li key={p.id}><BAQLA_PostCard post={p} /></li>)}
             </ul>
-          </section>
+          </>
         )}
-      </div>
+        <Link href="/blog" className="mt-8 inline-block font-semibold text-baqla-lime underline-offset-4 hover:underline">All posts →</Link>
+      </section>
     </article>
   );
 };
