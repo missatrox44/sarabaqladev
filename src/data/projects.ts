@@ -39,7 +39,7 @@ export const projects: Project[] = [
     ],
     image: "/projects/imrs.png",
     github: 'https://github.com/missatrox44/imrs',
-    liveDemo: "https://imrs.vercel.app/",
+    liveDemo: "https://www.imrs.bio/",
     featured: true,
     attributions: [
       { org: 'Freelance' }
