@@ -18,7 +18,21 @@ export default {
       }
     },
     extend: {
+      screens: {
+        tablet: '800px',
+        desktop: '1280px',
+      },
       colors: {
+        baqla: {
+          lime: 'rgb(var(--baqla-lime) / <alpha-value>)',
+          olive: 'rgb(var(--baqla-olive) / <alpha-value>)',
+          'lime-dim': 'rgb(var(--baqla-lime-dim) / <alpha-value>)',
+          paper: 'rgb(var(--baqla-paper) / <alpha-value>)',
+          card: 'rgb(var(--baqla-card) / <alpha-value>)',
+          ink: 'rgb(var(--baqla-ink) / <alpha-value>)',
+          muted: 'rgb(var(--baqla-muted) / <alpha-value>)',
+          line: 'rgb(var(--baqla-line) / <alpha-value>)',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -84,7 +98,9 @@ export default {
         'gradient-fern': 'linear-gradient(90deg, #6EE7B7, #10B981)'
       },
       fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif']
+        sans: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-archivo)', 'system-ui', 'sans-serif'],
+        hand: ['var(--font-caveat)', 'cursive'],
       },
       borderRadius: {
         lg: 'var(--radius)',

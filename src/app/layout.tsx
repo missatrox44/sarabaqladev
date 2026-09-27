@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Archivo, Caveat, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import "@/styles/BAQLA_tokens.css";
 import { Providers } from './providers';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import { BAQLA_Shell } from '@/components/layout/BAQLA_Shell';
 import { Analytics } from "@vercel/analytics/next"
 import { config } from "@/config";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.baseUrl),
@@ -53,15 +55,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col overflow-x-hidden`}>
+    <html lang="en" className={`${archivo.variable} ${caveat.variable} ${jakarta.variable}`}>
+      <body className="font-sans">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-baqla-card focus:px-4 focus:py-2 focus:text-baqla-olive">
+          Skip to content
+        </a>
         <Providers>
-          <Header />
-          <main className="flex-grow" id="main-content">
-            {children}
-            <Analytics />
-          </main>
-          <Footer />
+          <BAQLA_Shell>{children}</BAQLA_Shell>
+          <Analytics />
         </Providers>
       </body>
     </html>

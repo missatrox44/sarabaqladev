@@ -1,0 +1,50 @@
+/* Redesign palette as RGB channels so Tailwind opacity modifiers work. */
+:root {
+  --baqla-lime: 226 245 154;     /* #E2F59A */
+  --baqla-olive: 46 74 12;       /* #2E4A0C */
+  --baqla-lime-dim: 185 204 116; /* #B9CC74 */
+  --baqla-paper: 251 247 238;    /* #FBF7EE */
+  --baqla-card: 255 255 255;     /* #FFFFFF */
+  --baqla-ink: 28 28 26;         /* #1C1C1A */
+  --baqla-muted: 94 92 85;       /* #5E5C55 */
+  --baqla-line: 207 201 184;     /* #CFC9B8 */
+
+  /* shadcn variables (HSL triples) pointed at the palette */
+  --background: 42 62% 96%;
+  --foreground: 60 4% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 60 4% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 60 4% 11%;
+  --primary: 87 72% 17%;
+  --primary-foreground: 73 82% 78%;
+  --secondary: 73 82% 78%;
+  --secondary-foreground: 87 72% 17%;
+  --muted: 42 62% 96%;
+  --muted-foreground: 47 5% 35%;
+  --accent: 73 82% 78%;
+  --accent-foreground: 87 72% 17%;
+  --border: 44 19% 77%;
+  --input: 47 5% 35%;
+  --ring: 87 72% 17%;
+}
+
+body {
+  background: rgb(var(--baqla-paper));
+  color: rgb(var(--baqla-ink));
+}
+
+/* KEY-DECISION 2026-09-26: clip, not hidden — hidden makes html/body scroll containers and breaks the sticky panel. */
+html,
+body {
+  overflow-x: clip;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--baqla-olive));
+  outline-offset: 2px;
+}
+
+.baqla-band :focus-visible {
+  outline-color: rgb(var(--baqla-lime));
+}
