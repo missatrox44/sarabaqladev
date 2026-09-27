@@ -23,7 +23,7 @@ export default async function Home() {
 
       {/* KEY-DECISION 2026-09-26: sticky hero; later sections are `relative`, so they paint over it in DOM order. */}
       <section className="sticky top-0 flex h-dvh flex-col items-center justify-center overflow-hidden px-6">
-        <Image src="https://www.imrs.bio/imgs/hero-weather.webp" alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
+        <Image src="/home-hero.webp" alt="" fill priority quality={90} sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
         {hero && <div className="relative"><BAQLA_FeaturedProject project={hero} /></div>}
         <p aria-hidden="true" className="absolute bottom-8 rounded-full bg-baqla-paper/85 px-4 py-1 text-sm text-baqla-ink">Scroll for more ↓</p>
       </section>
