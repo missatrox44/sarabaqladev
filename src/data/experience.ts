@@ -9,7 +9,16 @@ export type Experience = {
   image?: string;
 };
 
-export const experienceData = [
+export const experienceData: Experience[] = [
+  {
+    title: 'Full Stack Developer',
+    company: 'NoTambourine',
+    location: 'Austin, TX',
+    period: 'Apr 2026 – Present',
+    description:
+      'Full-stack engineer embedded in Shopify e-commerce clients end-to-end: in the repo, in the rituals, in the work. AI-native by default. Here to ship. Absolutely no tambourines.',
+    type: 'work',
+  },
   {
     title: 'Owner & Developer',
     company: 'Artemis Bytes LLC',
