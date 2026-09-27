@@ -19,9 +19,11 @@ const heading = 'text-[26px] tablet:text-[30px] desktop:text-[34px] font-semibol
 export default function AboutPage() {
   return (
     <>
-      <section className="baqla-band bg-baqla-olive px-6 pt-24 pb-16 text-baqla-lime tablet:px-12 desktop:pt-16">
-        <Image src="/profile.webp" alt="Headshot of Sara Baqla" width={160} height={160} priority className="h-32 w-32 rounded-full object-cover ring-4 ring-baqla-lime tablet:h-40 tablet:w-40" />
-        <p className="mt-6 font-hand text-[26px]">hi, I&apos;m Sara</p>
+      <div className="sticky top-0 aspect-[16/9] w-full bg-baqla-card">
+        <Image src="/about-hero.webp" alt="Sara Baqla standing by a pond with a backpack, looking over her shoulder" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
+      </div>
+      <section className="baqla-band relative bg-baqla-olive px-6 pt-16 pb-16 text-baqla-lime tablet:px-12">
+        <p className="font-hand text-[26px]">hi, I&apos;m Sara</p>
         <h1 className={heading}>About</h1>
         <div className="mt-6 max-w-prose space-y-4 text-lg">
           <p>I&apos;m a full stack developer with 3+ years of professional experience building dynamic, modern, scalable applications.</p>
@@ -36,7 +38,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="px-6 py-16 tablet:px-12" aria-label="Photos">
+      <section className="relative bg-baqla-paper px-6 py-16 tablet:px-12" aria-label="Photos">
         <ul className="grid grid-cols-2 gap-3 tablet:grid-cols-4">
           {photos.map((p) => (
             <li key={p.src} className="relative aspect-[3/4] overflow-hidden rounded-2xl">
@@ -46,16 +48,15 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="px-6 pb-16 tablet:px-12">
+      <section className="relative bg-baqla-paper px-6 pb-16 tablet:px-12">
         <h2 className={`${heading} text-baqla-ink`}>Experience</h2>
         <div className="mt-6"><BAQLA_ExperienceList entries={experienceData} tone="paper" /></div>
       </section>
 
-      <section id="contact" className="baqla-band scroll-mt-20 desktop:scroll-mt-0 bg-baqla-olive px-6 pt-16 pb-32 text-baqla-lime tablet:px-12">
+      <section id="contact" className="baqla-band relative scroll-mt-20 desktop:scroll-mt-0 bg-baqla-olive px-6 pt-16 pb-32 text-baqla-lime tablet:px-12">
         <h2 className={heading}>Get in touch</h2>
         <p className="mt-3 max-w-prose">Always up for new projects and good conversations. Found a bug on the site? Tell me.</p>
         <div className="mt-8 max-w-xl"><BAQLA_ContactForm /></div>
-        <a href="/baqla_resume_2025.pdf" download className="mt-10 inline-block font-semibold underline underline-offset-4">Download my résumé (PDF)</a>
       </section>
     </>
   );
