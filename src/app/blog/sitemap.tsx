@@ -1,4 +1,3 @@
-// WISP TEMPLATE
 import { config } from "@/config";
 import { wisp } from "@/lib/wisp";
 import type { MetadataRoute } from "next";

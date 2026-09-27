@@ -71,17 +71,6 @@ const jsonLd = {
   ],
 };
 
-// export const metadata: Metadata = {
-//   title: 'SB | Full Stack Developer',
-//   description: 'Personal portfolio showcasing my projects, experience, and skills as a professional developer',
-
-//   metadataBase: new URL(config.baseUrl),
-//   openGraph: { images: ["/fallback-blog.png"] },
-//   twitter: { images: ["/fallback-blog.png"] },
-// };
-
-
-
 export default function RootLayout({
   children,
 }: Readonly<{

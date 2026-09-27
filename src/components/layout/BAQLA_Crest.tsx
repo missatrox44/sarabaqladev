@@ -2,13 +2,13 @@
 export function BAQLA_Crest({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 490.000000 520.000000"
+      viewBox="0 0 490 520"
       className={className}
       fill="currentColor"
       aria-hidden="true"
       focusable="false"
     >
-      <g transform="translate(0.000000,520.000000) scale(0.100000,-0.100000)">
+      <g transform="translate(0,520) scale(0.1,-0.1)">
         <path
           d="M130 4447 l0 -618 29 22 c18 13 50 24 80 27 l51 5 0 508 0 509 2150
 0 2150 0 1 -200 c2 -227 0 -206 21 -245 29 -55 69 -186 102 -333 l33 -145 5
