@@ -1,32 +1,34 @@
 /* Redesign palette as RGB channels so Tailwind opacity modifiers work. */
 :root {
-  --baqla-lime: 226 245 154;     /* #E2F59A */
-  --baqla-olive: 46 74 12;       /* #2E4A0C */
-  --baqla-lime-dim: 185 204 116; /* #B9CC74 */
-  --baqla-paper: 251 247 238;    /* #FBF7EE */
+  /* Figma "Roam Report" palette. */
+  --baqla-sky: 202 219 252;      /* #CADBFC: panel */
+  --baqla-blue: 33 82 204;       /* #2152CC: panel ink, focus ring */
+  --baqla-lime: 236 249 186;     /* #ECF9BA: text on band */
+  --baqla-olive: 98 109 65;      /* #626D41: band, accents */
+  --baqla-paper: 248 241 227;    /* #F8F1E3: right column, footer */
   --baqla-card: 255 255 255;     /* #FFFFFF */
-  --baqla-ink: 28 28 26;         /* #1C1C1A */
-  --baqla-muted: 94 92 85;       /* #5E5C55 */
-  --baqla-line: 207 201 184;     /* #CFC9B8 */
+  --baqla-ink: 48 34 23;         /* #302217 */
+  --baqla-muted: 110 105 102;    /* #6E6966: Figma #746F6C is 4.41:1 on paper, fails AA */
+  --baqla-line: 217 208 190;     /* #D9D0BE */
 
   /* shadcn variables (HSL triples) pointed at the palette */
-  --background: 42 62% 96%;
-  --foreground: 60 4% 11%;
+  --background: 40 60% 93%;
+  --foreground: 26 35% 14%;
   --card: 0 0% 100%;
-  --card-foreground: 60 4% 11%;
+  --card-foreground: 26 35% 14%;
   --popover: 0 0% 100%;
-  --popover-foreground: 60 4% 11%;
-  --primary: 87 72% 17%;
-  --primary-foreground: 73 82% 78%;
-  --secondary: 73 82% 78%;
-  --secondary-foreground: 87 72% 17%;
-  --muted: 42 62% 96%;
-  --muted-foreground: 47 5% 35%;
-  --accent: 73 82% 78%;
-  --accent-foreground: 87 72% 17%;
-  --border: 44 19% 77%;
-  --input: 47 5% 35%;
-  --ring: 87 72% 17%;
+  --popover-foreground: 26 35% 14%;
+  --primary: 75 25% 34%;
+  --primary-foreground: 72 84% 85%;
+  --secondary: 72 84% 85%;
+  --secondary-foreground: 75 25% 34%;
+  --muted: 40 60% 93%;
+  --muted-foreground: 22 4% 42%;
+  --accent: 72 84% 85%;
+  --accent-foreground: 75 25% 34%;
+  --border: 40 26% 80%;
+  --input: 22 4% 42%;
+  --ring: 223 72% 46%;
 }
 
 body {
@@ -41,7 +43,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid rgb(var(--baqla-olive));
+  outline: 2px solid rgb(var(--baqla-blue));
   outline-offset: 2px;
 }
 

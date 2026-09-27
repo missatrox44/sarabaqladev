@@ -26,7 +26,7 @@ export function BAQLA_ExperienceList({ entries, limit, tone }: { entries: Experi
           </div>
           <div className="col-span-2 tablet:col-span-1">
             <h3 className={cn('text-[17px] tablet:text-lg font-semibold', band ? 'text-baqla-lime' : 'text-baqla-ink')}>{e.title}</h3>
-            <p className={cn('text-[13px] desktop:text-sm', band ? 'text-baqla-lime-dim' : 'text-baqla-muted')}>
+            <p className={cn('text-[13px] desktop:text-sm', band ? 'text-baqla-lime' : 'text-baqla-muted')}>
               {e.company} · {e.location} · {e.period}
             </p>
             {e.description && (

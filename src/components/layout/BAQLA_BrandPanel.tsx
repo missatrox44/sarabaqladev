@@ -3,7 +3,7 @@ import { BAQLA_RoleTicker } from './BAQLA_RoleTicker';
 
 export function BAQLA_BrandPanel() {
   return (
-    <header className="sticky top-0 z-0 flex flex-col items-center justify-center gap-6 bg-baqla-lime text-baqla-olive px-6 pt-24 pb-10 text-center min-h-[80svh] tablet:min-h-[65svh] desktop:h-dvh desktop:min-h-0 desktop:self-start">
+    <header className="sticky top-0 z-0 flex flex-col items-center justify-center gap-6 bg-baqla-sky text-baqla-blue px-6 pt-24 pb-10 text-center min-h-[80svh] tablet:min-h-[65svh] desktop:h-dvh desktop:min-h-0 desktop:self-start">
       <p className="font-display font-black [font-stretch:125%] uppercase leading-[0.9] text-[44px] tablet:text-[72px] desktop:text-[88px]">
         <span className="desktop:block">Sara</span> <span className="desktop:block">Baqla</span>
       </p>

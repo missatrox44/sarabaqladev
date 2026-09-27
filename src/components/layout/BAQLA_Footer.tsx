@@ -4,7 +4,7 @@ import { RiBlueskyLine, RiTwitterXFill } from 'react-icons/ri';
 import { config } from '@/config';
 import { GITHUB_URL, LINKEDIN_URL, BLUESKY_URL, TWITTER_URL } from '@/lib/constants';
 
-const RIDGE = 'M0,52 L90,30 L160,44 L250,12 L330,38 L420,20 L500,46 L600,8 L690,34 L780,18 L870,42 L960,14 L1050,36 L1140,10 L1230,40 L1320,22 L1440,48';
+const RIDGE = 'M0,52 C9,47 28,30 55,24 C82,18 114,20 165,16 C216,12 313,2 364,2 C415,2 443,8 473,16 C503,24 523,43 546,50 C569,57 580,60 610,60 C640,60 684,54 728,52 C772,50 838,51 874,48 C910,45 925,42 946,36 C967,30 982,14 1001,10 C1020,6 1033,10 1060,12 C1087,14 1129,20 1165,24 C1201,28 1228,29 1274,36 C1320,43 1412,61 1440,66';
 
 const pages = [
   { href: '/', label: 'Home' },
@@ -24,13 +24,13 @@ const socials = [
 
 export function BAQLA_Footer() {
   return (
-    <footer className="relative z-20 -mt-20 text-baqla-olive">
+    <footer className="relative z-20 -mt-20 text-baqla-ink">
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="block h-20 w-full" aria-hidden="true" focusable="false">
-        <path d={`${RIDGE} L1440,80 L0,80 Z`} className="fill-baqla-lime" />
-        {/* KEY-DECISION 2026-09-26: stroke required — lime on paper is 1.11:1. */}
+        <path d={`${RIDGE} L1440,80 L0,80 Z`} className="fill-baqla-paper" />
+        {/* KEY-DECISION 2026-09-26: stroke required; the paper ridge is invisible over paper sections. */}
         <path d={RIDGE} fill="none" className="stroke-baqla-olive" strokeWidth={2} vectorEffect="non-scaling-stroke" />
       </svg>
-      <div className="bg-baqla-lime px-6 pb-10 pt-6 tablet:px-12">
+      <div className="-mt-px bg-baqla-paper px-6 pb-10 pt-6 tablet:px-12">
         <p className="font-hand text-[26px]">end of the page</p>
         <p className="font-display font-black [font-stretch:125%] leading-none text-[40px] tablet:text-[64px] desktop:text-[72px]">
           Let&apos;s build something.
@@ -48,7 +48,7 @@ export function BAQLA_Footer() {
               <a
                 href={href}
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full hover:bg-baqla-olive/10"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full hover:bg-baqla-ink/10"
               >
                 <Icon className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">{label}{external ? ' (opens in new tab)' : ''}</span>

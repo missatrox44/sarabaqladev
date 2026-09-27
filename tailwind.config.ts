@@ -24,9 +24,10 @@ export default {
       },
       colors: {
         baqla: {
+          sky: 'rgb(var(--baqla-sky) / <alpha-value>)',
+          blue: 'rgb(var(--baqla-blue) / <alpha-value>)',
           lime: 'rgb(var(--baqla-lime) / <alpha-value>)',
           olive: 'rgb(var(--baqla-olive) / <alpha-value>)',
-          'lime-dim': 'rgb(var(--baqla-lime-dim) / <alpha-value>)',
           paper: 'rgb(var(--baqla-paper) / <alpha-value>)',
           card: 'rgb(var(--baqla-card) / <alpha-value>)',
           ink: 'rgb(var(--baqla-ink) / <alpha-value>)',
