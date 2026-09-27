@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Turso",
       "iNaturalist API",
     ],
-    image: "/projects/imrs.png",
+    image: "/projects/imrs.webp",
     github: 'https://github.com/missatrox44/imrs',
     liveDemo: "https://www.imrs.bio/",
     featured: true,
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "Salesforce",
       "Google Sheets + Apps Script"
     ],
-    image: "/projects/premium-catalog.png",
+    image: "/projects/premium-catalog.webp",
     liveDemo: "https://www.identity.digital/premium-catalog",
     featured: true,
     attributions: [
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     // impact:
     //   "Delivered a scalable hub that communicates the park’s mission, supports events and press coverage, and engages the community. The site strengthens outreach, fundraising, and transparency around restoration, reconnecting the public to the waterfront for the first time in 75 years.",
     techStack: ["Next.js", "JavaScript", "Prismic", "Tailwind", "SCSS", "GSAP", "MailChimp", "Vercel"],
-    image: "/projects/manresa.png",
+    image: "/projects/manresa.webp",
     liveDemo: "https://www.manresawilds.org/",
     featured: false,
     attributions: [
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     impact:
       "Boosted site performance and organic traffic, streamlined editorial publishing, and opened new monetization opportunities without disrupting the reader experience.",
     techStack: ['Craft CMS', 'Twig', 'MySQL', 'PHP', 'SCSS', 'JavaScript', 'Laravel', 'Vite', 'Tailwind', 'Craft Cloud'],
-    image: '/projects/frommers.png',
+    image: '/projects/frommers.webp',
     liveDemo: 'https://www.frommers.com/',
     github: '',
     featured: true,
@@ -157,7 +157,7 @@ export const projects: Project[] = [
       "Tailwind",
       "SCSS"
     ],
-    image: "/projects/nant-bio.png",
+    image: "/projects/nant-bio.webp",
     liveDemo: "https://nantbr.com/",
     featured: false,
     attributions: [
@@ -187,7 +187,7 @@ export const projects: Project[] = [
       "Tailwind",
       "Swiper.js", "GSAP", "SCSS", "Vercel"
     ],
-    image: "/projects/resolute.png",
+    image: "/projects/resolute.webp",
     liveDemo: "https://www.resolute.vc/",
     featured: false,
     attributions: [
@@ -219,7 +219,7 @@ export const projects: Project[] = [
       "SCSS",
       "Vercel",
     ],
-    image: "/projects/nhrl.png",
+    image: "/projects/nhrl.webp",
     liveDemo: "https://www.nhrl.io/",
     featured: false,
     attributions: [
@@ -242,7 +242,7 @@ export const projects: Project[] = [
     impact:
       "Increased API visibility across global markets and streamlined developer outreach through automated lead routing to sales.",
     techStack: ["Vue", "Tailwind", "Vite", "Vue i18n", "TypeScript"],
-    image: "/projects/nameapi.png",
+    image: "/projects/nameapi.webp",
     liveDemo: "https://www.name.com/nameapi",
     featured: false,
     attributions: [
@@ -273,7 +273,7 @@ export const projects: Project[] = [
       "Keen Slider",
       "Tailwind"
     ],
-    image: "/projects/travel-texas.png",
+    image: "/projects/travel-texas.webp",
     liveDemo: "https://www.nationalgeographic.com/travel-texas/",
     featured: false,
     attributions: [
@@ -304,7 +304,7 @@ export const projects: Project[] = [
       "SCSS",
       "Formik"
     ],
-    image: "/projects/nat-geo-earth-month.png",
+    image: "/projects/nat-geo-earth-month.webp",
     liveDemo: "https://www.nationalgeographic.com/ourhomesweepstakes/",
     featured: false,
     attributions: [
@@ -335,7 +335,7 @@ export const projects: Project[] = [
       "Swiper.js",
       "Zustand",
     ],
-    image: "/projects/travel-nevada.png",
+    image: "/projects/travel-nevada.webp",
     liveDemo: "https://www.nationalgeographic.com/travel-nevada/",
     featured: false,
     attributions: [
@@ -367,7 +367,7 @@ export const projects: Project[] = [
       "Vercel"
 
     ],
-    image: "/projects/core-spaces.png",
+    image: "/projects/core-spaces.webp",
     liveDemo: "https://corespaces.com/strategy",
     featured: false,
     attributions: [
@@ -390,7 +390,7 @@ export const projects: Project[] = [
     solution: "Built a CMS-powered guidelines site with Prismic, allowing content editors to easily update styles and assets. Extended CMS schema for custom styles and applied design refinements to improve usability and brand fidelity.",
     impact: "Streamlined Motorola’s ability to maintain and distribute brand guidelines, reducing manual overhead for their design and marketing teams and ensuring consistent brand execution.",
     techStack: ["Prismic", "Tailwind", "SCSS", "GSAP", "Next.js"],
-    image: "/projects/motorola.png",
+    image: "/projects/motorola.webp",
     liveDemo: "https://brand-guidelines.motorolasolutions.com/",
     featured: false,
     attributions: [
@@ -411,7 +411,7 @@ export const projects: Project[] = [
     impact:
       'Improved the company’s digital visibility and customer engagement, helping convert site visitors into leads with a streamlined scheduling flow.',
     techStack: ['Next.js', 'Tailwind', 'Formspree', 'Vercel', 'TypeScript'],
-    image: '/projects/quality-water-4-usa.png',
+    image: '/projects/quality-water-4-usa.webp',
     liveDemo: 'https://qualitywater4usa.com',
     github: '',
     featured: false,
@@ -433,7 +433,7 @@ export const projects: Project[] = [
   //   impact:
   //     'Showcases best practices for small business landing pages—improving accessibility, mobile usability, and customer engagement with a bilingual, interactive design.',
   //   techStack: ['Next.js', 'TailwindCSS', 'Sass', 'Zustand', 'Swiper.js', 'TypeScript'],
-  //   image: '/projects/paleteria-snacks.png',
+  //   image: '/projects/paleteria-snacks.webp',
   //   liveDemo: 'https://kds-paleteria.vercel.app/',
   //   github: 'https://github.com/missatrox44/paleteria-and-snacks',
   //   featured: false,
@@ -455,7 +455,7 @@ export const projects: Project[] = [
   //   impact:
   //     'Enhanced restaurant operations by eliminating manual processes, improving staff efficiency, and ensuring better customer service during busy times.',
   //   techStack: ['React', 'Firebase Realtime Database', 'Tailwind'],
-  //   image: 'projects/crab-city.png',
+  //   image: 'projects/crab-city.webp',
   //   liveDemo: 'https://crab-city.vercel.app/',
   //   github: 'https://github.com/missatrox44/server-rotation-crab-city',
   //   featured: false,
@@ -478,7 +478,7 @@ export const projects: Project[] = [
   //   impact:
   //     'Expanded the business’s reach by providing an accessible, visually engaging, and easy-to-use online presence that helps attract and convert new customers.',
   //   techStack: ['React', 'Email.js', 'CSS3', 'JavaScript'],
-  //   image: 'projects/love_thy_selfie.png',
+  //   image: 'projects/love_thy_selfie.webp',
   //   liveDemo: 'https://www.lovethyselfiephotobooth.com/',
   //   github: 'https://github.com/missatrox44/love-thy-selfie',
   //   featured: false,
@@ -500,7 +500,7 @@ export const projects: Project[] = [
   //   impact:
   //     'Improved accessibility and usability for students, parents, and the community. The redesigned site strengthened the band’s online presence and provided a professional digital representation.',
   //   techStack: ['WiX', 'HTML5', 'CSS3'],
-  //   image: 'projects/odessa_band_screenshot.png',
+  //   image: 'projects/odessa_band_screenshot.webp',
   //   liveDemo: 'https://www.odessaband.org/',
   //   github: '',
   //   featured: false,
@@ -522,7 +522,7 @@ export const projects: Project[] = [
   //   impact:
   //     'Helped users improve productivity by streamlining focus cycles, while also serving as a creative showcase of rapid prototyping and collaborative programming.',
   //   techStack: ['React', 'Vite', 'TypeScript', 'JavaScript'],
-  //   image: 'projects/pomodoro_timer.png',
+  //   image: 'projects/pomodoro_timer.webp',
   //   liveDemo: 'https://missatrox44.github.io/pomodoro-clock/',
   //   github: 'https://github.com/missatrox44/pomodoro-clock',
   //   featured: false,
@@ -544,7 +544,7 @@ export const projects: Project[] = [
   //   impact:
   //     'Simplified the trip-planning process, making it intuitive and collaborative. Empowered users to stay organized and easily share their plans with friends and family.',
   //   techStack: ['React', 'Vite', 'Chakra UI', 'JavaScript'],
-  //   image: 'projects/travel_2_it.png',
+  //   image: 'projects/travel_2_it.webp',
   //   liveDemo: 'https://cosmic-gnome-4fc624.netlify.app/',
   //   github: 'https://github.com/missatrox44/travel2it',
   //   featured: false,
