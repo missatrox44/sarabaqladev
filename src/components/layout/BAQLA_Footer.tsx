@@ -31,7 +31,7 @@ export function BAQLA_Footer() {
         <path d={RIDGE} fill="none" className="stroke-baqla-olive" strokeWidth={2} vectorEffect="non-scaling-stroke" />
       </svg>
       <div className="-mt-px bg-baqla-paper px-6 pb-10 pt-6 tablet:px-12">
-        <p className="font-hand text-[26px]">end of the page</p>
+        <p className="font-hand text-[26px]">hey there cool cats</p>
         <p className="font-display font-black [font-stretch:125%] leading-none text-[40px] tablet:text-[64px] desktop:text-[72px]">
           Let&apos;s build something.
         </p>
