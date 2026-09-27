@@ -41,12 +41,6 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Forest Gradients */
-    --gradient-primary: linear-gradient(
-      135deg,
-      hsl(158 64% 52%),
-      hsl(84 81% 69%),
-      hsl(120 61% 50%)
-    );
     --gradient-subtle: linear-gradient(
       180deg,
       hsl(220 26% 14%),
@@ -93,19 +87,5 @@ All colors MUST be HSL.
     html {
       scroll-behavior: auto;
     }
-  }
-
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--gradient-primary);
-    border-radius: 4px;
   }
 }
