@@ -30,8 +30,8 @@ export default {
       },
       fontFamily: {
         sans: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-archivo)', 'system-ui', 'sans-serif'],
-        hand: ['var(--font-caveat)', 'cursive'],
+        display: ['var(--font-bowlby)', 'system-ui', 'sans-serif'],
+        hand: ['var(--font-covered)', 'cursive'],
       },
       borderRadius: {
         md: 'calc(var(--radius) - 2px)',
