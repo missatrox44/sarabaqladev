@@ -12,7 +12,8 @@ export function BAQLA_ExperienceList({ entries, limit, tone }: { entries: Experi
     <ol className={cn('divide-y', band ? 'divide-baqla-lime/25' : 'divide-baqla-line')}>
       {rows.map((e, i) => (
         <li key={`${e.title}-${e.company}-${e.period}`} className="grid grid-cols-[auto_1fr] items-start gap-x-5 gap-y-2 py-6 tablet:grid-cols-[auto_auto_1fr] tablet:gap-x-8">
-          <span aria-hidden="true" className={cn('font-display font-extralight [font-stretch:62%] leading-none text-[48px] tablet:text-[64px] desktop:text-[72px]', band ? 'text-baqla-lime' : 'text-baqla-olive')}>
+          {/* KEY-DECISION 2026-10-12: leading-none must follow text-[size] or tailwind-merge drops it; -mt-[0.135em] lifts the digit tops to the logo's top. */}
+          <span aria-hidden="true" className={cn('-mt-[0.135em] font-display font-extralight [font-stretch:62%] text-[48px] tablet:text-[64px] desktop:text-[72px] leading-none', band ? 'text-baqla-lime' : 'text-baqla-olive')}>
             {String(i + 1).padStart(2, '0')}
           </span>
           <div className="row-span-2 hidden tablet:block">
