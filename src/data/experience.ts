@@ -18,6 +18,7 @@ export const experienceData: Experience[] = [
     description:
       'Full-stack engineer embedded in Shopify e-commerce clients end-to-end: in the repo, in the rituals, in the work. AI-native by default. Here to ship. Absolutely no tambourines.',
     type: 'work',
+    image: '/experience/notambourine.svg',
   },
   {
     title: 'Owner & Developer',
