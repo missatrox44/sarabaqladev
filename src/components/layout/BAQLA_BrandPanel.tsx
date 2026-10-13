@@ -8,7 +8,7 @@ export function BAQLA_BrandPanel() {
         <span className="desktop:block">Sara</span> <span className="desktop:block">Baqla</span>
       </p>
       <BAQLA_Crest className="h-[72px] w-auto tablet:h-24 desktop:h-[140px]" />
-      <p className="max-w-sm text-base desktop:text-lg">Full stack developer building fast, accessible sites.</p>
+      <p className="max-w-sm text-balance text-base desktop:text-lg">Professional googler since 2022, professional prompter since the robots arrived.</p>
       <div className="desktop:absolute desktop:bottom-8 desktop:inset-x-6">
         <BAQLA_RoleTicker />
       </div>
