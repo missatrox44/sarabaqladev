@@ -1,4 +1,4 @@
-import { BAQLA_Crest } from './BAQLA_Crest';
+import { BAQLA_CatTyping } from './BAQLA_CatTyping';
 import { BAQLA_RoleTicker } from './BAQLA_RoleTicker';
 
 export function BAQLA_BrandPanel() {
@@ -7,7 +7,7 @@ export function BAQLA_BrandPanel() {
       <p className="font-display uppercase leading-[0.9] text-[44px] tablet:text-[72px] desktop:mt-auto desktop:text-[length:min(88px,13cqh)]">
         <span className="desktop:block">Sara</span> <span className="desktop:block">Baqla</span>
       </p>
-      <BAQLA_Crest className="h-[72px] w-auto tablet:h-24 desktop:h-[min(140px,20cqh)]" />
+      <BAQLA_CatTyping className="aspect-square h-[112px] tablet:h-36 desktop:h-[min(210px,30cqh)]" />
       <p className="max-w-sm text-balance text-base desktop:text-lg">Professional googler since 2022.</p>
           {/* <p className="max-w-sm text-balance text-base desktop:text-lg">Professional googler since 2022, professional prompter since the robots arrived.</p> */}
       <div className="desktop:mt-auto">
