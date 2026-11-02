@@ -1,76 +1,23 @@
-// // WISP TEMPLATE
-// import { BlogPostsPreview } from "@/components/sections/BlogPostPreview";
-// import { BlogPostsPagination } from "@/components/sections/BlogPostsPagination";
-// import { wisp } from "@/lib/wisp";
+import { wisp } from '@/lib/wisp';
+import { config } from '@/config';
+import { BAQLA_PostCard } from '@/components/sections/BAQLA_PostCard';
+import { HEADING_CLASS } from '@/lib/constants';
 
-// const Page = async ({
-//   searchParams,
-// }: {
-//   searchParams: { [key: string]: string | string[] | undefined };
-// }) => {
-//   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
-//   const result = await wisp.getPosts({ limit: 6, page });
-//   return (
-//     <>
+export const metadata = { title: 'Blog', description: config.blog.description };
 
-//       <BlogPostsPreview posts={result.posts} />
-//       <BlogPostsPagination pagination={result.pagination} />
-
-//     </>
-//   );
-// };
-
-// export default Page;
-
-
-
-
-
-
-import { BlogsClient, BlogItem } from "@/components/sections/BlogsClient";
-import { wisp } from "@/lib/wisp";
-import { Separator } from "@/components/ui/separator";
-import { BlogPostsPagination } from "@/components/sections/BlogPostsPagination";
-
-type SearchParams = Record<string, string | string[] | undefined>;
-
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams?: Promise<SearchParams>;
-}) {
-  const sp = (await searchParams) ?? {};
-  const raw = sp.page;
-  const page = raw ? parseInt(Array.isArray(raw) ? raw[0] : raw, 10) || 1 : 1;
-
-  // fetch from Wisp
-  const result = await wisp.getPosts({ limit: 100 });
-  // map Wisp’s post shape into our BlogItem shape
-  const posts: BlogItem[] = result.posts.map(post => ({
-    title: post.title ?? "Untitled",
-    excerpt: post.description ?? "",
-    coverImage: post.image || "/fallback-blog.png",
-    date: post.publishedAt || post.updatedAt,
-    slug: post.slug,
-    // you can pick your taxonomy/tag logic here:
-    category: post.tags[0]?.name ?? "Uncategorized",
-    tags: post.tags?.map((t: { name: string }) => t.name) ?? [],
-  }));
-
+export default async function BlogPage() {
+  // KEY-DECISION 2026-09-26: no search/filter/pagination; revisit past ~30 posts.
+  const { posts } = await wisp.getPosts({ limit: 'all' });
   return (
-
-    <div className="container max-w-7xl mx-auto pt-[80px] pb-16 px-4 sm:px-6 lg:px-8">
-
-      <div className="space-y-2 text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          <span className="text-gradient">Blog</span>
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
-          Thoughts, learnings, and insights from my journey in tech.
-        </p>
-      </div>
-      <Separator className="my-8" />
-      <BlogsClient posts={posts} />
-      <BlogPostsPagination pagination={result.pagination} />
-    </div>);
+    <section className="px-6 pt-20 pb-32 tablet:px-12 desktop:pt-16">
+      <p className="font-hand text-[26px] text-baqla-olive">notes from the trail</p>
+      <h1 className={`${HEADING_CLASS} text-baqla-ink`}>Blog</h1>
+      <p className="mt-2 max-w-prose text-baqla-muted">{config.blog.description}</p>
+      <ul className="mt-10 grid gap-6 tablet:grid-cols-2">
+        {posts.map((post) => (
+          <li key={post.id}><BAQLA_PostCard post={post} headingLevel="h2" /></li>
+        ))}
+      </ul>
+    </section>
+  );
 }

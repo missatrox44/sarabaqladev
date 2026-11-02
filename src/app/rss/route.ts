@@ -1,4 +1,4 @@
-export const revalidate = 3600; // 1 hour
+export const revalidate = 3600;
 
 import { NextResponse } from "next/server";
 import RSS from "rss";
@@ -11,15 +11,6 @@ const baseUrl = config.baseUrl;
 export async function GET() {
   const result = await wisp.getPosts({ limit: 20 });
 
-  const posts = result.posts.map((post) => {
-    return {
-      title: post.title,
-      description: post.description || "",
-      url: urlJoin(baseUrl, `/blog/${post.slug}`),
-      date: post.publishedAt || new Date(),
-    };
-  });
-
   const feed = new RSS({
     title: config.site.name,
     description: config.blog.description,
@@ -27,9 +18,14 @@ export async function GET() {
     feed_url: urlJoin(baseUrl, "/rss"),
     pubDate: new Date(),
   });
-  posts.forEach((post) => {
-    feed.item(post);
-  });
+  for (const post of result.posts) {
+    feed.item({
+      title: post.title,
+      description: post.description || "",
+      url: urlJoin(baseUrl, `/blog/${post.slug}`),
+      date: post.publishedAt || new Date(),
+    });
+  }
 
   const xml: string = feed.xml({ indent: true });
 

@@ -6,7 +6,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['imagedelivery.net'],
+    remotePatterns: [{ protocol: 'https', hostname: 'imagedelivery.net' }],
+    qualities: [75, 90],
   },
   outputFileTracingRoot: __dirname,
 };

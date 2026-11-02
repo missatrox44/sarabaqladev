@@ -1,24 +1,23 @@
-import { Projects } from '@/components/sections/Projects';
-import { Separator } from '@/components/ui/separator';
+import { projects } from '@/data/projects';
+import { BAQLA_ProjectCard } from '@/components/sections/BAQLA_ProjectCard';
+import { BAQLA_Reveal } from '@/components/sections/BAQLA_Reveal';
+import { HEADING_CLASS } from '@/lib/constants';
 
 export const metadata = {
-  title: 'SB | Portfolio',
-  description: 'A showcase of full stack web applications along with freelance apps and prototypes.'
+  title: 'Portfolio',
+  description: 'A showcase of full stack web applications along with freelance apps and prototypes.',
 };
 
 export default function PortfolioPage() {
   return (
-    <div className="container max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 mt-8">
-      <div className="space-y-2 text-center mb-12">
-      <h2 className="text-4xl md:text-5xl font-bold mb-6">
-           <span className="text-gradient">Portfolio</span>
-          </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
-          Explore my complete portfolio of work, from web applications to design projects
-        </p>
-      </div>
-      <Separator className="my-8" />
-      <Projects />
-    </div>
+    <section className="px-6 pt-20 pb-32 tablet:px-12 desktop:pt-16">
+      <p className="font-hand text-[26px] text-baqla-olive">things I&apos;ve built</p>
+      <h1 className={`${HEADING_CLASS} text-baqla-ink`}>Portfolio</h1>
+      <ul className="mt-10 grid gap-6 tablet:grid-cols-2">
+        {projects.map((p) => (
+          <li key={p.id}><BAQLA_Reveal className="h-full"><BAQLA_ProjectCard project={p} headingLevel="h2" /></BAQLA_Reveal></li>
+        ))}
+      </ul>
+    </section>
   );
 }

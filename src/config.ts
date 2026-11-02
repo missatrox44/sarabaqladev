@@ -1,4 +1,5 @@
-// src/config.ts
+import { FALLBACK_IMAGE } from "@/lib/constants";
+
 const buildConfig = () => {
   const blogId = process.env.NEXT_PUBLIC_BLOG_ID;
   if (!blogId) throw new Error("NEXT_PUBLIC_BLOG_ID is missing");
@@ -9,12 +10,10 @@ const buildConfig = () => {
 
   const defaultDescription =
     process.env.NEXT_PUBLIC_BLOG_DESCRIPTION ??
-    "Personal portfolio showcasing my projects, experience, and skills as a professional developer";
+    "Sara Baqla is a full stack developer in Odessa, Texas, and the founder of Artemis Bytes. She builds React, Next.js, TanStack, and Shopify sites.";
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
-
-  const defaultOgImage = "/fallback-blog.png";
 
   return {
     baseUrl,
@@ -28,21 +27,16 @@ const buildConfig = () => {
           template: `%s | ${siteName}`,
         },
         description: defaultDescription,
-        images: [defaultOgImage],
+        images: [FALLBACK_IMAGE],
       },
     },
 
     blog: {
       blogId,
-      displayName: process.env.NEXT_PUBLIC_BLOG_DISPLAY_NAME || "SEB",
       copyright:
         process.env.NEXT_PUBLIC_BLOG_COPYRIGHT || siteName,
         description: "Thoughts, learnings, and insights from my journey in tech."
     },
-
-    ogImageSecret:
-      process.env.OG_IMAGE_SECRET ||
-      "secret_used_for_signing_and_verifying_the_og_image_url",
   };
 };
 

@@ -1,6 +1,5 @@
 {
   "redirects" : [
-    { "source": "/about", "destination": "/", "permanent": true },
     { "source": "/education", "destination": "/", "permanent": true }
   ]
 }

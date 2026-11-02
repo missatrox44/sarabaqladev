@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://sarabaqla.dev/sitemap.xml
+Sitemap: https://sarabaqla.dev/blog/sitemap.xml

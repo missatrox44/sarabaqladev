@@ -4,19 +4,29 @@ export type Experience = {
   location: string;
   period: string;
   description?: string;
-  type: 'work' | 'education';
+  type: 'work' | 'prior' | 'education';
   skills?: string[];
   image?: string;
 };
 
-export const experienceData = [
+export const experienceData: Experience[] = [
+  {
+    title: 'Full Stack Developer',
+    company: 'NoTambourine',
+    location: 'Remote',
+    period: 'Apr 2026 – Present',
+    description:
+      'Full-stack engineer embedded in Shopify e-commerce clients end-to-end: in the repo, in the rituals, in the work. AI-native by default. Here to ship. Absolutely no tambourines.',
+    type: 'work',
+    image: '/experience/notambourine.svg',
+  },
   {
     title: 'Owner & Developer',
     company: 'Artemis Bytes LLC',
-    location: 'Remote',
+    location: 'Odessa, TX',
     period: 'Jan 2025 – Present',
     description:
-      'Builds custom web solutions for clients seeking to grow their digital presence and achieve measurable ROI. Owns the full project lifecycle — from discovery and requirements gathering through development and delivery. Also contracts through third-party agencies for frontend development on e-commerce and web platform projects.',
+      'Web and mobile solutions for a small set of clients, mostly in Shopify, Next.js, and Prismic. Handles each project from discovery to delivery.',
     type: 'work',
     skills: ['Shopify', 'Next.js', 'TypeScript', 'Project Management', 'Technical Writing', 'Client Relations'],
     image: '/experience/artemisbytes.webp',
@@ -27,7 +37,7 @@ export const experienceData = [
     location: 'Remote',
     period: 'Jan 2024 – Sept 2025',
     description:
-      'Built Next.js applications for clients across diverse industries, integrating with multiple CMS platforms to deliver scalable, content-driven websites. Provided PR/code review feedback and translated complex designs into responsive, engaging user interfaces.',
+      'Next.js sites for clients with content-heavy needs, leaning heavily on CMS platforms. Worked side by side with designers every day and left with strong opinions about spacing.',
     type: 'work',
     skills: [
       'Next.js',
@@ -50,7 +60,7 @@ export const experienceData = [
     location: 'Remote',
     period: 'Nov 2022 – Jan 2024',
     description:
-      'Built and launched web and mobile apps in React and React Native, integrating Firebase and MongoDB for secure, scalable performance. Designed intuitive interfaces with Figma and Material UI, and ensured quality through end-to-end testing and clear team documentation.',
+      'First dev job, many hats. Worked on a food delivery platform and a rideshare app, redesigned their internal tools, and built an in-house applicant tracking system to hire drivers. Learned the stack by shipping all of it.',
     type: 'work',
     skills: ['React Native', 'Firebase', 'Node.js', 'TypeScript', 'Cypress', 'MongoDB', 'React', 'Redux', 'JavaScript', 'Express', 'REST'],
     image: '/experience/ibg.webp'
@@ -61,7 +71,7 @@ export const experienceData = [
     location: 'Remote',
     period: 'Oct 2022 – Nov 2022 & Mar 2023',
     description:
-      'Collaborated in Chingu’s Voyage 41 to build an accessible travel planning app focused on inclusive design. In a separate sprint, developed a Pomodoro timer app with a partner, sharpening React skills and applying Agile workflows to improve time management and collaboration.',
+      'Volunteer team sprints. Built an accessible travel planner in Voyage 41 and a Pomodoro timer with a partner. Learned Agile by doing it.',
     type: 'work',
     skills: ['React', 'Agile', 'JavaScript'],
     image: '/experience/chingu.webp'
@@ -79,7 +89,7 @@ export const experienceData = [
     company: 'ECISD',
     location: 'Odessa, TX',
     period: 'Aug 2021 – Jul 2022',
-    type: 'work',
+    type: 'prior',
     image: '/experience/ecisd.webp'
   },
   {
@@ -87,7 +97,7 @@ export const experienceData = [
     company: 'ECISD',
     location: 'Odessa, TX',
     period: 'Aug 2019 – Jul 2021',
-    type: 'work',
+    type: 'prior',
     image: '/experience/ecisd.webp'
   },
   {
@@ -95,7 +105,7 @@ export const experienceData = [
     company: 'Southwest Conservation Corps',
     location: 'Las Cruces, NM',
     period: 'Apr 2018 – Oct 2018',
-    type: 'work',
+    type: 'prior',
     image: '/experience/scc.webp'
   },
   {
@@ -103,7 +113,7 @@ export const experienceData = [
     company: 'California Conservation Corps',
     location: 'Trinity Alps, CA',
     period: 'May 2017 – Sep 2017',
-    type: 'work',
+    type: 'prior',
     image: '/experience/ccc.webp'
   },
   {
@@ -111,7 +121,7 @@ export const experienceData = [
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Fall 2014 – Spring 2017',
-    type: 'work',
+    type: 'prior',
     image: '/experience/utep.webp'
   },
   {
@@ -119,7 +129,7 @@ export const experienceData = [
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Fall 2014 – Spring 2017',
-    type: 'work',
+    type: 'prior',
     image: '/experience/utep.webp'
   },
   {
