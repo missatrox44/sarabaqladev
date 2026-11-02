@@ -40,7 +40,7 @@ export function BAQLA_BlogPostContent({ content }: { content: string }) {
   });
   return (
     <div
-      className={`${styles.blogText} max-w-[68ch] break-words`}
+      className={`${styles.blogText} max-w-[68ch] wrap-break-word`}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   images: {
     remotePatterns: [{ protocol: 'https', hostname: 'imagedelivery.net' }],
+    qualities: [75, 90],
   },
   outputFileTracingRoot: __dirname,
 };

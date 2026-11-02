@@ -80,7 +80,7 @@ export default function RootLayout({
     <html lang="en" className={`${bowlby.variable} ${coveredByYourGrace.variable} ${jakarta.variable}`}>
       <body className="font-sans">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-baqla-card focus:px-4 focus:py-2 focus:text-baqla-olive">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-full focus:bg-baqla-card focus:px-4 focus:py-2 focus:text-baqla-olive">
           Skip to content
         </a>
         <Providers>

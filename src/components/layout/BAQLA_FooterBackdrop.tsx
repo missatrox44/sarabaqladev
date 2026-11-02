@@ -18,7 +18,7 @@ export function BAQLA_FooterBackdrop() {
   if (!backdrop) return null;
   // KEY-DECISION 2026-09-26: lives in the Shell column, not the page, so `sticky` holds until the footer covers it.
   return (
-    <div className="sticky top-0 h-dvh overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10rem)]">
+    <div className="sticky top-0 h-dvh overflow-hidden mask-[linear-gradient(to_bottom,transparent,black_10rem)]">
       <Image src={backdrop.src} alt="" fill sizes="(min-width: 1280px) 66vw, 100vw" className={`object-cover ${backdrop.className}`} />
       {backdrop.grain && (
         <div

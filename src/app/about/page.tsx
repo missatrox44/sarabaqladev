@@ -29,8 +29,8 @@ function CollapsibleList({ title, type }: { title: string; type: Experience['typ
 export default function AboutPage() {
   return (
     <>
-      <div className="sticky top-0 aspect-[16/9] w-full bg-baqla-card">
-        <Image src="/about-hero.webp" alt="Sara Baqla standing by a pond with a backpack, looking over her shoulder" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
+      <div className="sticky top-0 aspect-video w-full bg-baqla-card">
+        <Image src="/about-hero.webp" alt="Sara Baqla standing by a pond with a backpack, looking over her shoulder" fill preload sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
       <section className="baqla-band relative bg-baqla-olive px-6 pt-16 pb-16 text-baqla-lime tablet:px-12">
         <p className="font-hand text-[26px]">hi, I&apos;m Sara</p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
       <section className="relative bg-baqla-paper px-6 py-16 tablet:px-12" aria-label="Photos">
         <ul className="grid grid-cols-2 gap-3 tablet:grid-cols-4">
           {photos.map((p) => (
-            <li key={p.src} className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+            <li key={p.src} className="relative aspect-3/4 overflow-hidden rounded-2xl">
               <Image src={p.src} alt={p.alt} fill sizes="(min-width: 800px) 16vw, 50vw" className="object-cover" />
             </li>
           ))}

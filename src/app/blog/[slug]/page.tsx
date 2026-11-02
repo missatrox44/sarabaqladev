@@ -63,8 +63,8 @@ const Page = async (props: { params: Promise<Params> }) => {
   return (
     <article>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="sticky top-0 aspect-[16/9] w-full bg-baqla-card">
-        <Image src={image || FALLBACK_IMAGE} alt="" fill priority sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
+      <div className="sticky top-0 aspect-video w-full bg-baqla-card">
+        <Image src={image || FALLBACK_IMAGE} alt="" fill preload sizes="(min-width: 1280px) 66vw, 100vw" className="object-cover" />
       </div>
       <div className="relative bg-baqla-paper px-6 pt-10 pb-16 tablet:px-12">
         <h1 className={`${HEADING_CLASS} max-w-[24ch] leading-tight text-baqla-ink`}>{title}</h1>

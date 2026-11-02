@@ -1,6 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin 'tailwindcss-animate';
+
+@theme {
+  --breakpoint-tablet: 800px;
+  --breakpoint-desktop: 1280px;
+
+  --color-baqla-sky: rgb(var(--baqla-sky));
+  --color-baqla-blue: rgb(var(--baqla-blue));
+  --color-baqla-lime: rgb(var(--baqla-lime));
+  --color-baqla-olive: rgb(var(--baqla-olive));
+  --color-baqla-paper: rgb(var(--baqla-paper));
+  --color-baqla-card: rgb(var(--baqla-card));
+  --color-baqla-ink: rgb(var(--baqla-ink));
+  --color-baqla-muted: rgb(var(--baqla-muted));
+  --color-baqla-line: rgb(var(--baqla-line));
+
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-display: var(--font-bowlby), system-ui, sans-serif;
+  --font-hand: var(--font-covered), cursive;
+
+  --radius-md: calc(var(--radius) - 2px);
+}
 
 @layer base {
   * {
