@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Rss, Github, Linkedin } from 'lucide-react';
-import { RiBlueskyLine, RiTwitterXFill } from 'react-icons/ri';
+import { Rss } from 'lucide-react';
+import { RiBlueskyLine, RiGithubLine, RiLinkedinLine, RiTwitterXFill } from 'react-icons/ri';
 import { config } from '@/config';
 import { GITHUB_URL, LINKEDIN_URL, BLUESKY_URL, TWITTER_URL, NAV_LINKS } from '@/lib/constants';
 
@@ -28,8 +28,8 @@ const pages = [...NAV_LINKS, { href: '/about#contact', label: 'Contact' }];
 
 const socials = [
   { href: '/rss', label: 'RSS feed', Icon: Rss, external: false },
-  { href: GITHUB_URL, label: 'GitHub', Icon: Github, external: true },
-  { href: LINKEDIN_URL, label: 'LinkedIn', Icon: Linkedin, external: true },
+  { href: GITHUB_URL, label: 'GitHub', Icon: RiGithubLine, external: true },
+  { href: LINKEDIN_URL, label: 'LinkedIn', Icon: RiLinkedinLine, external: true },
   { href: BLUESKY_URL, label: 'Bluesky', Icon: RiBlueskyLine, external: true },
   { href: TWITTER_URL, label: 'X', Icon: RiTwitterXFill, external: true },
 ];
