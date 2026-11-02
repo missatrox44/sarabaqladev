@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { experienceData } from '@/data/experience';
+import { experienceData, type Experience } from '@/data/experience';
 import { BAQLA_ExperienceList } from '@/components/sections/BAQLA_ExperienceList';
 import { BAQLA_ContactForm } from '@/components/sections/BAQLA_ContactForm';
 import { HEADING_CLASS } from '@/lib/constants';
@@ -13,6 +13,18 @@ const photos = [
   { src: '/dogs.webp', alt: 'Archimedes & Artemis' },
   { src: '/clones.webp', alt: 'Sara with her mirror clones' },
 ];
+
+function CollapsibleList({ title, type }: { title: string; type: Experience['type'] }) {
+  return (
+    <details className="baqla-collapsible group relative bg-baqla-paper px-6 pb-16 tablet:px-12">
+      <summary className="flex cursor-pointer list-none items-center gap-3 text-baqla-ink [&::-webkit-details-marker]:hidden">
+        <h2 className={HEADING_CLASS}>{title}</h2>
+        <span aria-hidden="true" className="text-2xl text-baqla-olive transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-open:rotate-90">›</span>
+      </summary>
+      <div className="pt-6"><BAQLA_ExperienceList entries={experienceData.filter((e) => e.type === type)} tone="paper" /></div>
+    </details>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -48,8 +60,11 @@ export default function AboutPage() {
 
       <section className="relative bg-baqla-paper px-6 pb-16 tablet:px-12">
         <h2 className={`${HEADING_CLASS} text-baqla-ink`}>Experience</h2>
-        <div className="mt-6"><BAQLA_ExperienceList entries={experienceData} tone="paper" /></div>
+        <div className="mt-6"><BAQLA_ExperienceList entries={experienceData.filter((e) => e.type === 'work')} tone="paper" /></div>
       </section>
+
+      <CollapsibleList title="The Before Times" type="prior" />
+      <CollapsibleList title="Education" type="education" />
 
       <section id="contact" className="baqla-band relative scroll-mt-20 desktop:scroll-mt-0 bg-baqla-olive px-6 pt-16 pb-32 text-baqla-lime tablet:px-12">
         <h2 className={HEADING_CLASS}>Get in touch</h2>

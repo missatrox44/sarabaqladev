@@ -4,7 +4,7 @@ export type Experience = {
   location: string;
   period: string;
   description?: string;
-  type: 'work' | 'education';
+  type: 'work' | 'prior' | 'education';
   skills?: string[];
   image?: string;
 };
@@ -89,7 +89,7 @@ export const experienceData: Experience[] = [
     company: 'ECISD',
     location: 'Odessa, TX',
     period: 'Aug 2021 – Jul 2022',
-    type: 'work',
+    type: 'prior',
     image: '/experience/ecisd.webp'
   },
   {
@@ -97,7 +97,7 @@ export const experienceData: Experience[] = [
     company: 'ECISD',
     location: 'Odessa, TX',
     period: 'Aug 2019 – Jul 2021',
-    type: 'work',
+    type: 'prior',
     image: '/experience/ecisd.webp'
   },
   {
@@ -105,7 +105,7 @@ export const experienceData: Experience[] = [
     company: 'Southwest Conservation Corps',
     location: 'Las Cruces, NM',
     period: 'Apr 2018 – Oct 2018',
-    type: 'work',
+    type: 'prior',
     image: '/experience/scc.webp'
   },
   {
@@ -113,7 +113,7 @@ export const experienceData: Experience[] = [
     company: 'California Conservation Corps',
     location: 'Trinity Alps, CA',
     period: 'May 2017 – Sep 2017',
-    type: 'work',
+    type: 'prior',
     image: '/experience/ccc.webp'
   },
   {
@@ -121,7 +121,7 @@ export const experienceData: Experience[] = [
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Fall 2014 – Spring 2017',
-    type: 'work',
+    type: 'prior',
     image: '/experience/utep.webp'
   },
   {
@@ -129,7 +129,7 @@ export const experienceData: Experience[] = [
     company: 'The University of Texas at El Paso',
     location: 'El Paso, TX',
     period: 'Fall 2014 – Spring 2017',
-    type: 'work',
+    type: 'prior',
     image: '/experience/utep.webp'
   },
   {

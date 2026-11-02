@@ -38,3 +38,28 @@ body {
 .baqla-band :focus-visible {
   outline-color: rgb(var(--baqla-lime));
 }
+
+.baqla-collapsible {
+  interpolate-size: allow-keywords;
+}
+
+.baqla-collapsible::details-content {
+  block-size: 0;
+  opacity: 0;
+  overflow-y: clip;
+  transition:
+    block-size 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    content-visibility 0.6s allow-discrete;
+}
+
+.baqla-collapsible[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .baqla-collapsible::details-content {
+    transition: none;
+  }
+}
