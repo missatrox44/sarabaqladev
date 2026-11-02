@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { experienceData, type Experience } from '@/data/experience';
 import { BAQLA_ExperienceList } from '@/components/sections/BAQLA_ExperienceList';
 import { BAQLA_ContactForm } from '@/components/sections/BAQLA_ContactForm';
-import { HEADING_CLASS } from '@/lib/constants';
+import { EMAIL, HEADING_CLASS } from '@/lib/constants';
 
 export const metadata = { title: 'About', description: 'About Sara Baqla, full stack developer.' };
 
@@ -70,6 +70,7 @@ export default function AboutPage() {
         <h2 className={HEADING_CLASS}>Get in touch</h2>
         <p className="mt-3 max-w-prose">Always up for new projects and good conversations. Found a bug on the site? Tell me.</p>
         <div className="mt-8 max-w-xl"><BAQLA_ContactForm /></div>
+        <p className="mt-6">Or email me at <a href={`mailto:${EMAIL}`} className="font-semibold underline underline-offset-4 hover:text-baqla-card">{EMAIL}</a>.</p>
       </section>
     </>
   );
